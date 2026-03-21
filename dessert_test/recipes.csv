@@ -1,0 +1,11 @@
+recipe_id,recipe_name,cuisine,ingredient_count,avg_cook_time_min,difficulty,avg_rating
+R0001,Ondeh Ondeh,Dessert,5,52,Hard,4.5
+R0002,Kueh Lapis,Dessert,6,90,Medium,4.6
+R0003,Bubur Cha Cha,Dessert,6,16,Medium,4.4
+R0004,Cheng Tng,Dessert,6,79,Hard,4.9
+R0005,Mango Sago,Dessert,5,46,Medium,4.0
+R0006,Brownies,Dessert,6,34,Medium,4.3
+R0007,Cheesecake,Dessert,6,85,Easy,4.5
+R0008,Cookies,Dessert,6,20,Easy,4.7
+R0009,Gulab Jamun,Dessert,6,41,Easy,3.7
+R0010,Kheer,Dessert,6,52,Easy,3.8

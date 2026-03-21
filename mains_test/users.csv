@@ -1,0 +1,76 @@
+user_id,name,age,gender,email,location,preferred_cuisines,yuu_member,click_collect_user,account_created,avg_weekly_spend_sgd
+U0001,Jun Wong,35,M,jun.wong1@email.com,Woodlands,Korean,True,True,2022-10-09,130.38
+U0002,Aisha Tan,52,M,aisha.tan2@email.com,Toa Payoh,Malay,True,False,2022-08-27,67.47
+U0003,Ethan Chan,47,F,ethan.chan3@email.com,Clementi,Malay,True,True,2023-12-16,192.73
+U0004,Nurul Wong,42,F,nurul.wong4@email.com,Bukit Timah,Western,False,True,2022-04-10,154.05
+U0005,Jasmine Wong,60,F,jasmine.wong5@email.com,Bukit Timah,"Chinese, Japanese",True,True,2022-10-28,37.79
+U0006,Kevin Raj,44,F,kevin.raj6@email.com,Bishan,Malay,False,True,2022-04-14,92.93
+U0007,Raj Chan,35,M,raj.chan7@email.com,Bishan,"Korean, Chinese, Malay",False,False,2023-07-01,198.22
+U0008,Jun Goh,23,M,jun.goh8@email.com,Jurong,Korean,False,False,2022-11-29,75.52
+U0009,Raj Zhang,61,F,raj.zhang9@email.com,Woodlands,"Indian, Malay, Western",False,True,2023-02-10,71.93
+U0010,Jasmine Goh,57,F,jasmine.goh10@email.com,Yishun,"Korean, Japanese",True,True,2023-03-15,116.62
+U0011,Priya Lim,30,F,priya.lim11@email.com,Bukit Timah,Malay,True,False,2023-10-05,94.88
+U0012,Hui Sharma,27,F,hui.sharma12@email.com,Yishun,"Japanese, Chinese",True,False,2023-11-28,103.91
+U0013,Hui Tan,26,F,hui.tan13@email.com,Toa Payoh,"Korean, Indian, Malay",True,True,2023-06-04,93.57
+U0014,Siti Goh,21,M,siti.goh14@email.com,Yishun,"Chinese, Japanese, Indian",False,True,2023-05-16,39.85
+U0015,Xiao Zhang,24,M,xiao.zhang15@email.com,Woodlands,Chinese,False,True,2023-05-13,75.06
+U0016,Ryan Ali,32,F,ryan.ali16@email.com,Sengkang,"Malay, Japanese",False,False,2023-12-08,182.93
+U0017,Hui Wong,41,M,hui.wong17@email.com,Bukit Timah,Malay,True,True,2022-03-07,31.22
+U0018,Vikram Lim,41,M,vikram.lim18@email.com,Toa Payoh,Chinese,True,False,2022-02-02,143.73
+U0019,Raj Goh,56,F,raj.goh19@email.com,Bedok,Korean,False,False,2023-08-08,62.37
+U0020,John Smith,23,M,john.smith20@email.com,Jurong,"Western, Korean",False,False,2023-04-24,166.1
+U0021,John Singh,48,M,john.singh21@email.com,Sengkang,Malay,True,False,2023-07-04,108.65
+U0022,Ryan Lee,61,M,ryan.lee22@email.com,Tampines,"Japanese, Chinese",True,True,2022-02-21,99.09
+U0023,Farah Kumar,20,F,farah.kumar23@email.com,Clementi,"Chinese, Malay",False,False,2023-01-24,101.91
+U0024,Sarah Goh,38,M,sarah.goh24@email.com,Jurong,"Korean, Western, Malay",True,False,2022-07-14,39.72
+U0025,Ethan Hassan,25,M,ethan.hassan25@email.com,Tampines,"Japanese, Malay, Chinese",True,True,2023-06-05,98.64
+U0026,Xiao Zhang,22,M,xiao.zhang26@email.com,Sengkang,Japanese,False,False,2023-09-01,64.72
+U0027,Vikram Abdullah,28,F,vikram.abdullah27@email.com,Bishan,Indian,False,True,2023-02-10,31.58
+U0028,Zara Zhang,33,F,zara.zhang28@email.com,Woodlands,Chinese,False,True,2023-07-05,179.48
+U0029,Chen Raj,65,F,chen.raj29@email.com,Bukit Timah,Western,True,False,2023-07-11,188.4
+U0030,John Ng,29,F,john.ng30@email.com,Clementi,"Chinese, Korean",True,False,2023-07-21,64.61
+U0031,Jun Chan,60,F,jun.chan31@email.com,Clementi,"Western, Indian, Chinese",True,True,2022-04-05,86.7
+U0032,Mei Chan,55,F,mei.chan32@email.com,Toa Payoh,Korean,True,True,2023-03-29,42.79
+U0033,Xiao Ng,28,M,xiao.ng33@email.com,Clementi,"Chinese, Indian, Malay",False,True,2023-03-17,182.82
+U0034,Raj Singh,29,M,raj.singh34@email.com,Woodlands,"Chinese, Indian, Western",True,False,2023-09-28,34.21
+U0035,Sarah Abdullah,30,M,sarah.abdullah35@email.com,Sengkang,"Korean, Malay",True,False,2022-10-01,67.81
+U0036,Deepa Ong,21,M,deepa.ong36@email.com,Sengkang,"Indian, Malay",False,False,2022-08-17,176.94
+U0037,Ling Chan,63,F,ling.chan37@email.com,Jurong,"Korean, Japanese",True,False,2023-02-14,60.36
+U0038,Lin Lim,42,F,lin.lim38@email.com,Sengkang,Japanese,True,False,2023-03-21,182.92
+U0039,Raj Chan,20,M,raj.chan39@email.com,Yishun,Korean,False,True,2023-03-23,191.31
+U0040,Nur Abdullah,39,F,nur.abdullah40@email.com,Yishun,"Indian, Chinese, Korean",False,False,2023-06-04,124.25
+U0041,Raj Smith,55,M,raj.smith41@email.com,Clementi,"Western, Malay, Indian",False,True,2023-02-20,103.08
+U0042,Ethan Ali,63,M,ethan.ali42@email.com,Toa Payoh,"Indian, Western, Japanese",False,True,2023-03-29,142.0
+U0043,Ahmad Sharma,35,F,ahmad.sharma43@email.com,Bedok,"Korean, Japanese, Indian",True,True,2022-04-06,34.15
+U0044,Kevin Hassan,56,M,kevin.hassan44@email.com,Sengkang,"Chinese, Western, Japanese",False,False,2023-10-07,71.48
+U0045,Jun Tan,31,F,jun.tan45@email.com,Jurong,Western,True,True,2022-08-13,107.6
+U0046,Hafiz Ong,59,F,hafiz.ong46@email.com,Toa Payoh,"Japanese, Korean, Indian",False,True,2023-03-30,156.42
+U0047,Farah Ong,51,M,farah.ong47@email.com,Clementi,"Malay, Indian",False,True,2023-06-18,151.3
+U0048,Kevin Chan,28,M,kevin.chan48@email.com,Bedok,"Indian, Japanese",False,True,2022-03-24,150.09
+U0049,Priya Smith,46,M,priya.smith49@email.com,Bedok,"Indian, Japanese",False,False,2023-04-23,183.82
+U0050,Ethan Tan,39,F,ethan.tan50@email.com,Sengkang,"Western, Korean, Chinese",True,False,2022-12-27,67.3
+U0051,Marcus Hassan,62,F,marcus.hassan51@email.com,Woodlands,Western,False,True,2022-12-11,196.72
+U0052,Jasmine Tan,21,M,jasmine.tan52@email.com,Sengkang,"Japanese, Korean",True,False,2023-11-10,60.89
+U0053,Lin Pillai,41,F,lin.pillai53@email.com,Clementi,"Malay, Western",False,False,2022-12-01,171.93
+U0054,Farah Tan,61,M,farah.tan54@email.com,Jurong,"Japanese, Chinese, Indian",True,True,2022-08-18,63.89
+U0055,Wei Ali,50,M,wei.ali55@email.com,Bukit Timah,Malay,True,False,2022-05-10,148.91
+U0056,Ling Chen,65,M,ling.chen56@email.com,Woodlands,Japanese,False,True,2023-09-14,128.38
+U0057,Nur Raj,24,M,nur.raj57@email.com,Tampines,"Korean, Western, Japanese",False,True,2022-07-23,165.36
+U0058,Ethan Lim,43,M,ethan.lim58@email.com,Toa Payoh,"Japanese, Western",False,True,2023-11-09,174.43
+U0059,Deepa Hassan,60,F,deepa.hassan59@email.com,Woodlands,Western,False,True,2023-01-06,154.75
+U0060,Jun Chan,57,F,jun.chan60@email.com,Yishun,"Japanese, Western, Korean",True,True,2023-03-23,77.42
+U0061,Hui Singh,44,F,hui.singh61@email.com,Jurong,"Japanese, Korean",False,False,2023-11-16,60.91
+U0062,Raj Chen,64,F,raj.chen62@email.com,Toa Payoh,"Indian, Korean",True,True,2023-09-03,44.55
+U0063,Sarah Smith,50,F,sarah.smith63@email.com,Bishan,"Japanese, Malay",True,True,2023-12-09,80.02
+U0064,Kavya Singh,50,F,kavya.singh64@email.com,Sengkang,"Korean, Japanese",False,False,2023-01-13,149.49
+U0065,Lin Raj,40,M,lin.raj65@email.com,Toa Payoh,"Malay, Chinese",True,True,2022-07-17,66.79
+U0066,Farah Chan,32,F,farah.chan66@email.com,Bedok,"Japanese, Korean, Indian",False,True,2022-04-13,81.39
+U0067,Vikram Goh,23,F,vikram.goh67@email.com,Woodlands,Indian,False,True,2022-02-16,178.36
+U0068,Ethan Raj,31,M,ethan.raj68@email.com,Clementi,"Western, Korean",False,True,2022-12-15,169.76
+U0069,Kavya Hassan,63,M,kavya.hassan69@email.com,Woodlands,Japanese,True,False,2023-10-07,44.48
+U0070,Kevin Wong,44,F,kevin.wong70@email.com,Bishan,"Western, Japanese, Malay",False,False,2023-06-20,81.91
+U0071,Zara Lim,33,F,zara.lim71@email.com,Tampines,"Korean, Chinese, Malay",True,True,2023-10-03,59.55
+U0072,Priya Mohamed,64,F,priya.mohamed72@email.com,Clementi,Western,True,True,2023-04-07,78.98
+U0073,Ahmad Ong,36,M,ahmad.ong73@email.com,Sengkang,Korean,True,True,2022-08-28,140.1
+U0074,Nur Chan,30,F,nur.chan74@email.com,Bukit Timah,Chinese,False,False,2022-03-03,51.14
+U0075,Vikram Raj,25,M,vikram.raj75@email.com,Sengkang,"Western, Indian, Korean",False,False,2023-03-25,34.4
