@@ -1,0 +1,19 @@
+# Mac system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+env/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
