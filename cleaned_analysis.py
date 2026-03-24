@@ -27,14 +27,9 @@ from scipy.sparse import csr_matrix
 import warnings
 warnings.filterwarnings('ignore')
 
-# Create output folder for all saved charts
 os.makedirs('output', exist_ok=True)
-
-# Set a clean plot style
 sns.set_theme(style='whitegrid', palette='Set2')
 
-# ── Load datasets (using both_test for full cuisine coverage) ──
-print("Loading datasets...")
 users       = pd.read_csv('both_test/users.csv')
 orders      = pd.read_csv('both_test/orders.csv')
 order_items = pd.read_csv('both_test/order_items.csv')
@@ -67,7 +62,7 @@ print("=" * 60)
 print("SECTION 1: Customer Segmentation (K-Means)")
 print("=" * 60)
 
-# Engineer visit_frequency: count of orders per user
+# visit_frequency: count of orders per user
 visit_freq = (orders.groupby('user_id')['order_id']
               .count()
               .reset_index()
@@ -87,24 +82,6 @@ X = seg_df[features].copy()
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# ── Elbow Method: find optimal number of clusters ──
-inertias = []
-k_range = range(2, 8)
-for k in k_range:
-    km = KMeans(n_clusters=k, random_state=42, n_init=10)
-    km.fit(X_scaled)
-    inertias.append(km.inertia_)
-
-plt.figure(figsize=(7, 4))
-plt.plot(k_range, inertias, marker='o', color='steelblue')
-plt.title('Elbow Method — Optimal Number of Clusters')
-plt.xlabel('Number of Clusters (k)')
-plt.ylabel('Inertia')
-plt.tight_layout()
-plt.savefig('output/1a_elbow_method.png', dpi=150)
-plt.show()
-print("Elbow plot saved → output/1a_elbow_method.png")
-
 # ── Fit K-Means with k=3 (justified by elbow plot) ──
 kmeans = KMeans(n_clusters=3, random_state=42, n_init=10)
 seg_df['segment'] = kmeans.fit_predict(X_scaled)
@@ -119,7 +96,7 @@ label_map = {
 }
 seg_df['segment_label'] = seg_df['segment'].map(label_map)
 
-# ── Scatter plot: spend vs frequency, coloured by segment ──
+# 1a ==========================================================================================================================
 plt.figure(figsize=(9, 5))
 sns.scatterplot(
     data=seg_df,
@@ -139,7 +116,7 @@ plt.savefig('output/1b_segmentation_scatter.png', dpi=150)
 plt.show()
 print("Segmentation scatter plot saved → output/1b_segmentation_scatter.png")
 
-# ── Segment size bar chart ──
+# 1b ==========================================================================================================================
 seg_counts = seg_df['segment_label'].value_counts()
 plt.figure(figsize=(6, 4))
 seg_counts.plot(kind='bar', color=['#66b3ff', '#ff9999', '#99ff99'], edgecolor='black')
@@ -173,7 +150,6 @@ purchase_matrix = (order_items
                    .sum()
                    .unstack(fill_value=0))
 
-print(f"Purchase matrix shape: {purchase_matrix.shape[0]} users × {purchase_matrix.shape[1]} products")
 
 # Convert to sparse matrix for efficient SVD computation
 sparse_matrix = csr_matrix(purchase_matrix.values)
@@ -185,7 +161,6 @@ svd = TruncatedSVD(n_components=n_components, random_state=42)
 user_factors = svd.fit_transform(sparse_matrix)
 
 explained_var = svd.explained_variance_ratio_.sum()
-print(f"SVD explained variance: {explained_var:.1%}")
 
 # Compute cosine similarity between all users based on latent factors
 user_similarity = cosine_similarity(user_factors)
@@ -230,11 +205,12 @@ print("\nSample Recommendations:")
 for uid in users['user_id'].iloc[:3]:
     recs = recommend_products(uid)
     preferred = users.loc[users['user_id'] == uid, 'preferred_cuisines'].values[0]
-    print(f"  {uid} (prefers: {preferred}): {recs}")
+    print(f"  {uid} (Preferred cuisine: {preferred}): {recs}")
 
-# ── Visualise: top 10 most recommended products overall ──
+# 2a ==========================================================================================================================
 all_recs = []
 for uid in purchase_matrix.index[:50]:   # sample 50 users for speed
+# for uid in purchase_matrix:   # sample 50 users for speed
     all_recs.extend(recommend_products(uid))
 
 rec_counts = pd.Series(all_recs).value_counts().head(10)
@@ -247,12 +223,8 @@ plt.gca().invert_yaxis()
 plt.tight_layout()
 plt.savefig('output/2_top_recommendations.png', dpi=150)
 plt.show()
-print("\nRecommendation chart saved → output/2_top_recommendations.png\n")
 
-
-# =============================================================
-# SECTION 2B: PRICE-SENSITIVITY PROFILING + SMART RECOMMENDATIONS
-# =============================================================
+# 2b ==========================================================================================================================
 print("=" * 60)
 print("SECTION 2B: Price-Sensitivity Profiling")
 print("=" * 60)
@@ -269,18 +241,29 @@ price_profile = order_items.groupby('user_id').agg(
     avg_basket_size=('line_total_sgd', 'sum')
 ).reset_index()
 
-# ── Step 2: Classify each user into a price tier ─────────────
-# Price Sensitive  → above-average promo rate (>28% of purchases on promotion)
-# Premium Seeker   → consistently buys higher-priced items (avg > $9.80)
-# Value Conscious  → middle ground — occasional promo, mid-range prices
-def price_tier(row):
-    if row['promo_purchase_rate'] > 0.28:
-        return 'Price Sensitive'
-    elif row['avg_unit_price'] > 9.8:
-        return 'Premium Seeker'
-    else:
-        return 'Value Conscious'
+# ── Step 2: Classify each user into a price tier by spending ──
+# High Spender    → avg weekly spend in top third (> $130)
+# Mid Spender     → avg weekly spend in middle third ($70 - $130)  
+# Budget Spender  → avg weekly spend in bottom third (< $70)
 
+# Calculate thresholds from actual data
+low_thresh  = users['avg_weekly_spend_sgd'].quantile(0.33)
+high_thresh = users['avg_weekly_spend_sgd'].quantile(0.67)
+
+print(f"\nSpend thresholds: Low < ${low_thresh:.2f} | Mid ${low_thresh:.2f}–${high_thresh:.2f} | High > ${high_thresh:.2f}")
+
+def price_tier(row):
+    spend = row['avg_weekly_spend_sgd']
+    if spend >= high_thresh:
+        return 'High Spender'
+    elif spend >= low_thresh:
+        return 'Mid Spender'
+    else:
+        return 'Budget Spender'
+
+# Merge spend info from users into price_profile
+price_profile = price_profile.merge(
+    users[['user_id', 'avg_weekly_spend_sgd']], on='user_id', how='left')
 price_profile['price_tier'] = price_profile.apply(price_tier, axis=1)
 
 # Print tier distribution
@@ -291,31 +274,31 @@ for tier, count in tier_counts.items():
     print(f"  {tier}: {count} users ({pct:.1f}%)")
 
 # ── Step 3: Pre-compute product lists per tier ───────────────
-# Price Sensitive  → products most frequently bought on promotion
-promo_products = (order_items[order_items['on_promotion'] == True]
-                  ['product_name'].value_counts().head(50).index.tolist())
-
-# Premium Seeker   → products with highest average unit price
+# High Spender   → highest avg priced products
 premium_products = (order_items.groupby('product_name')['unit_price_sgd']
                     .mean().nlargest(50).index.tolist())
 
-# Value Conscious  → products with mid-range prices (between 25th–75th percentile)
-p25 = order_items['unit_price_sgd'].quantile(0.25)
-p75 = order_items['unit_price_sgd'].quantile(0.75)
-value_products = (order_items[
-    (order_items['unit_price_sgd'] >= p25) &
-    (order_items['unit_price_sgd'] <= p75)
+# Mid Spender    → mid-range priced products
+p33 = order_items['unit_price_sgd'].quantile(0.33)
+p67 = order_items['unit_price_sgd'].quantile(0.67)
+mid_products = (order_items[
+    (order_items['unit_price_sgd'] >= p33) &
+    (order_items['unit_price_sgd'] <= p67)
 ]['product_name'].value_counts().head(50).index.tolist())
 
+# Budget Spender → lowest avg priced products
+budget_products = (order_items.groupby('product_name')['unit_price_sgd']
+                   .mean().nsmallest(50).index.tolist())
+
 tier_product_map = {
-    'Price Sensitive':  promo_products,
-    'Premium Seeker':   premium_products,
-    'Value Conscious':  value_products
+    'High Spender':   premium_products,
+    'Mid Spender':    mid_products,
+    'Budget Spender': budget_products
 }
 
-print(f"\n  Price Sensitive pool : {len(promo_products)} products")
-print(f"  Premium Seeker pool  : {len(premium_products)} products")
-print(f"  Value Conscious pool : {len(value_products)} products")
+print(f"\n  High Spender pool   : {len(premium_products)} products")
+print(f"  Mid Spender pool    : {len(mid_products)} products")
+print(f"  Budget Spender pool : {len(budget_products)} products")
 
 # ── Step 4: Price-aware recommendation function ───────────────
 def recommend_with_price_filter(user_id, n=5):
@@ -354,69 +337,71 @@ for uid in users['user_id'].iloc[:5]:
     tier  = price_profile.loc[price_profile['user_id'] == uid, 'price_tier'].values[0]
     print(f"{uid:<8} {tier:<20} {str(base):<40} {str(aware)}")
 
-# ── Step 6: Plot price tier distribution ─────────────────────
-plt.figure(figsize=(7, 4))
+# ── Step 6: Plot spend tier distribution ─────────────────────
 tier_colors = {
-    'Price Sensitive': '#ff9999',
-    'Premium Seeker':  '#66b3ff',
-    'Value Conscious': '#99cc99'
+    'High Spender':   '#66b3ff',
+    'Mid Spender':    '#99cc99',
+    'Budget Spender': '#ff9999'
 }
-colors = [tier_colors[t] for t in tier_counts.index]
-tier_counts.plot(kind='bar', color=colors, edgecolor='black', width=0.5)
-plt.title('Customer Price Tier Distribution')
-plt.xlabel('Price Tier')
+
+plt.figure(figsize=(7, 4))
+tier_order = ['High Spender', 'Mid Spender', 'Budget Spender']
+tier_counts_ordered = tier_counts.reindex(tier_order, fill_value=0)
+colors = [tier_colors[t] for t in tier_counts_ordered.index]
+tier_counts_ordered.plot(kind='bar', color=colors, edgecolor='black', width=0.5)
+plt.title('Customer Spend Tier Distribution')
+plt.xlabel('Spend Tier')
 plt.ylabel('Number of Customers')
 plt.xticks(rotation=10)
-for i, v in enumerate(tier_counts):
+for i, v in enumerate(tier_counts_ordered):
     plt.text(i, v + 0.3, str(v), ha='center', fontsize=10)
 plt.tight_layout()
 plt.savefig('output/2b_price_tiers.png', dpi=150)
 plt.show()
-print("\nPrice tier chart saved → output/2b_price_tiers.png")
 
-# ── Step 7: Plot avg unit price and promo rate per tier ───────
-tier_profiles = price_profile.groupby('price_tier').agg(
-    avg_unit_price=('avg_unit_price',    'mean'),
-    promo_rate=('promo_purchase_rate',   'mean'),
-    avg_basket_size=('avg_basket_size',   'mean')
-).round(2)
+# 2c ==========================================================================================================================
+# ── Step 7: Plot avg weekly spend per tier ────────────────────
+tier_profiles = (price_profile.groupby('price_tier')
+                 .agg(
+                     avg_weekly_spend=('avg_weekly_spend_sgd', 'mean'),
+                     avg_unit_price=('avg_unit_price', 'mean')
+                 )
+                 .round(2)
+                 .reindex(tier_order))
 
-print("\nPrice Tier Profiles:")
+print("\nSpend Tier Profiles:")
 print(tier_profiles.to_string())
 
 fig, axes = plt.subplots(1, 2, figsize=(10, 4))
 
-# Avg unit price per tier
-tier_profiles['avg_unit_price'].plot(
+# Avg weekly spend per tier
+tier_profiles['avg_weekly_spend'].plot(
     kind='bar', ax=axes[0],
     color=[tier_colors.get(t, '#cccccc') for t in tier_profiles.index],
     edgecolor='black', width=0.5)
-axes[0].set_title('Avg Unit Price by Tier (SGD)')
+axes[0].set_title('Avg Weekly Spend by Tier (SGD)')
 axes[0].set_xlabel('')
-axes[0].set_ylabel('Avg Unit Price (SGD)')
+axes[0].set_ylabel('Avg Weekly Spend (SGD)')
 axes[0].tick_params(axis='x', rotation=10)
-for i, v in enumerate(tier_profiles['avg_unit_price']):
-    axes[0].text(i, v + 0.1, f'${v:.2f}', ha='center', fontsize=9)
+for i, v in enumerate(tier_profiles['avg_weekly_spend']):
+    axes[0].text(i, v + 1, f'${v:.2f}', ha='center', fontsize=9)
 
-# Promo purchase rate per tier
-(tier_profiles['promo_rate'] * 100).plot(
+# Avg unit price per tier
+tier_profiles['avg_unit_price'].plot(
     kind='bar', ax=axes[1],
     color=[tier_colors.get(t, '#cccccc') for t in tier_profiles.index],
     edgecolor='black', width=0.5)
-axes[1].set_title('Promotion Purchase Rate by Tier (%)')
+axes[1].set_title('Avg Unit Price by Tier (SGD)')
 axes[1].set_xlabel('')
-axes[1].set_ylabel('% Purchases on Promotion')
+axes[1].set_ylabel('Avg Unit Price (SGD)')
 axes[1].tick_params(axis='x', rotation=10)
-for i, v in enumerate(tier_profiles['promo_rate'] * 100):
-    axes[1].text(i, v + 0.5, f'{v:.1f}%', ha='center', fontsize=9)
+for i, v in enumerate(tier_profiles['avg_unit_price']):
+    axes[1].text(i, v + 0.1, f'${v:.2f}', ha='center', fontsize=9)
 
-plt.suptitle('Price Tier Behavioural Profiles', fontsize=12)
+plt.suptitle('Spend Tier Profiles', fontsize=12)
 plt.tight_layout()
 plt.savefig('output/2c_price_tier_profiles.png', dpi=150)
 plt.show()
-print("Price tier profile chart saved → output/2c_price_tier_profiles.png\n")
-
-
 # =============================================================
 # SECTION 3: DEMAND FORECASTING (ROLLING AVERAGE)
 # =============================================================
@@ -442,7 +427,7 @@ weekly_demand = (order_items_dated
 top_products = order_items['product_name'].value_counts().head(5).index.tolist()
 print(f"Forecasting for top 5 products: {top_products}")
 
-# ── Plot actual demand + 3-week rolling average forecast ──
+
 # ── Plot actual demand + 3-week rolling average forecast ──
 fig, axes = plt.subplots(len(top_products), 1,
                          figsize=(14, 4 * len(top_products)),
@@ -490,7 +475,8 @@ plt.show()
 print("Demand forecast chart saved → output/3_demand_forecast.png")
 
 # ── Flag potential stockout risk: products where latest demand > forecast ──
-print("\nStockout Risk Flags (latest demand > forecast):")
+print("\nStockout Risk Flags (latest demand > forecast):") # check if the latest week's actual demand is more than 20% above the forecast — if yes, that product is flagged as high risk.
+
 for product in top_products:
     prod_data = (weekly_demand[weekly_demand['product_name'] == product]
                  .sort_values('week'))
@@ -507,7 +493,7 @@ print()
 print("=" * 60)
 print("SECTION 4: Promotion Effectiveness Analysis")
 print("=" * 60)
-
+# 4a ========================================================================================================================
 # ── Overall: avg order total with vs without promotion ──
 promo_analysis = orders.groupby('promo_applied')['order_total_sgd'].mean().round(2)
 print("Avg Order Total (SGD):")
@@ -526,8 +512,8 @@ for i, val in enumerate(promo_analysis):
 plt.tight_layout()
 plt.savefig('output/4a_promo_overall.png', dpi=150)
 plt.show()
-print("Promotion overall chart saved → output/4a_promo_overall.png")
 
+# 4b ========================================================================================================================
 # ── By segment: which customer segment responds most to promotions? ──
 seg_orders = orders.merge(seg_df[['user_id', 'segment_label']], on='user_id', how='left')
 seg_promo = (seg_orders.groupby(['segment_label', 'promo_applied'])['order_total_sgd']
@@ -549,16 +535,14 @@ plt.legend(title='Promotion')
 plt.tight_layout()
 plt.savefig('output/4b_promo_by_segment.png', dpi=150)
 plt.show()
-print("Promotion by segment chart saved → output/4b_promo_by_segment.png\n")
-
 
 # =============================================================
-# SECTION 5: SEARCH TREND ANALYSIS (BONUS)
+# SECTION 5: SEARCH TREND ANALYSIS 
 # =============================================================
 print("=" * 60)
 print("SECTION 5: Search Trend Analysis")
 print("=" * 60)
-
+# 5a ========================================================================================================================
 # ── Top 10 most searched terms ──
 top_searches = search_hist['search_term'].value_counts().head(10)
 
@@ -570,8 +554,8 @@ plt.gca().invert_yaxis()
 plt.tight_layout()
 plt.savefig('output/5a_top_searches.png', dpi=150)
 plt.show()
-print("Top searches chart saved → output/5a_top_searches.png")
 
+# 5b ========================================================================================================================
 # ── App vs Web: click-through rate (result_clicked = True) ──
 platform_ctr = search_hist.groupby('platform')['result_clicked'].mean().round(3)
 print(f"\nClick-Through Rate by Platform:")
@@ -592,6 +576,7 @@ plt.savefig('output/5b_platform_ctr.png', dpi=150)
 plt.show()
 print("Platform CTR chart saved → output/5b_platform_ctr.png")
 
+# 5c ========================================================================================================================
 # ── Search trends by day of week ──
 day_order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 daily_searches = (search_hist.groupby('day_of_week')['search_id']
@@ -617,6 +602,7 @@ print("=" * 60)
 print("SECTION 6: RFM Segmentation + Combined Analysis")
 print("=" * 60)
 
+# 6a ========================================================================================================================
 # ── Build RFM table ──────────────────────────────────────────
 orders['timestamp'] = pd.to_datetime(orders['timestamp'])
 snapshot_date = orders['timestamp'].max() + pd.Timedelta(days=1)
@@ -644,22 +630,20 @@ rfm[['r_score', 'f_score', 'm_score']] = (
 def rfm_label(row):
     r, f, m = row['r_score'], row['f_score'], row['m_score']
     if r >= 3 and f >= 3 and m >= 3:
-        return 'Champions'
-    elif r >= 3 and f >= 2:
         return 'Loyal Customers'
     elif r >= 3 and f <= 2:
         return 'Potential Loyalists'
     elif r <= 2 and f >= 3:
         return 'At Risk'
     else:
-        return 'Occasional Visitors'
+        return 'Occasional Shoppers'
 
 rfm['rfm_segment'] = rfm.apply(rfm_label, axis=1)
 
-# ── Plot 1: RFM segment sizes ─────────────────────────────────
-seg_order  = ['Champions', 'Loyal Customers', 'Potential Loyalists',
-              'At Risk', 'Occasional Visitors']
-seg_colors = ['#66b3ff', '#99cc99', '#ffcc99', '#ff9999', '#c2c2f0']
+# ── Updated seg_order and seg_colors ─────────────────────────
+seg_order  = ['Loyal Customers', 'Potential Loyalists',
+              'At Risk', 'Occasional Shoppers']
+seg_colors = ['#66b3ff', '#99cc99', '#ff9999', '#c2c2f0']
 seg_counts = rfm['rfm_segment'].value_counts().reindex(seg_order, fill_value=0)
 
 plt.figure(figsize=(8, 4))
@@ -681,13 +665,12 @@ rfm_profile = (rfm.groupby('rfm_segment')[['recency', 'frequency', 'monetary']]
 print("\nRFM Segment Profiles (averages):")
 print(rfm_profile.to_string())
 
-# ── Plot 2: RFM scatter — frequency vs monetary, coloured by segment ──
+# ── RFM scatter — frequency vs monetary, coloured by segment ──
 palette = {
-    'Champions':          '#66b3ff',
-    'Loyal Customers':    '#99cc99',
-    'Potential Loyalists':'#ffcc99',
-    'At Risk':            '#ff9999',
-    'Occasional Visitors':'#c2c2f0',
+    'Loyal Customers':     '#66b3ff',
+    'Potential Loyalists': '#99cc99',
+    'At Risk':             '#ff9999',
+    'Occasional Shoppers': '#c2c2f0',
 }
 plt.figure(figsize=(9, 5))
 for seg, grp in rfm.groupby('rfm_segment'):
@@ -703,20 +686,15 @@ plt.savefig('output/6b_rfm_scatter.png', dpi=150)
 plt.show()
 print("RFM scatter saved → output/6b_rfm_scatter.png")
 
-# ── Section 6b: Combine K-Means + RFM ────────────────────────
-print("\n── Combining K-Means + RFM segments ──")
-
-# Merge RFM scores back onto seg_df (which already has k-means labels)
+# ── Combine K-Means + RFM ─────────────────────────────────────
 combined = seg_df.merge(
     rfm[['user_id', 'rfm_segment', 'recency', 'frequency', 'monetary']],
     on='user_id', how='left'
 )
-
-# Cross-tab: K-Means segment vs RFM segment
 cross = pd.crosstab(combined['segment_label'], combined['rfm_segment'])
 print("\nK-Means × RFM Cross-Tabulation:")
 print(cross.to_string())
-
+# 6b ========================================================================================================================
 # ── Plot 3: Heatmap of K-Means vs RFM overlap ─────────────────
 plt.figure(figsize=(9, 5))
 sns.heatmap(cross, annot=True, fmt='d', cmap='Blues',
@@ -729,12 +707,11 @@ plt.xticks(rotation=20, ha='right')
 plt.tight_layout()
 plt.savefig('output/6c_kmeans_rfm_heatmap.png', dpi=150)
 plt.show()
-print("K-Means × RFM heatmap saved → output/6c_kmeans_rfm_heatmap.png")
 
 # ── Combined targeting logic: print actionable recommendations ──
 print("\n── Actionable Targeting Recommendations ──")
 targeting = {
-    ('High-Value Customers', 'Champions'):
+    ('High-Value Customers', 'Loyal Customers'):
         'VIP early access to weekly deals + premium product push',
     ('High-Value Customers', 'At Risk'):
         'Urgent re-engagement: Yuu points bonus + personalised offer',
@@ -742,15 +719,16 @@ targeting = {
         'Recipe bundle promotions + meal plan feature highlight',
     ('Regular Families', 'Potential Loyalists'):
         'First click-and-collect incentive + family bundle discount',
-    ('Occasional Visitors', 'At Risk'):
+    ('Budget Shoppers', 'At Risk'):
         '"We miss you" push notification + limited-time discount',
-    ('Occasional Visitors', 'Occasional Visitors'):
+    ('Budget Shoppers', 'Occasional Shoppers'):
         'Price promotions + awareness campaigns on app home feed',
-    ('Budget Shoppers', 'Champions'):
-        'Loyalty point multiplier events + bulk-buy deals',
     ('Budget Shoppers', 'Potential Loyalists'):
-        'Weekly staples promotion + low-minimum click-and-collect',
+        'Weekly staples promotion + first order incentive',
+    ('Regular Families', 'Occasional Shoppers'):
+        'Recipe discovery campaign + low-barrier first order deal',
 }
+
 
 for combo, action in targeting.items():
     kmeans_seg, rfm_seg = combo
@@ -762,29 +740,103 @@ for combo, action in targeting.items():
         print(f"  [{kmeans_seg} × {rfm_seg}] ({count} users)")
         print(f"    → {action}")
 
-# ── Plot 4: Yuu membership rate per RFM segment ───────────────
-# Shows which segments are already loyal via Yuu vs need onboarding
-yuu_rate = (combined.groupby('rfm_segment')['yuu_member']
-            .apply(lambda x: (x == True).mean() * 100)
-            .reindex(seg_order, fill_value=0)
-            .round(1))
+# =============================================================
+# SECTION 7: RECIPE POPULARITY RANKING
+# =============================================================
+print("=" * 60)
+print("SECTION 7: Recipe Popularity Ranking")
+print("=" * 60)
+
+# ── Method: infer recipe "orders" from ingredient purchases ──
+# A recipe is counted as ordered if a user bought >= 50% of
+# its ingredients in any single order
+
+# Build lookup: recipe_id → set of ingredients
+recipe_ingredient_map = (
+    recipe_ing.groupby('recipe_id')['ingredient']
+    .apply(set)
+    .to_dict()
+)
+
+# Build lookup: (order_id, user_id) → set of products bought
+order_product_map = (
+    order_items.groupby(['order_id', 'user_id'])['product_name']
+    .apply(set)
+    .reset_index()
+)
+
+# Count how many times each recipe's ingredients appear together in one order
+recipe_order_counts = {}
+
+for recipe_id, ingredients in recipe_ingredient_map.items():
+    count = 0
+    for _, row in order_product_map.iterrows():
+        products_in_order = row['product_name']
+        # Check if at least 50% of recipe ingredients were bought in this order
+        overlap = ingredients & products_in_order
+        if len(overlap) / len(ingredients) >= 0.5:
+            count += 1
+    recipe_order_counts[recipe_id] = count
+
+# Convert to dataframe and merge with recipe names
+recipe_popularity = pd.DataFrame(
+    list(recipe_order_counts.items()),
+    columns=['recipe_id', 'inferred_orders']
+).merge(recipes[['recipe_id', 'recipe_name', 'cuisine', 'avg_rating']], on='recipe_id')
+
+recipe_popularity = recipe_popularity.sort_values('inferred_orders', ascending=False)
+
+print("\nTop 10 Most Ordered Recipes (inferred from ingredient purchases):")
+print(recipe_popularity.head(10)[
+    ['recipe_name', 'cuisine', 'inferred_orders', 'avg_rating']
+].to_string(index=False))
+
+# ── Plot: top 10 most ordered recipes ────────────────────────
+top_recipes = recipe_popularity.head(10)
+
+plt.figure(figsize=(10, 5))
+colors = plt.cm.Blues(
+    [0.4 + 0.5 * (i / len(top_recipes)) for i in range(len(top_recipes))]
+)[::-1]
+bars = plt.barh(top_recipes['recipe_name'], top_recipes['inferred_orders'],
+                color=colors, edgecolor='black')
+plt.xlabel('Number of Inferred Orders')
+plt.title('Top 10 Most Ordered Recipes\n(based on ingredient purchase patterns)',
+          fontsize=12, fontweight='bold')
+plt.gca().invert_yaxis()
+for bar, val in zip(bars, top_recipes['inferred_orders']):
+    plt.text(val + 0.3, bar.get_y() + bar.get_height()/2,
+             str(val), va='center', fontsize=9)
+plt.tight_layout()
+plt.savefig('output/7a_recipe_popularity.png', dpi=150)
+plt.show()
+print("Recipe popularity chart saved → output/7a_recipe_popularity.png")
+
+# ── Plot: most ordered by cuisine ────────────────────────────
+cuisine_orders = (recipe_popularity.groupby('cuisine')['inferred_orders']
+                  .sum().sort_values(ascending=False))
 
 plt.figure(figsize=(8, 4))
-yuu_rate.plot(kind='bar', color='steelblue', edgecolor='black', width=0.5)
-plt.title('Yuu Membership Rate by RFM Segment')
-plt.xlabel('RFM Segment')
-plt.ylabel('% of Customers with Yuu Membership')
+cuisine_orders.plot(kind='bar', color='mediumpurple', edgecolor='black', width=0.6)
+plt.title('Total Inferred Orders by Cuisine', fontsize=12, fontweight='bold')
+plt.xlabel('Cuisine')
+plt.ylabel('Total Inferred Orders')
 plt.xticks(rotation=20, ha='right')
-for i, v in enumerate(yuu_rate):
-    plt.text(i, v + 0.5, f'{v}%', ha='center', fontsize=10)
-plt.ylim(0, 110)
+for i, v in enumerate(cuisine_orders):
+    plt.text(i, v + 0.3, str(v), ha='center', fontsize=9)
 plt.tight_layout()
-plt.savefig('output/6d_yuu_by_segment.png', dpi=150)
+plt.savefig('output/7b_orders_by_cuisine.png', dpi=150)
 plt.show()
-print("Yuu membership by segment saved → output/6d_yuu_by_segment.png")
+print("Orders by cuisine chart saved → output/7b_orders_by_cuisine.png")
 
-print("\nRFM + Combined analysis complete.\n")
-
+# ── Most popular recipe per cuisine ──────────────────────────
+top_per_cuisine = (recipe_popularity
+                   .sort_values('inferred_orders', ascending=False)
+                   .groupby('cuisine')
+                   .first()
+                   .reset_index()[['cuisine', 'recipe_name', 'inferred_orders', 'avg_rating']])
+print("\nMost Popular Recipe per Cuisine:")
+print(top_per_cuisine.to_string(index=False))
 
 # =============================================================
 # SUMMARY
