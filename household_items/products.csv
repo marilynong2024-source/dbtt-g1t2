@@ -1,0 +1,63 @@
+product_id,product_name,category,avg_price_sgd
+P0001,Floor Cleaner,Cleaning Supplies,14.83
+P0002,Toilet Bowl Cleaner,Cleaning Supplies,20.22
+P0003,Glass Cleaner,Cleaning Supplies,6.03
+P0004,Multi-Purpose Spray,Cleaning Supplies,17.44
+P0005,Bleach,Cleaning Supplies,7.17
+P0006,Disinfectant Wipes,Cleaning Supplies,1.59
+P0007,Mop,Cleaning Supplies,16.09
+P0008,Broom,Cleaning Supplies,23.08
+P0009,Scrubbing Brush,Cleaning Supplies,5.12
+P0010,Sponge,Cleaning Supplies,10.78
+P0011,Rubber Gloves,Cleaning Supplies,4.3
+P0012,Trash Bags,Cleaning Supplies,21.23
+P0013,Air Freshener,Cleaning Supplies,2.89
+P0014,Drain Cleaner,Cleaning Supplies,22.18
+P0015,Shampoo,Toiletries and Personal Care,11.3
+P0016,Conditioner,Toiletries and Personal Care,10.53
+P0017,Body Wash,Toiletries and Personal Care,4.61
+P0018,Bar Soap,Toiletries and Personal Care,3.83
+P0019,Toothbrush,Toiletries and Personal Care,9.08
+P0020,Toothpaste,Toiletries and Personal Care,22.67
+P0021,Floss,Toiletries and Personal Care,18.71
+P0022,Mouthwash,Toiletries and Personal Care,17.58
+P0023,Deodorant,Toiletries and Personal Care,11.05
+P0024,Razor,Toiletries and Personal Care,8.03
+P0025,Shaving Cream,Toiletries and Personal Care,13.23
+P0026,Facial Cleanser,Toiletries and Personal Care,23.28
+P0027,Moisturiser,Toiletries and Personal Care,23.76
+P0028,Sunscreen,Toiletries and Personal Care,9.08
+P0029,Cotton Buds,Toiletries and Personal Care,19.16
+P0030,Laundry Detergent,Laundry,9.92
+P0031,Fabric Softener,Laundry,13.1
+P0032,Stain Remover,Laundry,3.85
+P0033,Dryer Sheets,Laundry,24.2
+P0034,Laundry Bags,Laundry,7.49
+P0035,Clothespins,Laundry,11.63
+P0036,Ironing Board Cover,Laundry,1.63
+P0037,Washing Machine Cleaner,Laundry,2.73
+P0038,Dish Soap,Kitchen Essentials,13.81
+P0039,Dishwasher Tablets,Kitchen Essentials,9.43
+P0040,Kitchen Roll,Kitchen Essentials,19.99
+P0041,Cling Wrap,Kitchen Essentials,11.25
+P0042,Aluminium Foil,Kitchen Essentials,13.98
+P0043,Ziplock Bags,Kitchen Essentials,4.62
+P0044,Rubber Bands,Kitchen Essentials,17.56
+P0045,Candles,Kitchen Essentials,9.9
+P0046,Matches,Kitchen Essentials,11.25
+P0047,Dish Rack,Kitchen Essentials,9.79
+P0048,Scouring Pad,Kitchen Essentials,9.14
+P0049,Bottle Brush,Kitchen Essentials,5.12
+P0050,Diapers,Baby and Family Care,22.46
+P0051,Baby Wipes,Baby and Family Care,21.75
+P0052,Baby Shampoo,Baby and Family Care,7.61
+P0053,Baby Lotion,Baby and Family Care,19.59
+P0054,Baby Powder,Baby and Family Care,15.34
+P0055,Nappy Rash Cream,Baby and Family Care,12.6
+P0056,Baby Bottle Brush,Baby and Family Care,8.46
+P0057,Wet Wipes,Baby and Family Care,4.88
+P0058,Hand Sanitiser,Baby and Family Care,21.43
+P0059,Tissue Paper,Baby and Family Care,6.24
+P0060,Feminine Wash,Baby and Family Care,13.94
+P0061,Sanitary Pads,Baby and Family Care,22.94
+P0062,Panty Liners,Baby and Family Care,24.96

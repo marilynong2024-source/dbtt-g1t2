@@ -1,0 +1,941 @@
+search_id,user_id,search_term,timestamp,day_of_week,platform,result_clicked
+S000546,U0045,Ziplock Bags,2024-01-01 06:48:48,Monday,Web,True
+S000757,U0062,Baby Shampoo,2024-01-01 10:14:18,Monday,App,True
+S000291,U0025,Kitchen Roll,2024-01-02 00:08:50,Tuesday,Web,True
+S000399,U0034,Toothpaste,2024-01-02 00:12:41,Tuesday,App,True
+S000794,U0064,Fabric Softener,2024-01-02 02:18:29,Tuesday,App,True
+S000306,U0026,Candles,2024-01-02 07:49:50,Tuesday,App,True
+S000115,U0011,Multi-Purpose Spray,2024-01-02 11:49:27,Tuesday,App,True
+S000541,U0044,Cotton Buds,2024-01-02 13:08:20,Tuesday,App,True
+S000369,U0031,Dish Rack,2024-01-02 18:36:08,Tuesday,App,False
+S000457,U0038,Ziplock Bags,2024-01-02 20:39:43,Tuesday,App,True
+S000729,U0059,Baby Shampoo,2024-01-02 21:04:34,Tuesday,App,False
+S000058,U0006,Ironing Board Cover,2024-01-03 16:51:56,Wednesday,App,False
+S000025,U0003,Candles,2024-01-03 23:31:29,Wednesday,Web,True
+S000373,U0032,Bleach,2024-01-04 07:53:25,Thursday,Web,False
+S000708,U0057,Baby Shampoo,2024-01-04 17:07:39,Thursday,App,True
+S000591,U0048,Bar Soap,2024-01-04 20:52:16,Thursday,Web,True
+S000507,U0041,Candles,2024-01-06 05:00:38,Saturday,Web,True
+S000103,U0009,Clothespins,2024-01-06 14:55:53,Saturday,App,True
+S000333,U0029,Shampoo,2024-01-07 06:08:36,Sunday,Web,True
+S000933,U0075,Aluminium Foil,2024-01-07 07:45:10,Sunday,Web,True
+S000660,U0053,Stain Remover,2024-01-07 10:07:20,Sunday,App,True
+S000003,U0001,click and collect,2024-01-08 03:01:15,Monday,App,True
+S000157,U0014,bulk buy,2024-01-08 07:54:57,Monday,Web,True
+S000590,U0048,Mouthwash,2024-01-08 08:55:25,Monday,App,True
+S000142,U0014,Glass Cleaner,2024-01-08 14:24:55,Monday,App,False
+S000867,U0071,Baby Powder,2024-01-08 14:38:33,Monday,Web,True
+S000803,U0065,Broom,2024-01-08 17:50:29,Monday,Web,True
+S000795,U0064,Toothpaste,2024-01-08 18:08:11,Monday,App,True
+S000852,U0069,Matches,2024-01-08 20:22:12,Monday,App,True
+S000185,U0017,Wet Wipes,2024-01-09 10:53:06,Tuesday,Web,True
+S000192,U0018,Multi-Purpose Spray,2024-01-09 12:09:07,Tuesday,App,True
+S000549,U0045,Trash Bags,2024-01-09 12:35:24,Tuesday,App,False
+S000428,U0036,Rubber Bands,2024-01-09 14:26:15,Tuesday,Web,False
+S000323,U0027,Sponge,2024-01-09 19:03:56,Tuesday,App,True
+S000359,U0031,Diapers,2024-01-09 21:02:57,Tuesday,Web,True
+S000539,U0044,Baby Wipes,2024-01-09 22:02:33,Tuesday,App,True
+S000739,U0060,Wet Wipes,2024-01-09 22:14:47,Tuesday,App,True
+S000713,U0057,Diapers,2024-01-10 08:47:29,Wednesday,Web,True
+S000251,U0022,Cling Wrap,2024-01-10 10:45:48,Wednesday,App,True
+S000747,U0061,Diapers,2024-01-10 18:39:04,Wednesday,Web,True
+S000073,U0007,Baby Wipes,2024-01-10 19:42:46,Wednesday,App,True
+S000246,U0022,Dryer Sheets,2024-01-10 19:50:15,Wednesday,App,True
+S000254,U0023,Air Freshener,2024-01-10 22:24:43,Wednesday,Web,False
+S000268,U0024,Trash Bags,2024-01-10 23:19:56,Wednesday,Web,True
+S000491,U0040,Mouthwash,2024-01-11 01:20:46,Thursday,App,False
+S000932,U0075,Body Wash,2024-01-11 12:20:55,Thursday,Web,True
+S000509,U0041,Ziplock Bags,2024-01-11 14:18:38,Thursday,App,True
+S000136,U0013,Diapers,2024-01-12 01:07:36,Friday,App,True
+S000521,U0043,Fabric Softener,2024-01-12 05:51:40,Friday,App,True
+S000071,U0007,Razor,2024-01-12 18:11:01,Friday,App,True
+S000083,U0007,Baby Wipes,2024-01-12 19:28:00,Friday,App,True
+S000191,U0018,Glass Cleaner,2024-01-13 06:04:11,Saturday,Web,True
+S000817,U0066,Sponge,2024-01-13 06:42:30,Saturday,Web,False
+S000407,U0035,Laundry Bags,2024-01-13 06:50:46,Saturday,App,True
+S000146,U0014,Ziplock Bags,2024-01-13 19:10:17,Saturday,App,True
+S000830,U0068,Shaving Cream,2024-01-14 01:55:59,Sunday,App,True
+S000500,U0041,Toothbrush,2024-01-14 06:49:16,Sunday,Web,False
+S000074,U0007,Moisturiser,2024-01-14 07:44:47,Sunday,Web,True
+S000119,U0011,Dish Soap,2024-01-14 23:53:46,Sunday,App,False
+S000913,U0074,Tissue Paper,2024-01-15 01:20:35,Monday,Web,True
+S000595,U0048,Dish Rack,2024-01-15 02:01:18,Monday,App,False
+S000818,U0066,Drain Cleaner,2024-01-15 02:17:28,Monday,App,False
+S000255,U0023,Disinfectant Wipes,2024-01-15 06:40:58,Monday,App,False
+S000423,U0036,Bottle Brush,2024-01-15 08:42:09,Monday,App,False
+S000614,U0049,Multi-Purpose Spray,2024-01-15 09:47:56,Monday,App,True
+S000555,U0046,Wet Wipes,2024-01-15 12:04:07,Monday,App,True
+S000205,U0019,Multi-Purpose Spray,2024-01-15 13:43:01,Monday,Web,False
+S000478,U0040,Candles,2024-01-15 15:55:52,Monday,Web,True
+S000922,U0074,Baby Shampoo,2024-01-15 18:19:11,Monday,Web,True
+S000842,U0069,Feminine Wash,2024-01-15 20:20:25,Monday,Web,True
+S000518,U0042,Bleach,2024-01-16 08:16:01,Tuesday,Web,True
+S000348,U0030,Scouring Pad,2024-01-16 08:29:41,Tuesday,App,True
+S000201,U0019,Mop,2024-01-16 13:08:53,Tuesday,App,False
+S000397,U0034,Sponge,2024-01-16 22:19:29,Tuesday,App,True
+S000490,U0040,Aluminium Foil,2024-01-17 00:06:27,Wednesday,App,False
+S000396,U0034,Toilet Bowl Cleaner,2024-01-17 15:21:48,Wednesday,Web,True
+S000870,U0071,Dish Rack,2024-01-17 15:37:01,Wednesday,App,True
+S000503,U0041,Floss,2024-01-17 19:59:43,Wednesday,App,True
+S000640,U0051,Toothbrush,2024-01-17 21:34:38,Wednesday,App,False
+S000899,U0073,Baby Bottle Brush,2024-01-18 02:45:55,Thursday,App,True
+S000497,U0041,Moisturiser,2024-01-18 08:18:46,Thursday,Web,True
+S000559,U0046,Baby Lotion,2024-01-18 13:23:30,Thursday,App,False
+S000319,U0027,promotion,2024-01-18 15:49:07,Thursday,Web,True
+S000169,U0015,Sunscreen,2024-01-18 19:24:58,Thursday,App,True
+S000879,U0071,Cling Wrap,2024-01-19 02:17:48,Friday,App,False
+S000011,U0001,Ironing Board Cover,2024-01-19 02:23:10,Friday,App,True
+S000093,U0009,Baby Shampoo,2024-01-19 02:29:01,Friday,App,True
+S000493,U0040,Bottle Brush,2024-01-19 11:35:17,Friday,App,True
+S000257,U0023,Hand Sanitiser,2024-01-19 18:34:06,Friday,App,True
+S000070,U0007,Dish Rack,2024-01-20 07:01:33,Saturday,Web,True
+S000486,U0040,Disinfectant Wipes,2024-01-20 08:03:06,Saturday,Web,True
+S000583,U0048,Floss,2024-01-20 10:39:35,Saturday,App,False
+S000895,U0073,Floss,2024-01-20 11:19:56,Saturday,App,False
+S000725,U0058,Bottle Brush,2024-01-20 16:02:52,Saturday,App,False
+S000565,U0046,Dishwasher Tablets,2024-01-20 18:55:21,Saturday,App,True
+S000783,U0064,Disinfectant Wipes,2024-01-20 21:35:29,Saturday,Web,False
+S000735,U0060,Floss,2024-01-21 03:20:17,Sunday,App,False
+S000547,U0045,Kitchen Roll,2024-01-21 04:26:15,Sunday,App,False
+S000043,U0005,Panty Liners,2024-01-21 17:02:24,Sunday,App,True
+S000760,U0062,Conditioner,2024-01-21 18:28:36,Sunday,App,False
+S000265,U0024,Rubber Gloves,2024-01-22 06:47:39,Monday,App,False
+S000643,U0051,Bottle Brush,2024-01-22 20:22:32,Monday,App,True
+S000734,U0059,Mouthwash,2024-01-22 22:52:54,Monday,App,False
+S000100,U0009,Scouring Pad,2024-01-23 07:24:15,Tuesday,App,False
+S000004,U0001,Clothespins,2024-01-23 12:14:01,Tuesday,App,False
+S000434,U0036,Baby Shampoo,2024-01-23 12:55:20,Tuesday,Web,True
+S000065,U0006,Washing Machine Cleaner,2024-01-23 13:09:38,Tuesday,App,True
+S000318,U0027,Washing Machine Cleaner,2024-01-23 13:43:03,Tuesday,Web,True
+S000214,U0019,Deodorant,2024-01-23 20:48:21,Tuesday,App,True
+S000816,U0066,Rubber Gloves,2024-01-23 23:20:41,Tuesday,Web,True
+S000792,U0064,halal,2024-01-24 04:13:44,Wednesday,App,True
+S000927,U0074,Dryer Sheets,2024-01-24 06:40:27,Wednesday,App,False
+S000636,U0051,Toothbrush,2024-01-24 08:33:14,Wednesday,App,True
+S000009,U0001,promotion,2024-01-24 13:53:11,Wednesday,App,False
+S000245,U0022,Rubber Bands,2024-01-24 18:59:36,Wednesday,App,True
+S000570,U0047,Ironing Board Cover,2024-01-24 19:01:13,Wednesday,App,True
+S000710,U0057,Nappy Rash Cream,2024-01-24 21:58:35,Wednesday,App,False
+S000824,U0067,Toothbrush,2024-01-24 22:19:02,Wednesday,App,True
+S000714,U0057,Panty Liners,2024-01-24 23:59:41,Wednesday,Web,True
+S000662,U0054,Cotton Buds,2024-01-25 01:17:21,Thursday,Web,True
+S000208,U0019,Bleach,2024-01-25 12:16:28,Thursday,App,True
+S000079,U0007,Baby Lotion,2024-01-25 14:44:15,Thursday,Web,True
+S000076,U0007,Tissue Paper,2024-01-26 05:48:26,Friday,Web,True
+S000320,U0027,Tissue Paper,2024-01-26 14:54:18,Friday,Web,True
+S000400,U0035,Drain Cleaner,2024-01-26 17:31:38,Friday,App,True
+S000328,U0028,delivery,2024-01-26 19:46:38,Friday,Web,True
+S000847,U0069,Dish Soap,2024-01-26 23:55:54,Friday,App,False
+S000653,U0053,Laundry Detergent,2024-01-27 02:16:54,Saturday,App,False
+S000693,U0056,Dish Rack,2024-01-27 16:10:06,Saturday,App,True
+S000368,U0031,Baby Lotion,2024-01-27 16:45:25,Saturday,Web,True
+S000406,U0035,Clothespins,2024-01-27 23:02:29,Saturday,App,True
+S000064,U0006,Fabric Softener,2024-01-28 03:24:29,Sunday,App,True
+S000261,U0024,Scrubbing Brush,2024-01-28 03:25:35,Sunday,App,False
+S000365,U0031,Mouthwash,2024-01-28 04:15:14,Sunday,Web,False
+S000207,U0019,Toilet Bowl Cleaner,2024-01-28 17:24:01,Sunday,Web,False
+S000038,U0004,Clothespins,2024-01-28 18:58:36,Sunday,App,True
+S000694,U0056,Laundry Bags,2024-01-28 19:28:22,Sunday,App,False
+S000779,U0064,Toilet Bowl Cleaner,2024-01-29 05:16:17,Monday,App,False
+S000173,U0015,Feminine Wash,2024-01-29 08:38:20,Monday,App,True
+S000561,U0046,Feminine Wash,2024-01-29 19:14:20,Monday,App,False
+S000375,U0032,bulk buy,2024-01-29 21:54:45,Monday,App,True
+S000724,U0058,discount,2024-01-29 23:03:49,Monday,App,False
+S000544,U0045,Stain Remover,2024-01-30 05:41:24,Tuesday,App,True
+S000026,U0003,Scouring Pad,2024-01-30 23:22:31,Tuesday,App,True
+S000332,U0029,Clothespins,2024-01-31 02:55:04,Wednesday,App,True
+S000556,U0046,Drain Cleaner,2024-01-31 04:15:56,Wednesday,App,True
+S000597,U0048,Body Wash,2024-01-31 14:01:16,Wednesday,Web,True
+S000489,U0040,Dishwasher Tablets,2024-01-31 20:53:19,Wednesday,App,True
+S000798,U0065,Scouring Pad,2024-01-31 22:43:13,Wednesday,App,False
+S000897,U0073,Baby Lotion,2024-02-01 05:05:36,Thursday,App,False
+S000230,U0021,Kitchen Roll,2024-02-01 10:49:14,Thursday,App,False
+S000388,U0033,Dishwasher Tablets,2024-02-01 13:04:22,Thursday,Web,True
+S000612,U0049,Cotton Buds,2024-02-01 14:02:03,Thursday,App,True
+S000501,U0041,Ziplock Bags,2024-02-01 20:50:18,Thursday,App,True
+S000617,U0050,Deodorant,2024-02-02 00:56:33,Friday,Web,True
+S000526,U0043,Laundry Bags,2024-02-02 10:06:13,Friday,App,True
+S000704,U0056,Wet Wipes,2024-02-02 10:22:13,Friday,App,True
+S000460,U0038,promotion,2024-02-02 11:27:27,Friday,App,False
+S000126,U0013,Panty Liners,2024-02-02 15:33:18,Friday,App,False
+S000462,U0038,Aluminium Foil,2024-02-02 15:54:38,Friday,App,False
+S000472,U0039,Panty Liners,2024-02-02 16:41:43,Friday,App,False
+S000036,U0004,Nappy Rash Cream,2024-02-03 00:10:52,Saturday,App,True
+S000217,U0019,Hand Sanitiser,2024-02-03 12:38:13,Saturday,Web,True
+S000659,U0053,Multi-Purpose Spray,2024-02-03 17:40:29,Saturday,App,True
+S000303,U0026,Aluminium Foil,2024-02-04 01:51:56,Sunday,Web,False
+S000586,U0048,Deodorant,2024-02-04 04:41:13,Sunday,App,False
+S000775,U0063,Washing Machine Cleaner,2024-02-04 12:40:02,Sunday,Web,False
+S000813,U0066,Floor Cleaner,2024-02-04 13:30:12,Sunday,App,False
+S000580,U0048,Toothbrush,2024-02-04 22:00:09,Sunday,App,True
+S000418,U0036,Aluminium Foil,2024-02-04 22:31:17,Sunday,Web,False
+S000325,U0028,Drain Cleaner,2024-02-04 22:46:25,Sunday,App,False
+S000154,U0014,Bleach,2024-02-05 00:05:09,Monday,App,True
+S000344,U0029,Ironing Board Cover,2024-02-05 16:56:17,Monday,Web,True
+S000305,U0026,Ironing Board Cover,2024-02-05 21:08:34,Monday,App,True
+S000441,U0037,Razor,2024-02-06 04:37:33,Tuesday,Web,False
+S000456,U0038,Kitchen Roll,2024-02-06 07:56:33,Tuesday,App,True
+S000655,U0053,Kitchen Roll,2024-02-06 11:50:37,Tuesday,App,True
+S000248,U0022,Cling Wrap,2024-02-06 20:41:27,Tuesday,App,True
+S000015,U0001,Ironing Board Cover,2024-02-07 00:18:31,Wednesday,Web,False
+S000271,U0024,Shampoo,2024-02-07 01:07:09,Wednesday,App,True
+S000155,U0014,promotion,2024-02-07 06:48:33,Wednesday,App,True
+S000833,U0068,Cotton Buds,2024-02-07 13:46:07,Wednesday,App,True
+S000129,U0013,Baby Powder,2024-02-08 07:21:11,Thursday,App,False
+S000623,U0050,Panty Liners,2024-02-08 18:33:07,Thursday,App,True
+S000216,U0019,promotion,2024-02-08 20:53:55,Thursday,App,True
+S000052,U0006,Deodorant,2024-02-08 23:46:17,Thursday,App,False
+S000903,U0073,Diapers,2024-02-09 04:01:25,Friday,Web,False
+S000488,U0040,Nappy Rash Cream,2024-02-09 06:52:16,Friday,Web,True
+S000876,U0071,Dish Soap,2024-02-09 07:00:45,Friday,Web,False
+S000715,U0057,Baby Powder,2024-02-09 21:40:32,Friday,Web,False
+S000668,U0054,Shaving Cream,2024-02-10 03:26:10,Saturday,App,False
+S000558,U0046,Bottle Brush,2024-02-10 07:39:17,Saturday,App,True
+S000936,U0075,Matches,2024-02-10 22:10:38,Saturday,App,False
+S000809,U0065,Laundry Bags,2024-02-10 22:18:46,Saturday,Web,False
+S000709,U0057,Body Wash,2024-02-11 00:13:04,Sunday,Web,True
+S000862,U0070,Bar Soap,2024-02-11 01:44:28,Sunday,App,True
+S000826,U0067,Bar Soap,2024-02-11 02:45:56,Sunday,App,False
+S000353,U0030,Dish Soap,2024-02-11 03:05:44,Sunday,App,False
+S000637,U0051,Mouthwash,2024-02-11 03:28:46,Sunday,App,True
+S000286,U0025,Candles,2024-02-11 13:15:02,Sunday,App,False
+S000069,U0007,Shaving Cream,2024-02-12 04:33:00,Monday,App,True
+S000923,U0074,Baby Lotion,2024-02-12 10:35:31,Monday,Web,True
+S000340,U0029,eco-friendly,2024-02-12 22:08:01,Monday,App,True
+S000566,U0046,Bottle Brush,2024-02-13 03:56:16,Tuesday,App,True
+S000289,U0025,Matches,2024-02-13 19:42:21,Tuesday,Web,True
+S000378,U0032,Trash Bags,2024-02-13 20:34:15,Tuesday,App,False
+S000494,U0041,Cling Wrap,2024-02-13 22:07:32,Tuesday,Web,False
+S000911,U0073,Laundry Bags,2024-02-13 22:36:48,Tuesday,Web,True
+S000814,U0066,Drain Cleaner,2024-02-14 04:54:19,Wednesday,App,True
+S000532,U0044,Bar Soap,2024-02-14 08:26:30,Wednesday,Web,False
+S000882,U0071,Baby Wipes,2024-02-14 13:29:00,Wednesday,App,True
+S000875,U0071,Kitchen Roll,2024-02-14 15:00:35,Wednesday,App,True
+S000021,U0002,Baby Bottle Brush,2024-02-15 08:28:47,Thursday,App,True
+S000338,U0029,Laundry Bags,2024-02-15 11:16:18,Thursday,Web,False
+S000832,U0068,Shaving Cream,2024-02-15 13:00:08,Thursday,App,True
+S000553,U0045,Bleach,2024-02-15 23:26:10,Thursday,App,True
+S000339,U0029,Clothespins,2024-02-16 00:03:10,Friday,App,True
+S000178,U0015,Razor,2024-02-16 03:29:01,Friday,App,True
+S000334,U0029,Laundry Detergent,2024-02-16 17:35:10,Friday,App,True
+S000187,U0017,Candles,2024-02-16 19:43:41,Friday,Web,False
+S000270,U0024,Rubber Gloves,2024-02-17 00:43:04,Saturday,App,False
+S000124,U0012,Floss,2024-02-17 05:56:13,Saturday,App,False
+S000336,U0029,Mop,2024-02-17 12:32:37,Saturday,Web,True
+S000240,U0021,Panty Liners,2024-02-17 13:12:49,Saturday,Web,True
+S000836,U0069,Nappy Rash Cream,2024-02-17 19:15:33,Saturday,App,False
+S000247,U0022,Baby Powder,2024-02-18 05:01:24,Sunday,App,True
+S000577,U0047,Feminine Wash,2024-02-18 09:06:45,Sunday,Web,False
+S000671,U0054,Cotton Buds,2024-02-19 00:13:28,Monday,Web,True
+S000422,U0036,Wet Wipes,2024-02-19 01:34:55,Monday,Web,True
+S000889,U0072,Dish Rack,2024-02-19 06:00:51,Monday,App,False
+S000884,U0071,Aluminium Foil,2024-02-19 10:08:23,Monday,App,True
+S000039,U0004,Fabric Softener,2024-02-19 13:54:31,Monday,Web,True
+S000176,U0015,Glass Cleaner,2024-02-19 16:41:31,Monday,App,True
+S000363,U0031,Sponge,2024-02-19 23:13:46,Monday,App,False
+S000430,U0036,Baby Lotion,2024-02-20 05:48:29,Tuesday,App,False
+S000568,U0046,Ziplock Bags,2024-02-20 06:11:29,Tuesday,App,True
+S000360,U0031,Glass Cleaner,2024-02-20 15:17:43,Tuesday,Web,False
+S000912,U0074,Floor Cleaner,2024-02-20 16:50:57,Tuesday,App,True
+S000308,U0026,Toilet Bowl Cleaner,2024-02-20 18:55:33,Tuesday,Web,True
+S000514,U0042,Shampoo,2024-02-20 21:52:19,Tuesday,App,True
+S000628,U0050,Dishwasher Tablets,2024-02-21 03:02:53,Wednesday,App,True
+S000726,U0058,Aluminium Foil,2024-02-21 06:54:42,Wednesday,App,True
+S000646,U0052,Baby Lotion,2024-02-21 06:57:57,Wednesday,App,False
+S000793,U0064,Air Freshener,2024-02-21 07:26:44,Wednesday,App,True
+S000278,U0024,Trash Bags,2024-02-21 08:01:01,Wednesday,Web,True
+S000626,U0050,Razor,2024-02-21 11:00:36,Wednesday,App,False
+S000267,U0024,Broom,2024-02-21 13:27:41,Wednesday,Web,False
+S000199,U0018,eco-friendly,2024-02-21 19:00:30,Wednesday,App,False
+S000017,U0002,weekly deals,2024-02-21 21:06:53,Wednesday,App,True
+S000629,U0050,Cotton Buds,2024-02-22 03:35:22,Thursday,Web,True
+S000938,U0075,Wet Wipes,2024-02-22 07:32:00,Thursday,App,False
+S000654,U0053,Scouring Pad,2024-02-22 07:35:17,Thursday,Web,True
+S000537,U0044,Cling Wrap,2024-02-22 16:09:13,Thursday,App,False
+S000168,U0015,Toothpaste,2024-02-22 23:17:58,Thursday,App,False
+S000300,U0026,Feminine Wash,2024-02-22 23:30:46,Thursday,App,True
+S000282,U0025,Bottle Brush,2024-02-23 02:24:16,Friday,App,True
+S000045,U0005,Rubber Gloves,2024-02-23 07:10:16,Friday,App,False
+S000573,U0047,Facial Cleanser,2024-02-23 09:30:28,Friday,App,True
+S000677,U0055,Baby Shampoo,2024-02-23 16:30:19,Friday,Web,True
+S000837,U0069,Baby Bottle Brush,2024-02-23 17:25:17,Friday,App,True
+S000505,U0041,Stain Remover,2024-02-23 18:45:46,Friday,Web,True
+S000479,U0040,Bottle Brush,2024-02-24 00:37:32,Saturday,Web,True
+S000279,U0024,Multi-Purpose Spray,2024-02-24 04:15:50,Saturday,Web,True
+S000576,U0047,Toothpaste,2024-02-24 07:51:02,Saturday,App,True
+S000931,U0075,halal,2024-02-24 10:08:13,Saturday,App,True
+S000676,U0054,Razor,2024-02-24 21:22:11,Saturday,App,False
+S000113,U0011,Broom,2024-02-25 00:01:27,Sunday,Web,False
+S000147,U0014,Mop,2024-02-25 04:13:15,Sunday,App,False
+S000666,U0054,Trash Bags,2024-02-25 08:31:10,Sunday,App,True
+S000252,U0022,Candles,2024-02-25 11:41:02,Sunday,Web,True
+S000921,U0074,Stain Remover,2024-02-25 18:51:59,Sunday,App,True
+S000097,U0009,Mop,2024-02-25 20:27:00,Sunday,Web,True
+S000002,U0001,Washing Machine Cleaner,2024-02-25 23:11:32,Sunday,Web,True
+S000219,U0020,Glass Cleaner,2024-02-26 09:11:10,Monday,App,True
+S000284,U0025,Toothbrush,2024-02-26 09:36:26,Monday,App,True
+S000415,U0035,Cling Wrap,2024-02-26 14:14:48,Monday,Web,False
+S000624,U0050,Deodorant,2024-02-26 15:56:23,Monday,App,True
+S000461,U0038,Cling Wrap,2024-02-26 17:14:15,Monday,App,True
+S000034,U0004,Baby Wipes,2024-02-26 23:11:34,Monday,App,True
+S000686,U0056,Razor,2024-02-27 01:07:58,Tuesday,App,True
+S000770,U0063,Feminine Wash,2024-02-27 02:56:53,Tuesday,App,True
+S000600,U0049,Deodorant,2024-02-27 04:32:59,Tuesday,App,True
+S000087,U0008,bulk buy,2024-02-27 06:19:23,Tuesday,App,False
+S000613,U0049,Bleach,2024-02-27 06:22:25,Tuesday,App,True
+S000822,U0067,delivery,2024-02-27 06:41:57,Tuesday,Web,True
+S000361,U0031,Diapers,2024-02-27 07:41:44,Tuesday,App,True
+S000721,U0058,Rubber Bands,2024-02-27 08:26:10,Tuesday,App,True
+S000044,U0005,Candles,2024-02-27 10:51:54,Tuesday,Web,True
+S000620,U0050,Dish Rack,2024-02-27 17:59:14,Tuesday,App,True
+S000264,U0024,Sponge,2024-02-28 05:07:31,Wednesday,App,True
+S000437,U0037,Baby Wipes,2024-02-28 07:19:55,Wednesday,App,False
+S000413,U0035,Bar Soap,2024-02-28 08:07:47,Wednesday,App,False
+S000819,U0067,Sunscreen,2024-02-28 12:23:45,Wednesday,Web,True
+S000542,U0044,Feminine Wash,2024-02-29 00:19:12,Thursday,Web,False
+S000839,U0069,Panty Liners,2024-02-29 07:36:06,Thursday,App,False
+S000224,U0020,Scrubbing Brush,2024-03-01 01:23:57,Friday,App,False
+S000162,U0015,Mouthwash,2024-03-01 02:13:29,Friday,App,True
+S000520,U0043,Toilet Bowl Cleaner,2024-03-01 05:29:40,Friday,Web,True
+S000149,U0014,Disinfectant Wipes,2024-03-01 05:47:04,Friday,Web,False
+S000108,U0010,Toothpaste,2024-03-01 12:20:07,Friday,Web,True
+S000703,U0056,Feminine Wash,2024-03-01 14:27:19,Friday,App,True
+S000091,U0008,Ironing Board Cover,2024-03-01 16:34:51,Friday,App,True
+S000451,U0037,Baby Shampoo,2024-03-01 19:33:04,Friday,App,True
+S000386,U0033,Cotton Buds,2024-03-02 01:36:17,Saturday,App,True
+S000133,U0013,Feminine Wash,2024-03-02 09:18:50,Saturday,App,True
+S000029,U0003,Bottle Brush,2024-03-02 11:44:52,Saturday,Web,False
+S000807,U0065,Bleach,2024-03-03 04:45:56,Sunday,Web,True
+S000293,U0026,Washing Machine Cleaner,2024-03-03 08:44:59,Sunday,App,False
+S000536,U0044,Mouthwash,2024-03-03 11:42:21,Sunday,App,True
+S000416,U0036,Stain Remover,2024-03-04 06:44:23,Monday,App,True
+S000480,U0040,Candles,2024-03-04 13:16:42,Monday,Web,True
+S000075,U0007,Conditioner,2024-03-04 19:11:54,Monday,App,False
+S000307,U0026,Dish Rack,2024-03-05 00:09:54,Tuesday,App,False
+S000290,U0025,Rubber Bands,2024-03-05 03:16:47,Tuesday,Web,True
+S000618,U0050,Cling Wrap,2024-03-05 07:00:45,Tuesday,App,True
+S000024,U0002,Tissue Paper,2024-03-05 11:12:26,Tuesday,App,True
+S000411,U0035,Toothbrush,2024-03-05 12:14:39,Tuesday,Web,True
+S000019,U0002,Nappy Rash Cream,2024-03-05 13:16:56,Tuesday,Web,False
+S000148,U0014,Toothpaste,2024-03-05 17:34:46,Tuesday,App,False
+S000606,U0049,Cotton Buds,2024-03-06 04:42:21,Wednesday,App,True
+S000484,U0040,Aluminium Foil,2024-03-06 14:03:11,Wednesday,Web,False
+S000027,U0003,Laundry Bags,2024-03-06 17:48:34,Wednesday,Web,False
+S000392,U0034,Toothbrush,2024-03-07 03:16:38,Thursday,Web,False
+S000141,U0014,Drain Cleaner,2024-03-07 16:32:09,Thursday,Web,True
+S000579,U0048,Mouthwash,2024-03-07 19:18:54,Thursday,Web,False
+S000342,U0029,Laundry Detergent,2024-03-07 21:05:21,Thursday,Web,False
+S000227,U0021,Matches,2024-03-07 21:33:18,Thursday,App,False
+S000285,U0025,Rubber Gloves,2024-03-08 06:10:15,Friday,App,False
+S000545,U0045,Bar Soap,2024-03-08 06:27:05,Friday,Web,False
+S000525,U0043,Broom,2024-03-08 07:45:46,Friday,Web,False
+S000604,U0049,Fabric Softener,2024-03-08 08:15:08,Friday,App,True
+S000799,U0065,Clothespins,2024-03-08 20:20:08,Friday,App,True
+S000610,U0049,Air Freshener,2024-03-09 04:51:21,Saturday,Web,True
+S000504,U0041,Diapers,2024-03-09 06:16:29,Saturday,App,True
+S000203,U0019,Conditioner,2024-03-09 06:19:39,Saturday,App,True
+S000588,U0048,Facial Cleanser,2024-03-09 06:57:27,Saturday,Web,False
+S000402,U0035,Stain Remover,2024-03-09 17:21:36,Saturday,Web,True
+S000730,U0059,Matches,2024-03-10 10:11:54,Sunday,App,False
+S000737,U0060,Bottle Brush,2024-03-10 15:11:31,Sunday,Web,True
+S000707,U0057,Kitchen Roll,2024-03-10 18:13:49,Sunday,App,True
+S000184,U0016,Body Wash,2024-03-11 00:32:07,Monday,App,False
+S000800,U0065,Drain Cleaner,2024-03-11 01:26:23,Monday,App,True
+S000222,U0020,Multi-Purpose Spray,2024-03-11 01:53:58,Monday,Web,False
+S000511,U0041,Shampoo,2024-03-11 02:50:22,Monday,App,True
+S000209,U0019,Dish Rack,2024-03-11 07:44:38,Monday,App,False
+S000888,U0072,Baby Lotion,2024-03-11 08:17:58,Monday,App,True
+S000848,U0069,Baby Bottle Brush,2024-03-11 15:44:11,Monday,Web,True
+S000417,U0036,Baby Wipes,2024-03-11 21:05:44,Monday,App,False
+S000846,U0069,Baby Shampoo,2024-03-12 00:50:18,Tuesday,App,True
+S000311,U0027,Dish Soap,2024-03-12 08:52:43,Tuesday,Web,True
+S000661,U0054,Ironing Board Cover,2024-03-12 12:38:39,Tuesday,App,False
+S000853,U0069,Baby Powder,2024-03-12 17:41:33,Tuesday,App,True
+S000627,U0050,Ziplock Bags,2024-03-13 01:04:51,Wednesday,App,True
+S000929,U0074,Panty Liners,2024-03-13 01:54:04,Wednesday,Web,True
+S000166,U0015,Panty Liners,2024-03-13 01:58:25,Wednesday,Web,True
+S000940,U0075,Bottle Brush,2024-03-13 07:05:19,Wednesday,App,True
+S000550,U0045,Cotton Buds,2024-03-13 07:56:18,Wednesday,App,False
+S000731,U0059,Nappy Rash Cream,2024-03-13 08:32:42,Wednesday,App,True
+S000377,U0032,Rubber Gloves,2024-03-13 10:32:46,Wednesday,App,True
+S000823,U0067,Moisturiser,2024-03-13 10:54:51,Wednesday,App,False
+S000452,U0037,Baby Shampoo,2024-03-13 11:43:56,Wednesday,Web,True
+S000326,U0028,Baby Powder,2024-03-13 17:06:51,Wednesday,App,True
+S000711,U0057,Baby Wipes,2024-03-13 20:31:24,Wednesday,Web,True
+S000327,U0028,Bottle Brush,2024-03-13 22:38:06,Wednesday,App,False
+S000107,U0010,Sunscreen,2024-03-14 01:11:34,Thursday,App,True
+S000380,U0032,Mop,2024-03-14 05:44:15,Thursday,Web,True
+S000283,U0025,Matches,2024-03-14 17:30:11,Thursday,App,True
+S000356,U0030,Aluminium Foil,2024-03-14 22:00:44,Thursday,App,False
+S000820,U0067,Floss,2024-03-15 01:30:57,Friday,App,False
+S000918,U0074,Stain Remover,2024-03-15 07:23:11,Friday,Web,True
+S000534,U0044,Facial Cleanser,2024-03-15 08:48:49,Friday,App,True
+S000804,U0065,Washing Machine Cleaner,2024-03-15 22:18:43,Friday,App,False
+S000171,U0015,Mouthwash,2024-03-15 23:39:52,Friday,App,True
+S000854,U0070,Razor,2024-03-16 08:38:41,Saturday,App,True
+S000347,U0030,Kitchen Roll,2024-03-16 10:09:50,Saturday,App,True
+S000066,U0006,Bar Soap,2024-03-16 11:13:15,Saturday,App,True
+S000443,U0037,Baby Bottle Brush,2024-03-16 12:06:21,Saturday,App,False
+S000389,U0033,Cotton Buds,2024-03-16 13:36:04,Saturday,Web,False
+S000448,U0037,Tissue Paper,2024-03-17 05:23:15,Sunday,Web,True
+S000329,U0028,Washing Machine Cleaner,2024-03-17 07:47:09,Sunday,Web,True
+S000125,U0012,Toothpaste,2024-03-17 20:24:23,Sunday,App,False
+S000649,U0052,Floor Cleaner,2024-03-17 20:31:40,Sunday,App,False
+S000322,U0027,Glass Cleaner,2024-03-17 21:15:17,Sunday,App,True
+S000562,U0046,Sanitary Pads,2024-03-17 22:37:58,Sunday,Web,True
+S000355,U0030,Cling Wrap,2024-03-18 00:26:21,Monday,App,False
+S000674,U0054,Razor,2024-03-18 02:51:53,Monday,Web,True
+S000244,U0021,Candles,2024-03-18 10:09:14,Monday,App,True
+S000259,U0023,Clothespins,2024-03-18 22:35:57,Monday,Web,True
+S000748,U0061,Baby Powder,2024-03-19 07:24:25,Tuesday,App,True
+S000658,U0053,Laundry Bags,2024-03-19 07:54:39,Tuesday,App,False
+S000699,U0056,Stain Remover,2024-03-19 07:56:59,Tuesday,App,True
+S000121,U0012,Washing Machine Cleaner,2024-03-19 12:44:50,Tuesday,Web,False
+S000815,U0066,Rubber Gloves,2024-03-19 12:51:51,Tuesday,App,True
+S000682,U0055,Nappy Rash Cream,2024-03-19 13:34:03,Tuesday,App,False
+S000122,U0012,Mouthwash,2024-03-19 15:35:14,Tuesday,App,True
+S000557,U0046,Feminine Wash,2024-03-19 22:29:08,Tuesday,App,False
+S000885,U0072,Rubber Bands,2024-03-20 08:25:54,Wednesday,App,True
+S000372,U0031,Tissue Paper,2024-03-20 20:58:35,Wednesday,App,True
+S000751,U0061,Baby Powder,2024-03-21 01:38:12,Thursday,App,False
+S000272,U0024,Glass Cleaner,2024-03-21 04:32:00,Thursday,Web,True
+S000891,U0072,Shampoo,2024-03-21 05:46:58,Thursday,Web,False
+S000090,U0008,Floss,2024-03-21 08:30:39,Thursday,App,True
+S000170,U0015,Multi-Purpose Spray,2024-03-21 13:33:35,Thursday,App,True
+S000313,U0027,Scouring Pad,2024-03-21 17:58:51,Thursday,Web,False
+S000183,U0016,Toothbrush,2024-03-21 21:20:44,Thursday,App,False
+S000238,U0021,Dish Rack,2024-03-21 21:26:06,Thursday,Web,False
+S000609,U0049,Razor,2024-03-22 11:43:32,Friday,App,True
+S000689,U0056,Wet Wipes,2024-03-22 15:32:39,Friday,App,True
+S000881,U0071,Baby Powder,2024-03-22 16:31:46,Friday,App,True
+S000716,U0057,Tissue Paper,2024-03-22 17:24:11,Friday,Web,True
+S000153,U0014,Rubber Gloves,2024-03-23 05:13:00,Saturday,Web,True
+S000516,U0042,Baby Powder,2024-03-23 06:00:13,Saturday,Web,True
+S000672,U0054,Ironing Board Cover,2024-03-23 07:04:58,Saturday,App,True
+S000728,U0059,Cling Wrap,2024-03-23 17:16:53,Saturday,Web,True
+S000440,U0037,Hand Sanitiser,2024-03-23 19:01:31,Saturday,App,True
+S000622,U0050,Dish Soap,2024-03-24 00:47:17,Sunday,App,True
+S000182,U0016,Dish Soap,2024-03-24 08:23:53,Sunday,App,False
+S000395,U0034,Toilet Bowl Cleaner,2024-03-24 20:33:26,Sunday,App,False
+S000766,U0062,click and collect,2024-03-25 01:02:33,Monday,Web,True
+S000742,U0061,Air Freshener,2024-03-25 01:13:02,Monday,Web,False
+S000032,U0003,Trash Bags,2024-03-25 06:27:13,Monday,App,False
+S000436,U0037,Baby Wipes,2024-03-26 02:00:04,Tuesday,Web,False
+S000468,U0039,Trash Bags,2024-03-26 06:12:50,Tuesday,App,True
+S000861,U0070,Scrubbing Brush,2024-03-26 10:04:35,Tuesday,App,True
+S000412,U0035,Ziplock Bags,2024-03-26 11:35:15,Tuesday,App,True
+S000163,U0015,Baby Lotion,2024-03-26 13:19:57,Tuesday,App,True
+S000487,U0040,Kitchen Roll,2024-03-26 16:32:29,Tuesday,App,True
+S000806,U0065,Scouring Pad,2024-03-27 12:26:44,Wednesday,App,True
+S000802,U0065,Dish Soap,2024-03-27 12:57:35,Wednesday,App,False
+S000431,U0036,Cotton Buds,2024-03-27 13:28:43,Wednesday,App,True
+S000850,U0069,Bar Soap,2024-03-27 15:32:16,Wednesday,App,True
+S000335,U0029,Laundry Detergent,2024-03-27 16:33:58,Wednesday,Web,False
+S000749,U0061,Feminine Wash,2024-03-28 00:17:26,Thursday,App,True
+S000175,U0015,Sanitary Pads,2024-03-28 02:38:03,Thursday,Web,True
+S000467,U0039,Stain Remover,2024-03-28 07:54:16,Thursday,App,True
+S000081,U0007,Baby Bottle Brush,2024-03-28 18:29:52,Thursday,Web,True
+S000522,U0043,Shampoo,2024-03-29 00:51:57,Friday,Web,False
+S000435,U0036,Feminine Wash,2024-03-29 10:00:13,Friday,App,False
+S000732,U0059,Shampoo,2024-03-29 15:37:28,Friday,App,True
+S000042,U0005,Dryer Sheets,2024-03-29 17:00:33,Friday,App,True
+S000764,U0062,Bar Soap,2024-03-29 19:34:55,Friday,Web,False
+S000446,U0037,Baby Lotion,2024-03-29 20:20:22,Friday,App,True
+S000410,U0035,Ironing Board Cover,2024-03-29 21:47:23,Friday,App,True
+S000812,U0065,Fabric Softener,2024-03-30 04:08:40,Saturday,Web,True
+S000276,U0024,Glass Cleaner,2024-03-30 06:11:14,Saturday,Web,True
+S000935,U0075,eco-friendly,2024-03-30 08:05:03,Saturday,App,False
+S000364,U0031,Nappy Rash Cream,2024-03-30 11:37:07,Saturday,App,False
+S000829,U0068,click and collect,2024-03-30 13:39:05,Saturday,Web,False
+S000419,U0036,Scouring Pad,2024-03-30 15:18:55,Saturday,Web,True
+S000690,U0056,Baby Bottle Brush,2024-03-31 01:16:52,Sunday,App,True
+S000131,U0013,discount,2024-03-31 02:10:40,Sunday,Web,False
+S000242,U0021,Candles,2024-03-31 04:27:26,Sunday,App,True
+S000673,U0054,Bar Soap,2024-03-31 14:58:13,Sunday,App,False
+S000061,U0006,Dryer Sheets,2024-04-01 13:14:29,Monday,App,False
+S000691,U0056,Aluminium Foil,2024-04-01 16:42:11,Monday,App,False
+S000014,U0001,Washing Machine Cleaner,2024-04-01 16:42:13,Monday,App,True
+S000174,U0015,Sanitary Pads,2024-04-01 17:47:58,Monday,Web,True
+S000647,U0052,Sponge,2024-04-01 20:33:25,Monday,App,True
+S000801,U0065,bulk buy,2024-04-02 04:59:41,Tuesday,Web,False
+S000650,U0052,Trash Bags,2024-04-02 06:40:38,Tuesday,App,True
+S000080,U0007,Baby Powder,2024-04-02 11:28:01,Tuesday,App,True
+S000292,U0026,Shaving Cream,2024-04-02 17:04:16,Tuesday,Web,True
+S000312,U0027,Stain Remover,2024-04-02 20:29:21,Tuesday,App,True
+S000275,U0024,Rubber Gloves,2024-04-02 21:22:13,Tuesday,Web,True
+S000414,U0035,Facial Cleanser,2024-04-03 00:20:49,Wednesday,App,True
+S000352,U0030,Cling Wrap,2024-04-03 02:08:20,Wednesday,App,True
+S000864,U0070,Shampoo,2024-04-03 12:01:48,Wednesday,Web,True
+S000433,U0036,Diapers,2024-04-03 17:52:34,Wednesday,App,True
+S000738,U0060,Body Wash,2024-04-03 19:18:51,Wednesday,App,True
+S000408,U0035,Conditioner,2024-04-04 00:40:53,Thursday,App,True
+S000111,U0011,Ziplock Bags,2024-04-04 07:20:51,Thursday,Web,True
+S000454,U0037,Baby Shampoo,2024-04-04 12:02:51,Thursday,Web,False
+S000860,U0070,Deodorant,2024-04-04 12:56:21,Thursday,App,False
+S000831,U0068,Razor,2024-04-04 14:28:18,Thursday,App,True
+S000695,U0056,Ziplock Bags,2024-04-04 16:17:29,Thursday,App,False
+S000281,U0025,Bottle Brush,2024-04-04 22:55:10,Thursday,App,True
+S000084,U0007,Baby Bottle Brush,2024-04-05 04:49:06,Friday,Web,True
+S000796,U0064,Laundry Bags,2024-04-05 06:07:59,Friday,Web,False
+S000394,U0034,Disinfectant Wipes,2024-04-05 06:22:40,Friday,App,True
+S000459,U0038,Scouring Pad,2024-04-05 11:36:31,Friday,App,False
+S000548,U0045,Baby Powder,2024-04-05 13:01:14,Friday,App,True
+S000543,U0045,Toothbrush,2024-04-05 19:13:38,Friday,App,False
+S000023,U0002,Toothpaste,2024-04-06 04:23:55,Saturday,App,True
+S000529,U0044,Sponge,2024-04-06 08:12:54,Saturday,App,False
+S000603,U0049,Multi-Purpose Spray,2024-04-06 08:23:23,Saturday,App,True
+S000750,U0061,Dryer Sheets,2024-04-06 13:55:40,Saturday,Web,False
+S000117,U0011,Floor Cleaner,2024-04-06 13:59:01,Saturday,Web,True
+S000719,U0058,Dishwasher Tablets,2024-04-06 15:37:55,Saturday,App,False
+S000249,U0022,Feminine Wash,2024-04-06 20:23:19,Saturday,App,True
+S000939,U0075,Nappy Rash Cream,2024-04-06 20:26:12,Saturday,App,True
+S000765,U0062,Bar Soap,2024-04-06 20:42:35,Saturday,App,False
+S000575,U0047,Dryer Sheets,2024-04-06 21:00:12,Saturday,App,False
+S000924,U0074,Ironing Board Cover,2024-04-06 21:30:19,Saturday,Web,True
+S000510,U0041,Mouthwash,2024-04-07 00:13:24,Sunday,Web,False
+S000140,U0013,Wet Wipes,2024-04-07 08:32:27,Sunday,App,True
+S000551,U0045,Multi-Purpose Spray,2024-04-08 03:27:50,Monday,App,False
+S000250,U0022,Aluminium Foil,2024-04-08 03:32:30,Monday,App,True
+S000745,U0061,Clothespins,2024-04-08 04:06:56,Monday,App,True
+S000515,U0042,Baby Wipes,2024-04-08 08:58:35,Monday,App,False
+S000685,U0056,Matches,2024-04-08 12:15:30,Monday,App,True
+S000135,U0013,Nappy Rash Cream,2024-04-08 12:21:40,Monday,App,True
+S000098,U0009,Ziplock Bags,2024-04-08 12:42:49,Monday,App,True
+S000013,U0001,Dish Soap,2024-04-08 19:30:55,Monday,Web,True
+S000508,U0041,Aluminium Foil,2024-04-08 22:32:50,Monday,App,False
+S000127,U0013,Hand Sanitiser,2024-04-09 00:32:55,Tuesday,App,True
+S000718,U0057,Baby Lotion,2024-04-09 08:09:28,Tuesday,Web,False
+S000357,U0031,Trash Bags,2024-04-09 13:53:53,Tuesday,App,True
+S000657,U0053,Broom,2024-04-10 01:19:51,Wednesday,App,True
+S000304,U0026,Nappy Rash Cream,2024-04-10 01:22:54,Wednesday,App,True
+S000181,U0016,Floss,2024-04-10 01:49:29,Wednesday,Web,True
+S000193,U0018,Bleach,2024-04-10 01:51:41,Wednesday,App,False
+S000439,U0037,Stain Remover,2024-04-10 04:42:21,Wednesday,App,False
+S000679,U0055,Laundry Bags,2024-04-10 10:45:46,Wednesday,App,True
+S000006,U0001,Dryer Sheets,2024-04-10 16:06:09,Wednesday,App,False
+S000274,U0024,Bar Soap,2024-04-10 17:14:20,Wednesday,App,False
+S000741,U0061,Rubber Bands,2024-04-10 19:10:47,Wednesday,Web,False
+S000528,U0044,Clothespins,2024-04-11 17:20:15,Thursday,App,True
+S000143,U0014,Broom,2024-04-11 18:20:11,Thursday,Web,False
+S000299,U0026,Cotton Buds,2024-04-11 19:30:05,Thursday,App,True
+S000797,U0065,Air Freshener,2024-04-12 00:31:06,Friday,App,True
+S000315,U0027,Rubber Gloves,2024-04-12 01:02:18,Friday,App,False
+S000164,U0015,weekly deals,2024-04-12 10:08:26,Friday,App,True
+S000447,U0037,Wet Wipes,2024-04-12 11:19:48,Friday,Web,True
+S000582,U0048,Sanitary Pads,2024-04-12 19:19:59,Friday,App,False
+S000692,U0056,Panty Liners,2024-04-12 21:13:35,Friday,App,True
+S000053,U0006,Dish Rack,2024-04-13 01:57:04,Saturday,Web,True
+S000035,U0004,Wet Wipes,2024-04-13 03:24:52,Saturday,App,False
+S000331,U0029,Ironing Board Cover,2024-04-13 06:59:25,Saturday,App,True
+S000118,U0011,Kitchen Roll,2024-04-13 10:00:49,Saturday,Web,True
+S000821,U0067,Clothespins,2024-04-13 14:08:23,Saturday,App,True
+S000233,U0021,Dish Rack,2024-04-13 14:11:16,Saturday,App,False
+S000700,U0056,Kitchen Roll,2024-04-13 15:36:26,Saturday,App,False
+S000424,U0036,Panty Liners,2024-04-13 18:19:57,Saturday,Web,False
+S000920,U0074,eco-friendly,2024-04-14 00:19:07,Sunday,App,False
+S000825,U0067,Toothbrush,2024-04-14 07:18:35,Sunday,Web,True
+S000517,U0042,Nappy Rash Cream,2024-04-14 09:39:20,Sunday,Web,True
+S000880,U0071,Wet Wipes,2024-04-14 17:15:17,Sunday,App,False
+S000337,U0029,Dryer Sheets,2024-04-14 19:27:46,Sunday,App,True
+S000631,U0050,Sunscreen,2024-04-15 03:20:06,Monday,App,False
+S000239,U0021,Scouring Pad,2024-04-15 22:34:31,Monday,App,False
+S000189,U0017,Nappy Rash Cream,2024-04-16 00:36:30,Tuesday,App,False
+S000615,U0050,Kitchen Roll,2024-04-16 05:25:13,Tuesday,App,True
+S000758,U0062,Dish Soap,2024-04-16 08:25:23,Tuesday,Web,True
+S000621,U0050,Floss,2024-04-16 17:36:48,Tuesday,App,True
+S000463,U0038,discount,2024-04-16 17:54:34,Tuesday,Web,True
+S000232,U0021,Scouring Pad,2024-04-16 23:06:25,Tuesday,App,True
+S000223,U0020,Rubber Gloves,2024-04-17 02:51:39,Wednesday,App,False
+S000787,U0064,Clothespins,2024-04-17 05:05:13,Wednesday,App,True
+S000535,U0044,Bleach,2024-04-17 08:32:11,Wednesday,Web,False
+S000138,U0013,Tissue Paper,2024-04-17 15:18:05,Wednesday,Web,True
+S000401,U0035,Razor,2024-04-17 17:16:32,Wednesday,Web,True
+S000892,U0073,Cotton Buds,2024-04-17 18:04:27,Wednesday,App,True
+S000564,U0046,Hand Sanitiser,2024-04-17 22:55:56,Wednesday,Web,False
+S000102,U0009,Candles,2024-04-18 02:35:43,Thursday,App,False
+S000258,U0023,Rubber Bands,2024-04-18 07:41:05,Thursday,App,True
+S000321,U0027,Laundry Detergent,2024-04-18 12:11:01,Thursday,App,False
+S000755,U0062,Ziplock Bags,2024-04-18 18:29:31,Thursday,Web,False
+S000458,U0038,Rubber Bands,2024-04-19 01:09:43,Friday,Web,False
+S000095,U0009,Aluminium Foil,2024-04-19 01:38:03,Friday,App,False
+S000346,U0030,Broom,2024-04-19 04:54:30,Friday,App,True
+S000105,U0010,Body Wash,2024-04-19 23:14:51,Friday,Web,True
+S000835,U0068,Razor,2024-04-20 01:46:04,Saturday,App,True
+S000512,U0041,Bottle Brush,2024-04-20 08:50:40,Saturday,App,True
+S000362,U0031,Air Freshener,2024-04-20 15:24:41,Saturday,App,True
+S000471,U0039,Broom,2024-04-20 16:44:20,Saturday,App,False
+S000857,U0070,Clothespins,2024-04-20 17:08:20,Saturday,App,True
+S000139,U0013,Panty Liners,2024-04-21 00:06:47,Sunday,Web,True
+S000405,U0035,Stain Remover,2024-04-21 01:31:43,Sunday,Web,True
+S000667,U0054,Sunscreen,2024-04-21 02:54:57,Sunday,App,True
+S000317,U0027,Dryer Sheets,2024-04-21 04:58:59,Sunday,Web,True
+S000633,U0051,Sanitary Pads,2024-04-21 05:02:31,Sunday,App,True
+S000866,U0071,Aluminium Foil,2024-04-21 08:38:27,Sunday,Web,True
+S000211,U0019,Bleach,2024-04-21 10:40:09,Sunday,App,False
+S000585,U0048,Cotton Buds,2024-04-21 18:55:10,Sunday,App,True
+S000886,U0072,Diapers,2024-04-22 05:36:55,Monday,Web,True
+S000234,U0021,Dish Rack,2024-04-22 18:00:31,Monday,App,True
+S000188,U0017,Panty Liners,2024-04-22 23:51:57,Monday,Web,True
+S000596,U0048,Baby Wipes,2024-04-23 19:02:08,Tuesday,App,True
+S000908,U0073,Toothbrush,2024-04-23 19:19:53,Tuesday,App,False
+S000519,U0043,Mop,2024-04-23 20:59:42,Tuesday,Web,False
+S000288,U0025,Bottle Brush,2024-04-23 22:49:42,Tuesday,App,True
+S000664,U0054,Sanitary Pads,2024-04-23 23:03:36,Tuesday,Web,True
+S000041,U0005,Broom,2024-04-24 02:16:57,Wednesday,App,False
+S000858,U0070,Razor,2024-04-24 02:46:54,Wednesday,Web,True
+S000432,U0036,Matches,2024-04-24 07:01:40,Wednesday,Web,False
+S000078,U0007,Body Wash,2024-04-24 08:15:12,Wednesday,App,True
+S000844,U0069,Panty Liners,2024-04-24 13:46:06,Wednesday,App,True
+S000552,U0045,Sponge,2024-04-24 22:26:03,Wednesday,Web,True
+S000426,U0036,cheap,2024-04-25 07:24:05,Thursday,Web,True
+S000712,U0057,Mop,2024-04-25 07:53:12,Thursday,App,False
+S000663,U0054,Mouthwash,2024-04-25 08:26:37,Thursday,App,True
+S000150,U0014,Glass Cleaner,2024-04-25 13:05:35,Thursday,Web,True
+S000453,U0037,Baby Bottle Brush,2024-04-25 19:32:44,Thursday,App,False
+S000158,U0014,Body Wash,2024-04-25 23:22:12,Thursday,App,True
+S000878,U0071,Wet Wipes,2024-04-26 11:20:05,Friday,App,False
+S000506,U0041,Aluminium Foil,2024-04-26 12:14:21,Friday,Web,False
+S000872,U0071,Baby Wipes,2024-04-26 16:06:40,Friday,App,False
+S000202,U0019,Conditioner,2024-04-27 00:25:13,Saturday,Web,True
+S000350,U0030,Scouring Pad,2024-04-27 11:21:43,Saturday,Web,True
+S000877,U0071,Aluminium Foil,2024-04-27 13:53:09,Saturday,App,True
+S000768,U0063,Ironing Board Cover,2024-04-27 16:54:50,Saturday,App,False
+S000840,U0069,Feminine Wash,2024-04-27 19:05:23,Saturday,App,True
+S000085,U0008,Aluminium Foil,2024-04-28 02:52:17,Sunday,App,True
+S000177,U0015,Hand Sanitiser,2024-04-28 05:35:12,Sunday,Web,True
+S000769,U0063,Baby Powder,2024-04-28 06:06:58,Sunday,Web,True
+S000900,U0073,Nappy Rash Cream,2024-04-28 06:16:48,Sunday,App,False
+S000273,U0024,Air Freshener,2024-04-28 17:41:39,Sunday,App,False
+S000215,U0019,Sunscreen,2024-04-28 19:33:15,Sunday,App,False
+S000890,U0072,Shaving Cream,2024-04-28 19:34:14,Sunday,App,False
+S000937,U0075,Sanitary Pads,2024-04-28 23:45:10,Sunday,App,True
+S000928,U0074,discount,2024-04-29 04:38:27,Monday,App,False
+S000901,U0073,Toothbrush,2024-04-29 05:17:13,Monday,Web,False
+S000849,U0069,Panty Liners,2024-04-29 05:36:54,Monday,Web,True
+S000574,U0047,Bleach,2024-04-29 05:56:38,Monday,Web,False
+S000592,U0048,Cotton Buds,2024-04-29 06:04:31,Monday,App,True
+S000204,U0019,Matches,2024-04-29 09:24:56,Monday,App,True
+S000137,U0013,Baby Wipes,2024-04-29 10:08:48,Monday,Web,False
+S000905,U0073,Fabric Softener,2024-04-29 10:59:35,Monday,App,False
+S000068,U0007,Dryer Sheets,2024-04-29 13:08:50,Monday,App,True
+S000470,U0039,Glass Cleaner,2024-04-29 15:28:21,Monday,App,True
+S000262,U0024,Mop,2024-04-29 17:06:01,Monday,Web,True
+S000827,U0068,Bar Soap,2024-04-29 18:53:31,Monday,App,True
+S000449,U0037,Wet Wipes,2024-04-29 21:07:07,Monday,App,False
+S000370,U0031,Cling Wrap,2024-04-29 23:19:15,Monday,Web,False
+S000648,U0052,Glass Cleaner,2024-04-30 01:13:41,Tuesday,Web,False
+S000037,U0004,Panty Liners,2024-04-30 08:03:34,Tuesday,Web,True
+S000788,U0064,Facial Cleanser,2024-04-30 12:01:37,Tuesday,App,True
+S000717,U0057,Hand Sanitiser,2024-04-30 22:26:52,Tuesday,Web,False
+S000873,U0071,Razor,2024-05-01 00:22:37,Wednesday,Web,False
+S000341,U0029,Stain Remover,2024-05-01 13:20:22,Wednesday,Web,True
+S000702,U0056,Dish Soap,2024-05-01 16:34:21,Wednesday,Web,True
+S000049,U0005,Deodorant,2024-05-01 23:50:54,Wednesday,App,False
+S000031,U0003,Cling Wrap,2024-05-02 13:25:24,Thursday,Web,True
+S000134,U0013,Wet Wipes,2024-05-02 14:28:04,Thursday,App,True
+S000843,U0069,weekly deals,2024-05-02 15:35:34,Thursday,App,False
+S000477,U0040,Dish Rack,2024-05-02 19:12:24,Thursday,App,False
+S000773,U0063,click and collect,2024-05-02 20:03:06,Thursday,App,True
+S000106,U0010,Facial Cleanser,2024-05-02 22:47:43,Thursday,App,True
+S000856,U0070,eco-friendly,2024-05-03 00:38:10,Friday,App,False
+S000696,U0056,Cling Wrap,2024-05-03 04:58:46,Friday,App,True
+S000048,U0005,Cotton Buds,2024-05-03 14:51:15,Friday,App,False
+S000366,U0031,Hand Sanitiser,2024-05-04 15:02:55,Saturday,App,False
+S000226,U0021,Ziplock Bags,2024-05-04 17:30:53,Saturday,App,True
+S000132,U0013,Tissue Paper,2024-05-04 20:33:32,Saturday,Web,False
+S000151,U0014,Mop,2024-05-04 22:53:45,Saturday,App,True
+S000382,U0032,Mop,2024-05-05 05:29:08,Sunday,App,False
+S000811,U0065,Ziplock Bags,2024-05-05 13:11:36,Sunday,App,False
+S000865,U0071,Ziplock Bags,2024-05-05 16:26:47,Sunday,App,True
+S000670,U0054,Body Wash,2024-05-05 16:58:12,Sunday,App,False
+S000012,U0001,Fabric Softener,2024-05-05 18:32:45,Sunday,App,True
+S000438,U0037,Nappy Rash Cream,2024-05-05 19:45:31,Sunday,App,False
+S000301,U0026,Razor,2024-05-05 21:13:43,Sunday,App,False
+S000855,U0070,Disinfectant Wipes,2024-05-05 22:20:39,Sunday,App,True
+S000598,U0048,promotion,2024-05-06 01:23:57,Monday,App,True
+S000212,U0019,Baby Bottle Brush,2024-05-06 03:10:20,Monday,App,True
+S000294,U0026,Clothespins,2024-05-06 15:55:56,Monday,Web,True
+S000379,U0032,Rubber Gloves,2024-05-06 22:37:45,Monday,Web,True
+S000688,U0056,Ziplock Bags,2024-05-07 01:53:11,Tuesday,App,True
+S000887,U0072,Facial Cleanser,2024-05-07 02:24:21,Tuesday,App,False
+S000753,U0062,Moisturiser,2024-05-07 02:38:18,Tuesday,Web,True
+S000906,U0073,Stain Remover,2024-05-07 04:36:37,Tuesday,App,True
+S000681,U0055,Laundry Detergent,2024-05-07 06:23:16,Tuesday,App,True
+S000130,U0013,Panty Liners,2024-05-07 06:53:36,Tuesday,App,True
+S000678,U0055,Laundry Bags,2024-05-07 09:44:20,Tuesday,Web,False
+S000427,U0036,Wet Wipes,2024-05-07 16:38:44,Tuesday,Web,True
+S000005,U0001,Floor Cleaner,2024-05-07 16:55:10,Tuesday,Web,True
+S000371,U0031,Panty Liners,2024-05-08 00:29:15,Wednesday,App,True
+S000851,U0069,Tissue Paper,2024-05-08 01:05:19,Wednesday,App,False
+S000834,U0068,Razor,2024-05-08 01:07:49,Wednesday,App,False
+S000680,U0055,Baby Shampoo,2024-05-08 06:17:39,Wednesday,App,False
+S000077,U0007,Shampoo,2024-05-08 08:45:06,Wednesday,App,True
+S000863,U0070,Broom,2024-05-08 08:59:39,Wednesday,App,True
+S000743,U0061,Baby Lotion,2024-05-08 21:06:56,Wednesday,Web,False
+S000114,U0011,Bottle Brush,2024-05-09 13:03:47,Thursday,App,True
+S000630,U0050,Shaving Cream,2024-05-09 14:37:42,Thursday,App,True
+S000309,U0026,Dryer Sheets,2024-05-09 16:06:31,Thursday,App,True
+S000218,U0020,Cling Wrap,2024-05-09 16:21:32,Thursday,App,False
+S000723,U0058,Dish Soap,2024-05-10 10:02:14,Friday,App,True
+S000059,U0006,Clothespins,2024-05-10 15:36:27,Friday,Web,False
+S000421,U0036,Baby Lotion,2024-05-10 16:18:11,Friday,App,True
+S000538,U0044,Baby Wipes,2024-05-10 17:55:30,Friday,App,True
+S000110,U0011,Mop,2024-05-10 20:55:18,Friday,App,True
+S000777,U0064,Multi-Purpose Spray,2024-05-10 22:12:08,Friday,Web,False
+S000160,U0015,Facial Cleanser,2024-05-11 08:04:46,Saturday,Web,True
+S000736,U0060,Ziplock Bags,2024-05-11 17:32:28,Saturday,App,True
+S000145,U0014,Disinfectant Wipes,2024-05-11 19:53:33,Saturday,Web,True
+S000210,U0019,Sponge,2024-05-11 20:39:30,Saturday,App,True
+S000791,U0064,Facial Cleanser,2024-05-12 13:25:15,Sunday,App,True
+S000638,U0051,Toothpaste,2024-05-12 15:35:43,Sunday,App,True
+S000572,U0047,Baby Wipes,2024-05-12 16:00:10,Sunday,App,True
+S000385,U0032,Toilet Bowl Cleaner,2024-05-12 21:40:08,Sunday,App,False
+S000874,U0071,Sanitary Pads,2024-05-13 03:05:11,Monday,App,True
+S000567,U0046,Scouring Pad,2024-05-13 06:19:16,Monday,Web,False
+S000684,U0055,Cotton Buds,2024-05-13 06:28:27,Monday,Web,False
+S000774,U0063,Tissue Paper,2024-05-13 07:50:26,Monday,App,False
+S000092,U0009,Baby Powder,2024-05-13 08:49:04,Monday,App,True
+S000722,U0058,Cling Wrap,2024-05-13 15:15:45,Monday,App,True
+S000241,U0021,Dishwasher Tablets,2024-05-13 17:10:18,Monday,App,True
+S000310,U0027,Laundry Bags,2024-05-14 00:59:10,Tuesday,App,False
+S000198,U0018,discount,2024-05-14 09:16:22,Tuesday,App,True
+S000384,U0032,Drain Cleaner,2024-05-14 10:17:40,Tuesday,Web,True
+S000159,U0014,Drain Cleaner,2024-05-14 12:53:40,Tuesday,Web,True
+S000607,U0049,Broom,2024-05-14 14:26:04,Tuesday,App,True
+S000496,U0041,Nappy Rash Cream,2024-05-14 18:25:08,Tuesday,App,True
+S000915,U0074,Dryer Sheets,2024-05-14 19:10:06,Tuesday,App,True
+S000190,U0018,Feminine Wash,2024-05-15 00:44:55,Wednesday,App,False
+S000495,U0041,Shampoo,2024-05-15 01:43:02,Wednesday,App,True
+S000287,U0025,Matches,2024-05-15 04:23:36,Wednesday,App,True
+S000343,U0029,Clothespins,2024-05-15 05:01:56,Wednesday,App,True
+S000560,U0046,Dish Rack,2024-05-15 07:41:12,Wednesday,Web,True
+S000587,U0048,Facial Cleanser,2024-05-15 11:10:31,Wednesday,App,False
+S000771,U0063,Ironing Board Cover,2024-05-15 22:18:10,Wednesday,Web,False
+S000554,U0045,Baby Wipes,2024-05-16 01:37:04,Thursday,Web,True
+S000475,U0039,Body Wash,2024-05-16 04:53:04,Thursday,App,True
+S000381,U0032,Floor Cleaner,2024-05-16 11:29:44,Thursday,App,True
+S000740,U0060,Diapers,2024-05-16 19:31:32,Thursday,Web,False
+S000594,U0048,Razor,2024-05-16 20:07:22,Thursday,App,True
+S000022,U0002,Wet Wipes,2024-05-16 22:36:00,Thursday,App,True
+S000524,U0043,Floor Cleaner,2024-05-17 11:03:21,Friday,App,False
+S000010,U0001,Dryer Sheets,2024-05-17 19:49:39,Friday,App,True
+S000776,U0063,Feminine Wash,2024-05-17 22:29:01,Friday,App,True
+S000086,U0008,Panty Liners,2024-05-18 06:52:21,Saturday,App,True
+S000260,U0023,Hand Sanitiser,2024-05-18 13:34:44,Saturday,App,True
+S000756,U0062,Sanitary Pads,2024-05-19 00:23:55,Sunday,App,True
+S000762,U0062,Diapers,2024-05-19 04:28:25,Sunday,App,True
+S000608,U0049,Multi-Purpose Spray,2024-05-19 21:22:14,Sunday,App,True
+S000089,U0008,click and collect,2024-05-19 23:21:26,Sunday,App,True
+S000409,U0035,Washing Machine Cleaner,2024-05-19 23:38:05,Sunday,Web,True
+S000269,U0024,Rubber Gloves,2024-05-20 00:57:20,Monday,Web,True
+S000619,U0050,Toothpaste,2024-05-20 04:56:29,Monday,Web,False
+S000687,U0056,Baby Powder,2024-05-20 19:36:52,Monday,Web,True
+S000082,U0007,Disinfectant Wipes,2024-05-21 05:11:52,Tuesday,Web,False
+S000253,U0023,Multi-Purpose Spray,2024-05-21 06:25:59,Tuesday,App,True
+S000705,U0057,Tissue Paper,2024-05-21 07:56:33,Tuesday,Web,False
+S000767,U0063,Nappy Rash Cream,2024-05-21 20:21:06,Tuesday,App,True
+S000481,U0040,Trash Bags,2024-05-21 22:23:22,Tuesday,App,False
+S000527,U0043,Clothespins,2024-05-22 07:43:42,Wednesday,App,True
+S000213,U0019,Multi-Purpose Spray,2024-05-22 20:29:36,Wednesday,App,True
+S000466,U0039,Drain Cleaner,2024-05-22 21:57:21,Wednesday,Web,True
+S000442,U0037,Diapers,2024-05-23 04:28:43,Thursday,Web,True
+S000152,U0014,Drain Cleaner,2024-05-23 10:56:22,Thursday,Web,False
+S000398,U0034,Razor,2024-05-23 15:02:36,Thursday,App,True
+S000390,U0033,Facial Cleanser,2024-05-23 15:27:44,Thursday,App,False
+S000656,U0053,Baby Lotion,2024-05-23 21:03:10,Thursday,App,False
+S000523,U0043,Rubber Gloves,2024-05-24 00:32:32,Friday,Web,False
+S000784,U0064,Cotton Buds,2024-05-24 03:53:38,Friday,Web,False
+S000391,U0033,weekly deals,2024-05-24 18:04:45,Friday,App,True
+S000186,U0017,Dryer Sheets,2024-05-25 02:44:51,Saturday,App,True
+S000894,U0073,Conditioner,2024-05-25 05:04:00,Saturday,App,True
+S000297,U0026,Razor,2024-05-25 10:36:28,Saturday,App,True
+S000474,U0039,Bar Soap,2024-05-25 15:41:31,Saturday,App,True
+S000780,U0064,Stain Remover,2024-05-25 16:06:56,Saturday,App,True
+S000746,U0061,Sponge,2024-05-25 21:55:03,Saturday,App,True
+S000444,U0037,Baby Powder,2024-05-26 02:05:27,Sunday,Web,True
+S000161,U0015,Washing Machine Cleaner,2024-05-26 02:23:49,Sunday,Web,True
+S000429,U0036,Panty Liners,2024-05-26 03:45:21,Sunday,App,True
+S000499,U0041,Bottle Brush,2024-05-26 05:58:11,Sunday,App,False
+S000194,U0018,Floor Cleaner,2024-05-26 06:35:24,Sunday,Web,True
+S000782,U0064,Moisturiser,2024-05-26 08:00:08,Sunday,Web,True
+S000056,U0006,Toothbrush,2024-05-26 10:36:02,Sunday,App,False
+S000112,U0011,Drain Cleaner,2024-05-26 14:17:24,Sunday,Web,True
+S000789,U0064,Scouring Pad,2024-05-26 15:03:25,Sunday,Web,False
+S000492,U0040,Bottle Brush,2024-05-26 15:38:13,Sunday,App,True
+S000916,U0074,Washing Machine Cleaner,2024-05-27 02:04:52,Monday,App,True
+S000644,U0052,Sponge,2024-05-27 06:17:41,Monday,App,True
+S000007,U0001,Wet Wipes,2024-05-27 13:48:45,Monday,App,True
+S000465,U0038,Dish Soap,2024-05-27 13:52:33,Monday,Web,True
+S000697,U0056,Baby Wipes,2024-05-27 19:25:04,Monday,App,False
+S000358,U0031,Baby Powder,2024-05-27 21:26:53,Monday,App,True
+S000513,U0041,Toothpaste,2024-05-28 02:33:37,Tuesday,App,True
+S000116,U0011,Bar Soap,2024-05-28 09:14:52,Tuesday,App,True
+S000228,U0021,Kitchen Roll,2024-05-29 02:07:18,Wednesday,App,True
+S000237,U0021,Scouring Pad,2024-05-29 17:13:28,Wednesday,Web,True
+S000280,U0025,Dishwasher Tablets,2024-05-29 17:55:57,Wednesday,App,False
+S000277,U0024,Rubber Gloves,2024-05-29 21:43:59,Wednesday,Web,False
+S000016,U0002,Ironing Board Cover,2024-05-30 00:55:37,Thursday,App,True
+S000808,U0065,Mouthwash,2024-05-30 03:55:31,Thursday,Web,False
+S000531,U0044,Deodorant,2024-05-30 03:58:26,Thursday,App,False
+S000540,U0044,Washing Machine Cleaner,2024-05-30 04:53:57,Thursday,App,True
+S000393,U0034,Baby Wipes,2024-05-30 05:01:37,Thursday,App,True
+S000902,U0073,Baby Lotion,2024-05-30 05:16:36,Thursday,App,False
+S000893,U0073,Candles,2024-05-30 08:00:28,Thursday,Web,True
+S000464,U0038,Aluminium Foil,2024-05-30 12:17:18,Thursday,Web,True
+S000047,U0005,Multi-Purpose Spray,2024-05-30 15:12:53,Thursday,App,False
+S000934,U0075,Matches,2024-05-30 15:58:28,Thursday,App,True
+S000790,U0064,Facial Cleanser,2024-05-30 17:06:21,Thursday,Web,True
+S000404,U0035,Toothbrush,2024-05-31 07:11:28,Friday,App,False
+S000907,U0073,Laundry Bags,2024-05-31 09:32:20,Friday,App,True
+S000195,U0018,Drain Cleaner,2024-05-31 14:59:07,Friday,App,False
+S000578,U0047,Bottle Brush,2024-05-31 19:59:29,Friday,Web,True
+S000904,U0073,Baby Shampoo,2024-06-01 05:30:56,Saturday,Web,False
+S000785,U0064,Sponge,2024-06-01 07:08:10,Saturday,Web,True
+S000625,U0050,Kitchen Roll,2024-06-01 09:47:23,Saturday,App,True
+S000698,U0056,promotion,2024-06-01 11:20:52,Saturday,App,True
+S000645,U0052,Toilet Bowl Cleaner,2024-06-01 13:50:24,Saturday,App,False
+S000642,U0051,Shampoo,2024-06-01 17:35:29,Saturday,Web,False
+S000485,U0040,Candles,2024-06-02 01:45:40,Sunday,App,False
+S000050,U0005,Bleach,2024-06-02 03:11:28,Sunday,App,True
+S000611,U0049,Conditioner,2024-06-02 03:44:53,Sunday,Web,False
+S000425,U0036,Baby Wipes,2024-06-02 13:01:35,Sunday,App,False
+S000302,U0026,Conditioner,2024-06-02 13:14:39,Sunday,App,False
+S000752,U0061,Stain Remover,2024-06-02 17:58:39,Sunday,Web,False
+S000221,U0020,Floss,2024-06-02 19:17:36,Sunday,App,True
+S000088,U0008,Ironing Board Cover,2024-06-03 00:05:44,Monday,Web,True
+S000651,U0052,Drain Cleaner,2024-06-03 02:41:12,Monday,App,True
+S000220,U0020,Deodorant,2024-06-03 02:53:35,Monday,App,False
+S000179,U0016,Floss,2024-06-03 03:50:16,Monday,Web,True
+S000196,U0018,Toilet Bowl Cleaner,2024-06-04 05:12:20,Tuesday,App,True
+S000828,U0068,Shaving Cream,2024-06-04 06:41:09,Tuesday,Web,True
+S000733,U0059,Toothpaste,2024-06-04 07:47:59,Tuesday,App,False
+S000919,U0074,Washing Machine Cleaner,2024-06-04 09:01:20,Tuesday,App,True
+S000635,U0051,Mop,2024-06-04 10:22:08,Tuesday,Web,False
+S000896,U0073,Shampoo,2024-06-04 12:14:56,Tuesday,Web,False
+S000206,U0019,Toothpaste,2024-06-04 13:22:40,Tuesday,Web,False
+S000314,U0027,cheap,2024-06-04 17:34:03,Tuesday,Web,True
+S000914,U0074,Dryer Sheets,2024-06-04 21:58:55,Tuesday,Web,True
+S000055,U0006,Rubber Bands,2024-06-05 03:59:43,Wednesday,App,True
+S000351,U0030,Shaving Cream,2024-06-05 05:56:37,Wednesday,Web,False
+S000778,U0064,Bleach,2024-06-05 22:58:23,Wednesday,App,False
+S000094,U0009,Scouring Pad,2024-06-06 15:07:08,Thursday,App,False
+S000599,U0049,Toothbrush,2024-06-07 03:37:54,Friday,App,True
+S000128,U0013,Feminine Wash,2024-06-07 06:20:51,Friday,App,True
+S000376,U0032,Bleach,2024-06-07 07:10:27,Friday,App,True
+S000683,U0055,Feminine Wash,2024-06-07 10:54:14,Friday,App,True
+S000584,U0048,Deodorant,2024-06-07 12:09:52,Friday,Web,True
+S000367,U0031,Aluminium Foil,2024-06-07 20:08:14,Friday,Web,True
+S000632,U0051,Dish Rack,2024-06-07 22:02:41,Friday,Web,True
+S000563,U0046,Hand Sanitiser,2024-06-08 05:53:40,Saturday,App,True
+S000387,U0033,Facial Cleanser,2024-06-08 08:41:45,Saturday,Web,True
+S000605,U0049,Glass Cleaner,2024-06-08 13:13:17,Saturday,Web,False
+S000571,U0047,Baby Powder,2024-06-08 13:19:53,Saturday,Web,True
+S000200,U0019,Facial Cleanser,2024-06-08 16:23:17,Saturday,App,False
+S000060,U0006,Ironing Board Cover,2024-06-08 16:44:32,Saturday,Web,True
+S000898,U0073,Nappy Rash Cream,2024-06-08 20:38:54,Saturday,App,True
+S000225,U0021,Rubber Bands,2024-06-08 21:02:22,Saturday,Web,True
+S000483,U0040,Rubber Bands,2024-06-09 04:04:07,Sunday,App,True
+S000236,U0021,Disinfectant Wipes,2024-06-09 05:52:47,Sunday,App,True
+S000754,U0062,Dish Rack,2024-06-09 06:13:40,Sunday,App,True
+S000256,U0023,Bleach,2024-06-09 06:13:46,Sunday,Web,False
+S000263,U0024,Scrubbing Brush,2024-06-09 20:06:29,Sunday,Web,False
+S000476,U0039,Air Freshener,2024-06-09 21:00:18,Sunday,App,False
+S000349,U0030,Bottle Brush,2024-06-10 01:18:48,Monday,App,True
+S000420,U0036,Tissue Paper,2024-06-10 10:03:14,Monday,Web,True
+S000229,U0021,Dish Soap,2024-06-10 10:33:43,Monday,App,False
+S000720,U0058,Aluminium Foil,2024-06-10 11:03:55,Monday,Web,True
+S000123,U0012,Laundry Detergent,2024-06-10 13:31:18,Monday,Web,True
+S000639,U0051,Toothbrush,2024-06-10 23:13:32,Monday,Web,True
+S000330,U0028,Cotton Buds,2024-06-11 02:33:02,Tuesday,App,True
+S000810,U0065,Nappy Rash Cream,2024-06-11 06:28:53,Tuesday,App,True
+S000926,U0074,Washing Machine Cleaner,2024-06-11 09:36:08,Tuesday,Web,True
+S000589,U0048,Bar Soap,2024-06-11 11:17:23,Tuesday,App,False
+S000781,U0064,Razor,2024-06-11 23:48:10,Tuesday,App,False
+S000675,U0054,Shaving Cream,2024-06-12 17:59:16,Wednesday,App,False
+S000156,U0014,Bleach,2024-06-12 23:19:17,Wednesday,App,False
+S000101,U0009,Dish Soap,2024-06-13 02:42:30,Thursday,Web,False
+S000057,U0006,Baby Wipes,2024-06-13 05:27:17,Thursday,Web,True
+S000099,U0009,Wet Wipes,2024-06-13 12:35:13,Thursday,App,True
+S000072,U0007,Wet Wipes,2024-06-13 16:07:15,Thursday,App,True
+S000482,U0040,Ziplock Bags,2024-06-14 01:46:56,Friday,App,False
+S000601,U0049,Baby Wipes,2024-06-14 04:48:53,Friday,Web,True
+S000167,U0015,eco-friendly,2024-06-14 06:43:16,Friday,App,True
+S000028,U0003,Dishwasher Tablets,2024-06-14 09:30:50,Friday,App,False
+S000727,U0059,Disinfectant Wipes,2024-06-14 11:46:00,Friday,App,True
+S000641,U0051,Ziplock Bags,2024-06-15 08:09:28,Saturday,App,False
+S000345,U0030,Dishwasher Tablets,2024-06-15 12:25:54,Saturday,Web,True
+S000001,U0001,Fabric Softener,2024-06-15 13:19:33,Saturday,App,True
+S000473,U0039,Sponge,2024-06-15 14:38:53,Saturday,Web,False
+S000652,U0052,Broom,2024-06-15 15:39:50,Saturday,Web,False
+S000530,U0044,Diapers,2024-06-15 20:54:24,Saturday,Web,True
+S000772,U0063,Laundry Bags,2024-06-16 03:11:16,Sunday,App,False
+S000469,U0039,Diapers,2024-06-16 04:46:39,Sunday,Web,False
+S000243,U0021,Ziplock Bags,2024-06-16 06:48:41,Sunday,Web,True
+S000917,U0074,Feminine Wash,2024-06-16 09:19:10,Sunday,App,True
+S000533,U0044,Panty Liners,2024-06-16 13:32:17,Sunday,App,True
+S000403,U0035,Body Wash,2024-06-16 17:13:06,Sunday,App,True
+S000669,U0054,Shampoo,2024-06-16 21:28:03,Sunday,Web,True
+S000018,U0002,promotion,2024-06-17 00:24:23,Monday,App,True
+S000871,U0071,Baby Lotion,2024-06-17 09:55:19,Monday,App,True
+S000930,U0074,Feminine Wash,2024-06-17 16:45:22,Monday,App,True
+S000020,U0002,Nappy Rash Cream,2024-06-17 20:38:15,Monday,App,False
+S000445,U0037,Panty Liners,2024-06-18 07:43:05,Tuesday,Web,True
+S000266,U0024,Trash Bags,2024-06-18 08:16:35,Tuesday,Web,False
+S000030,U0003,promotion,2024-06-18 09:35:58,Tuesday,Web,True
+S000925,U0074,Washing Machine Cleaner,2024-06-18 11:16:29,Tuesday,App,True
+S000165,U0015,Bar Soap,2024-06-18 12:29:01,Tuesday,App,True
+S000096,U0009,Sanitary Pads,2024-06-18 15:18:19,Tuesday,Web,True
+S000838,U0069,Nappy Rash Cream,2024-06-19 11:14:40,Wednesday,App,True
+S000869,U0071,Glass Cleaner,2024-06-19 14:08:54,Wednesday,Web,False
+S000498,U0041,Facial Cleanser,2024-06-20 01:42:22,Thursday,App,True
+S000109,U0010,Rubber Gloves,2024-06-20 12:40:22,Thursday,App,True
+S000067,U0007,Tissue Paper,2024-06-20 22:19:38,Thursday,App,False
+S000706,U0057,Dish Soap,2024-06-21 10:15:32,Friday,Web,True
+S000841,U0069,Bar Soap,2024-06-22 01:44:42,Saturday,Web,True
+S000701,U0056,Dish Soap,2024-06-22 05:03:03,Saturday,App,False
+S000744,U0061,Tissue Paper,2024-06-22 05:18:34,Saturday,Web,True
+S000616,U0050,Mouthwash,2024-06-22 10:44:08,Saturday,App,False
+S000845,U0069,Hand Sanitiser,2024-06-22 14:16:35,Saturday,Web,True
+S000324,U0028,Baby Lotion,2024-06-22 15:21:36,Saturday,App,True
+S000665,U0054,Sunscreen,2024-06-22 16:38:04,Saturday,App,False
+S000197,U0018,Wet Wipes,2024-06-22 17:18:46,Saturday,App,True
+S000383,U0032,Air Freshener,2024-06-22 18:01:45,Saturday,Web,True
+S000231,U0021,Matches,2024-06-22 18:39:25,Saturday,App,True
+S000581,U0048,Shampoo,2024-06-22 22:33:59,Saturday,App,True
+S000759,U0062,Disinfectant Wipes,2024-06-23 03:45:01,Sunday,App,True
+S000040,U0004,Feminine Wash,2024-06-23 23:56:25,Sunday,App,False
+S000235,U0021,Bottle Brush,2024-06-24 03:37:43,Monday,Web,True
+S000569,U0046,Facial Cleanser,2024-06-24 05:56:11,Monday,Web,True
+S000634,U0051,Scouring Pad,2024-06-24 07:14:48,Monday,Web,True
+S000033,U0004,Tissue Paper,2024-06-24 10:15:40,Monday,App,True
+S000180,U0016,Moisturiser,2024-06-24 18:17:24,Monday,App,False
+S000859,U0070,Shaving Cream,2024-06-25 04:03:22,Tuesday,App,False
+S000883,U0071,Sanitary Pads,2024-06-25 06:55:44,Tuesday,Web,False
+S000063,U0006,Washing Machine Cleaner,2024-06-25 14:03:12,Tuesday,Web,True
+S000051,U0006,Trash Bags,2024-06-25 15:10:22,Tuesday,App,True
+S000374,U0032,Air Freshener,2024-06-25 15:51:04,Tuesday,App,True
+S000046,U0005,Mop,2024-06-25 19:46:57,Tuesday,Web,False
+S000805,U0065,Multi-Purpose Spray,2024-06-25 23:07:59,Tuesday,Web,True
+S000295,U0026,Stain Remover,2024-06-26 07:57:32,Wednesday,App,True
+S000054,U0006,Dryer Sheets,2024-06-26 11:46:36,Wednesday,App,True
+S000354,U0030,Candles,2024-06-26 13:36:19,Wednesday,App,False
+S000910,U0073,Cotton Buds,2024-06-26 16:15:03,Wednesday,Web,True
+S000062,U0006,Aluminium Foil,2024-06-26 17:24:06,Wednesday,Web,True
+S000316,U0027,Sponge,2024-06-27 02:40:12,Thursday,Web,True
+S000144,U0014,Disinfectant Wipes,2024-06-27 05:53:43,Thursday,App,True
+S000450,U0037,Dishwasher Tablets,2024-06-27 09:22:16,Thursday,Web,False
+S000593,U0048,Body Wash,2024-06-27 09:49:43,Thursday,App,True
+S000909,U0073,Baby Powder,2024-06-27 11:40:38,Thursday,App,False
+S000296,U0026,Deodorant,2024-06-27 13:48:31,Thursday,App,True
+S000502,U0041,Toothpaste,2024-06-27 15:01:02,Thursday,App,False
+S000602,U0049,Rubber Gloves,2024-06-27 20:20:57,Thursday,Web,True
+S000120,U0012,Laundry Detergent,2024-06-27 20:55:41,Thursday,App,True
+S000104,U0009,Kitchen Roll,2024-06-27 22:40:34,Thursday,App,True
+S000868,U0071,Matches,2024-06-28 02:54:50,Friday,App,False
+S000786,U0064,Bar Soap,2024-06-28 21:43:55,Friday,App,True
+S000763,U0062,Disinfectant Wipes,2024-06-28 22:23:33,Friday,Web,False
+S000008,U0001,Stain Remover,2024-06-29 03:16:06,Saturday,App,True
+S000298,U0026,Ironing Board Cover,2024-06-29 06:54:47,Saturday,App,True
+S000761,U0062,Candles,2024-06-29 15:07:19,Saturday,App,True
+S000455,U0037,Feminine Wash,2024-06-29 17:21:09,Saturday,App,False
+S000172,U0015,Shaving Cream,2024-06-29 17:57:47,Saturday,App,False

@@ -1,0 +1,76 @@
+user_id,name,age,gender,email,location,preferred_categories,yuu_member,click_collect_user,account_created,avg_weekly_spend_sgd
+U0001,Jun Wong,34,M,jun.wong1@email.com,Tampines,Laundry,True,False,2022-09-08,22.54
+U0002,Priya Kumar,21,M,priya.kumar2@email.com,Toa Payoh,Baby and Family Care,False,True,2023-09-09,55.94
+U0003,Lin Tan,37,M,lin.tan3@email.com,Bedok,Kitchen Essentials,False,True,2022-12-15,27.42
+U0004,John Chen,49,M,john.chen4@email.com,Sengkang,Baby and Family Care | Laundry,True,False,2022-02-14,86.35
+U0005,Zara Chen,34,F,zara.chen5@email.com,Tampines,Toiletries and Personal Care | Cleaning Supplies | Kitchen Essentials,True,True,2023-11-09,50.41
+U0006,Hui Chen,33,F,hui.chen6@email.com,Tampines,Laundry,True,True,2022-12-30,33.07
+U0007,Kavya Chan,23,M,kavya.chan7@email.com,Jurong,Baby and Family Care | Toiletries and Personal Care | Laundry,False,False,2022-11-29,41.42
+U0008,Raj Zhang,45,F,raj.zhang8@email.com,Woodlands,Laundry | Toiletries and Personal Care | Baby and Family Care,False,True,2023-05-27,39.73
+U0009,Jasmine Goh,45,F,jasmine.goh9@email.com,Bedok,Baby and Family Care | Kitchen Essentials,True,False,2023-08-21,27.27
+U0010,Aisha Wong,47,M,aisha.wong10@email.com,Sengkang,Toiletries and Personal Care,False,False,2023-11-28,62.33
+U0011,Jasmine Tan,27,F,jasmine.tan11@email.com,Sengkang,Cleaning Supplies | Laundry | Kitchen Essentials,True,False,2022-12-15,20.26
+U0012,Sarah Chan,60,M,sarah.chan12@email.com,Woodlands,Toiletries and Personal Care | Cleaning Supplies | Laundry,False,True,2022-11-02,63.15
+U0013,Ling Sharma,51,M,ling.sharma13@email.com,Tampines,Baby and Family Care,False,False,2022-11-28,39.16
+U0014,Kevin Zhang,24,M,kevin.zhang14@email.com,Woodlands,Cleaning Supplies,False,True,2023-05-13,41.2
+U0015,Ryan Ali,39,F,ryan.ali15@email.com,Yishun,Toiletries and Personal Care | Baby and Family Care,False,False,2024-01-01,29.68
+U0016,Kevin Lee,34,M,kevin.lee16@email.com,Tampines,Cleaning Supplies | Toiletries and Personal Care,True,True,2023-08-26,25.39
+U0017,Aisha Abdullah,37,F,aisha.abdullah17@email.com,Bedok,Baby and Family Care,True,False,2022-09-01,39.44
+U0018,Farah Smith,62,F,farah.smith18@email.com,Yishun,Cleaning Supplies,False,False,2022-04-10,57.36
+U0019,Sarah Lim,26,M,sarah.lim19@email.com,Bedok,Cleaning Supplies | Baby and Family Care | Toiletries and Personal Care,True,False,2022-12-14,31.21
+U0020,Siti Chan,55,M,siti.chan20@email.com,Jurong,Toiletries and Personal Care | Cleaning Supplies,True,True,2023-03-30,94.11
+U0021,Ryan Singh,50,M,ryan.singh21@email.com,Sengkang,Kitchen Essentials,True,True,2023-05-13,50.32
+U0022,Kavya Chan,55,F,kavya.chan22@email.com,Woodlands,Laundry | Kitchen Essentials,True,False,2023-12-15,37.42
+U0023,Aisha Zhang,23,M,aisha.zhang23@email.com,Bukit Timah,Baby and Family Care | Cleaning Supplies | Laundry,False,True,2022-11-18,24.55
+U0024,Arjun Lee,24,M,arjun.lee24@email.com,Sengkang,Cleaning Supplies,True,True,2023-09-02,66.31
+U0025,Aisha Ali,57,F,aisha.ali25@email.com,Clementi,Kitchen Essentials,True,False,2023-11-05,39.09
+U0026,Kavya Ng,20,F,kavya.ng26@email.com,Bukit Timah,Laundry | Kitchen Essentials | Toiletries and Personal Care,True,True,2022-03-16,63.01
+U0027,Arjun Chan,35,F,arjun.chan27@email.com,Clementi,Laundry,True,False,2022-03-12,86.7
+U0028,Vikram Raj,39,M,vikram.raj28@email.com,Woodlands,Baby and Family Care | Cleaning Supplies | Laundry,False,True,2023-07-22,91.18
+U0029,Sarah Goh,58,M,sarah.goh29@email.com,Yishun,Laundry,True,False,2022-10-16,60.43
+U0030,Lin Lim,22,M,lin.lim30@email.com,Yishun,Kitchen Essentials,True,False,2022-10-11,32.93
+U0031,Hui Goh,64,M,hui.goh31@email.com,Toa Payoh,Kitchen Essentials | Cleaning Supplies | Baby and Family Care,True,False,2022-03-19,66.6
+U0032,Mei Smith,43,M,mei.smith32@email.com,Yishun,Cleaning Supplies,True,True,2022-11-12,73.35
+U0033,Chen Goh,30,M,chen.goh33@email.com,Sengkang,Baby and Family Care | Toiletries and Personal Care,True,True,2022-08-31,78.93
+U0034,Nurul Smith,26,F,nurul.smith34@email.com,Jurong,Toiletries and Personal Care | Laundry | Cleaning Supplies,False,True,2023-12-20,35.97
+U0035,Nur Ong,21,M,nur.ong35@email.com,Sengkang,Laundry | Toiletries and Personal Care,False,False,2022-08-17,89.15
+U0036,Ling Chan,54,F,ling.chan36@email.com,Jurong,Baby and Family Care | Kitchen Essentials,True,False,2023-11-27,34.29
+U0037,Lin Lim,42,F,lin.lim37@email.com,Sengkang,Baby and Family Care,True,False,2023-03-21,91.96
+U0038,Raj Chan,53,M,raj.chan38@email.com,Yishun,Kitchen Essentials,False,True,2022-01-02,95.91
+U0039,Nur Abdullah,52,F,nur.abdullah39@email.com,Sengkang,Laundry | Cleaning Supplies | Baby and Family Care,False,False,2022-11-04,75.78
+U0040,Jasmine Ng,44,M,jasmine.ng40@email.com,Bukit Timah,Kitchen Essentials,False,False,2023-11-12,63.83
+U0041,Wei Raj,58,F,wei.raj41@email.com,Bishan,Toiletries and Personal Care | Kitchen Essentials,False,False,2023-08-17,74.05
+U0042,Arjun Hassan,62,F,arjun.hassan42@email.com,Tampines,Toiletries and Personal Care | Cleaning Supplies | Baby and Family Care,True,False,2023-06-12,37.97
+U0043,Raj Ng,50,M,raj.ng43@email.com,Bishan,Cleaning Supplies,False,True,2022-09-08,77.47
+U0044,Kavya Hassan,64,M,kavya.hassan44@email.com,Tampines,Toiletries and Personal Care | Baby and Family Care,False,True,2023-11-03,34.07
+U0045,Vikram Sharma,49,M,vikram.sharma45@email.com,Bishan,Cleaning Supplies | Toiletries and Personal Care,False,False,2022-05-05,69.01
+U0046,Sarah Sharma,50,F,sarah.sharma46@email.com,Clementi,Baby and Family Care | Kitchen Essentials,True,False,2022-06-12,81.27
+U0047,Arjun Hassan,65,F,arjun.hassan47@email.com,Bedok,Toiletries and Personal Care | Laundry | Baby and Family Care,False,False,2022-03-21,45.58
+U0048,Jasmine Lee,44,M,jasmine.lee48@email.com,Bedok,Toiletries and Personal Care,True,False,2022-08-25,52.61
+U0049,Jasmine Ong,44,M,jasmine.ong49@email.com,Bukit Timah,Cleaning Supplies | Toiletries and Personal Care,False,False,2023-03-07,20.47
+U0050,Chen Raj,34,F,chen.raj50@email.com,Sengkang,Kitchen Essentials | Toiletries and Personal Care,False,True,2023-05-15,51.11
+U0051,Nadia Pillai,54,M,nadia.pillai51@email.com,Sengkang,Toiletries and Personal Care | Kitchen Essentials | Cleaning Supplies,True,True,2023-09-30,71.42
+U0052,Mei Ong,44,F,mei.ong52@email.com,Bedok,Cleaning Supplies,False,False,2022-09-24,47.0
+U0053,Xiao Pillai,50,M,xiao.pillai53@email.com,Toa Payoh,Kitchen Essentials | Laundry,True,False,2022-03-25,37.94
+U0054,Priya Lim,21,M,priya.lim54@email.com,Bedok,Toiletries and Personal Care,True,False,2022-07-24,73.56
+U0055,Ethan Kumar,58,M,ethan.kumar55@email.com,Woodlands,Laundry | Baby and Family Care,False,True,2022-06-21,66.29
+U0056,Nur Raj,24,M,nur.raj56@email.com,Tampines,Kitchen Essentials | Baby and Family Care | Laundry,False,True,2022-07-23,83.7
+U0057,Ethan Lim,43,M,ethan.lim57@email.com,Toa Payoh,Baby and Family Care | Kitchen Essentials,False,True,2023-11-09,87.97
+U0058,Deepa Hassan,60,F,deepa.hassan58@email.com,Woodlands,Kitchen Essentials,False,True,2023-01-06,78.7
+U0059,Jun Chan,57,F,jun.chan59@email.com,Yishun,Baby and Family Care | Kitchen Essentials | Toiletries and Personal Care,True,True,2023-03-23,42.31
+U0060,Hui Singh,21,F,hui.singh60@email.com,Yishun,Baby and Family Care | Kitchen Essentials,True,False,2022-12-11,36.97
+U0061,Hafiz Chan,20,M,hafiz.chan61@email.com,Tampines,Laundry | Baby and Family Care,True,False,2023-07-24,59.09
+U0062,Ling Singh,25,F,ling.singh62@email.com,Bedok,Kitchen Essentials | Baby and Family Care | Toiletries and Personal Care,False,True,2022-01-18,44.5
+U0063,Ethan Chen,55,F,ethan.chen63@email.com,Yishun,Baby and Family Care | Laundry,False,False,2023-03-12,44.53
+U0064,Kevin Wong,64,M,kevin.wong64@email.com,Bedok,Toiletries and Personal Care | Laundry | Cleaning Supplies,True,False,2023-07-03,42.12
+U0065,Ethan Sharma,34,F,ethan.sharma65@email.com,Woodlands,Laundry | Cleaning Supplies | Kitchen Essentials,False,True,2022-10-31,76.64
+U0066,Mei Chan,38,M,mei.chan66@email.com,Bishan,Cleaning Supplies,True,True,2023-07-21,65.93
+U0067,Farah Hassan,36,F,farah.hassan67@email.com,Tampines,Laundry | Toiletries and Personal Care,True,False,2022-02-22,59.34
+U0068,Ethan Lim,39,M,ethan.lim68@email.com,Bedok,Toiletries and Personal Care,True,False,2023-07-31,68.51
+U0069,Hafiz Ali,48,F,hafiz.ali69@email.com,Clementi,Baby and Family Care,False,False,2023-01-25,65.49
+U0070,Aisha Ali,36,M,aisha.ali70@email.com,Woodlands,Cleaning Supplies | Toiletries and Personal Care | Laundry,True,True,2022-08-05,64.16
+U0071,Siti Tan,22,M,siti.tan71@email.com,Clementi,Kitchen Essentials | Baby and Family Care,False,False,2022-10-26,25.69
+U0072,Kevin Chan,54,M,kevin.chan72@email.com,Woodlands,Baby and Family Care | Toiletries and Personal Care | Kitchen Essentials,False,True,2022-04-28,25.71
+U0073,Siti Raj,49,F,siti.raj73@email.com,Sengkang,Baby and Family Care | Laundry | Toiletries and Personal Care,False,False,2022-05-08,55.02
+U0074,Zara Lim,25,M,zara.lim74@email.com,Bukit Timah,Laundry | Baby and Family Care,True,False,2022-01-27,66.1
+U0075,Ling Mohamed,31,F,ling.mohamed75@email.com,Bishan,Baby and Family Care | Kitchen Essentials,True,False,2022-10-12,47.84
