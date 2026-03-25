@@ -1,0 +1,47 @@
+recipe_id,recipe_name,cuisine,ingredient_count,avg_cook_time_min,difficulty,avg_rating
+R0001,Chicken Rice,Chinese,6,33,Easy,3.7
+R0002,Fried Rice,Chinese,6,16,Easy,4.8
+R0003,Wonton Soup,Chinese,6,65,Medium,4.1
+R0004,Char Siew Pork,Chinese,6,32,Medium,4.2
+R0005,Steamed Fish,Chinese,6,61,Easy,3.7
+R0006,Congee,Chinese,6,61,Easy,4.1
+R0007,Nasi Lemak,Malay,6,68,Easy,4.2
+R0008,Rendang,Malay,6,86,Medium,4.6
+R0009,Mee Goreng,Malay,6,20,Hard,4.8
+R0010,Laksa,Malay,6,19,Medium,4.4
+R0011,Satay,Malay,6,26,Medium,4.2
+R0012,Curry Puff,Malay,6,15,Medium,4.5
+R0013,Biryani,Indian,6,57,Medium,4.3
+R0014,Roti Prata,Indian,6,82,Medium,4.7
+R0015,Butter Chicken,Indian,6,75,Hard,4.4
+R0016,Dhal Curry,Indian,6,46,Medium,4.8
+R0017,Tandoori Chicken,Indian,6,87,Medium,4.7
+R0018,Chapati,Indian,5,27,Medium,4.7
+R0019,Pasta Aglio Olio,Western,6,78,Medium,4.0
+R0020,Caesar Salad,Western,6,32,Hard,3.9
+R0021,Grilled Salmon,Western,6,84,Easy,3.8
+R0022,Beef Steak,Western,6,53,Medium,3.6
+R0023,Mac and Cheese,Western,6,79,Hard,3.9
+R0024,Club Sandwich,Western,6,46,Easy,4.4
+R0025,Miso Soup,Japanese,5,78,Hard,4.2
+R0026,Teriyaki Chicken,Japanese,6,23,Easy,3.7
+R0027,Gyudon,Japanese,6,83,Medium,4.1
+R0028,Tamagoyaki,Japanese,5,25,Hard,3.9
+R0029,Sushi Rice Bowl,Japanese,6,62,Easy,3.7
+R0030,Ramen,Japanese,6,64,Medium,3.7
+R0031,Kimchi Jjigae,Korean,6,53,Easy,4.5
+R0032,Bibimbap,Korean,6,84,Easy,4.9
+R0033,Japchae,Korean,6,62,Medium,4.0
+R0034,Korean Fried Chicken,Korean,6,22,Easy,4.5
+R0035,Doenjang Jjigae,Korean,6,41,Hard,4.1
+R0036,Tteokbokki,Korean,6,65,Easy,5.0
+R0037,Ondeh Ondeh,Dessert,5,25,Easy,4.3
+R0038,Kueh Lapis,Dessert,6,53,Medium,5.0
+R0039,Bubur Cha Cha,Dessert,6,63,Hard,3.9
+R0040,Cheng Tng,Dessert,6,26,Hard,4.7
+R0041,Mango Sago,Dessert,5,52,Medium,4.2
+R0042,Brownies,Dessert,6,80,Easy,4.5
+R0043,Cheesecake,Dessert,6,43,Easy,4.9
+R0044,Cookies,Dessert,6,51,Hard,4.2
+R0045,Gulab Jamun,Dessert,6,58,Medium,4.2
+R0046,Kheer,Dessert,6,64,Hard,3.8

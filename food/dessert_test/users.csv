@@ -1,0 +1,76 @@
+user_id,name,age,gender,email,location,preferred_cuisines,yuu_member,click_collect_user,account_created,avg_weekly_spend_sgd
+U0001,Hafiz Chan,32,M,hafiz.chan1@email.com,Bedok,Dessert,True,False,2022-11-30,110.96
+U0002,Jasmine Ali,29,M,jasmine.ali2@email.com,Clementi,Dessert,True,False,2022-09-01,59.36
+U0003,Deepa Kumar,44,M,deepa.kumar3@email.com,Yishun,Dessert,False,True,2023-06-04,44.82
+U0004,Ling Chan,50,M,ling.chan4@email.com,Bedok,Dessert,True,True,2023-07-01,43.76
+U0005,Raj Goh,58,M,raj.goh5@email.com,Tampines,Dessert,True,False,2023-03-25,174.46
+U0006,John Zhang,25,M,john.zhang6@email.com,Clementi,Dessert,False,True,2023-04-18,89.74
+U0007,Arjun Lim,57,M,arjun.lim7@email.com,Bedok,Dessert,False,False,2023-02-18,155.49
+U0008,Ling Pillai,22,M,ling.pillai8@email.com,Bishan,Dessert,True,False,2022-01-14,159.23
+U0009,Marcus Wong,52,F,marcus.wong9@email.com,Jurong,Dessert,False,True,2022-09-20,55.06
+U0010,Arjun Lee,51,F,arjun.lee10@email.com,Sengkang,Dessert,True,True,2022-01-18,165.0
+U0011,Mei Tan,20,M,mei.tan11@email.com,Tampines,Dessert,False,True,2023-12-19,176.89
+U0012,Farah Wong,35,F,farah.wong12@email.com,Bedok,Dessert,True,True,2022-05-19,57.92
+U0013,Wei Lim,62,F,wei.lim13@email.com,Bukit Timah,Dessert,False,False,2022-08-27,116.09
+U0014,Zara Wong,59,F,zara.wong14@email.com,Clementi,Dessert,False,False,2023-04-28,107.14
+U0015,Raj Tan,51,M,raj.tan15@email.com,Jurong,Dessert,True,True,2023-08-30,31.5
+U0016,Nadia Wong,33,M,nadia.wong16@email.com,Sengkang,Dessert,True,True,2023-06-07,191.73
+U0017,Kavya Raj,51,F,kavya.raj17@email.com,Bedok,Dessert,False,False,2023-04-17,78.2
+U0018,Xiao Lee,40,F,xiao.lee18@email.com,Bedok,Dessert,False,False,2023-06-21,158.33
+U0019,Nadia Hassan,53,F,nadia.hassan19@email.com,Toa Payoh,Dessert,False,False,2023-11-03,94.35
+U0020,Sarah Goh,62,F,sarah.goh20@email.com,Tampines,Dessert,False,True,2023-12-25,54.66
+U0021,Chen Lim,57,M,chen.lim21@email.com,Toa Payoh,Dessert,True,True,2022-08-06,138.71
+U0022,Deepa Ng,30,F,deepa.ng22@email.com,Jurong,Dessert,False,True,2022-10-05,179.56
+U0023,Ahmad Lee,49,M,ahmad.lee23@email.com,Jurong,Dessert,False,True,2023-01-04,114.24
+U0024,Hafiz Goh,47,M,hafiz.goh24@email.com,Tampines,Dessert,True,False,2022-03-20,162.75
+U0025,Aisha Chan,36,M,aisha.chan25@email.com,Toa Payoh,Dessert,True,True,2023-09-06,37.66
+U0026,Sarah Pillai,65,M,sarah.pillai26@email.com,Woodlands,Dessert,False,True,2023-06-08,122.05
+U0027,Ling Abdullah,50,M,ling.abdullah27@email.com,Bedok,Dessert,False,False,2022-11-29,189.77
+U0028,Kavya Goh,45,M,kavya.goh28@email.com,Bedok,Dessert,False,False,2022-07-20,87.73
+U0029,Jun Smith,52,F,jun.smith29@email.com,Bedok,Dessert,False,False,2022-07-15,165.39
+U0030,Siti Chen,29,F,siti.chen30@email.com,Toa Payoh,Dessert,False,False,2023-11-18,81.42
+U0031,Kevin Wong,57,M,kevin.wong31@email.com,Clementi,Dessert,False,True,2023-05-07,194.03
+U0032,Nur Raj,46,F,nur.raj32@email.com,Toa Payoh,Dessert,False,False,2023-08-20,179.01
+U0033,Hafiz Wong,48,F,hafiz.wong33@email.com,Bishan,Dessert,False,False,2023-12-05,181.92
+U0034,Kavya Pillai,47,F,kavya.pillai34@email.com,Jurong,Dessert,False,False,2023-07-22,104.57
+U0035,Ryan Ong,56,M,ryan.ong35@email.com,Bukit Timah,Dessert,True,False,2023-11-28,86.2
+U0036,Chen Chan,27,F,chen.chan36@email.com,Yishun,Dessert,True,True,2023-09-05,105.78
+U0037,Nur Ng,23,F,nur.ng37@email.com,Bukit Timah,Dessert,False,False,2022-06-19,90.74
+U0038,Priya Chan,31,F,priya.chan38@email.com,Sengkang,Dessert,True,False,2022-05-21,130.04
+U0039,Arjun Smith,32,M,arjun.smith39@email.com,Bishan,Dessert,True,False,2022-08-26,184.21
+U0040,Priya Tan,42,F,priya.tan40@email.com,Bishan,Dessert,False,False,2022-03-01,121.41
+U0041,Ryan Kumar,43,M,ryan.kumar41@email.com,Bukit Timah,Dessert,True,True,2023-06-06,60.43
+U0042,Jasmine Kumar,42,F,jasmine.kumar42@email.com,Jurong,Dessert,True,True,2022-10-12,92.24
+U0043,Hui Hassan,27,F,hui.hassan43@email.com,Bishan,Dessert,False,False,2022-09-09,130.42
+U0044,John Chen,27,F,john.chen44@email.com,Bedok,Dessert,False,False,2022-06-22,156.71
+U0045,Nurul Hassan,40,M,nurul.hassan45@email.com,Jurong,Dessert,True,True,2023-01-10,194.51
+U0046,Jasmine Singh,21,F,jasmine.singh46@email.com,Tampines,Dessert,True,False,2023-09-07,68.77
+U0047,Farah Singh,41,M,farah.singh47@email.com,Tampines,Dessert,False,False,2022-11-09,131.08
+U0048,Farah Mohamed,50,F,farah.mohamed48@email.com,Woodlands,Dessert,True,True,2023-02-14,168.78
+U0049,Aisha Mohamed,43,F,aisha.mohamed49@email.com,Clementi,Dessert,False,True,2022-01-17,171.02
+U0050,Marcus Goh,59,F,marcus.goh50@email.com,Jurong,Dessert,True,False,2022-04-09,108.47
+U0051,Ryan Mohamed,30,F,ryan.mohamed51@email.com,Clementi,Dessert,True,False,2022-04-18,193.62
+U0052,Arjun Chan,30,F,arjun.chan52@email.com,Clementi,Dessert,False,True,2022-01-16,100.16
+U0053,Sarah Abdullah,61,M,sarah.abdullah53@email.com,Toa Payoh,Dessert,False,True,2022-06-27,150.71
+U0054,Nadia Lim,21,F,nadia.lim54@email.com,Sengkang,Dessert,True,False,2023-12-25,52.01
+U0055,Nur Raj,41,F,nur.raj55@email.com,Bedok,Dessert,False,True,2022-04-20,122.39
+U0056,Nadia Pillai,28,M,nadia.pillai56@email.com,Tampines,Dessert,True,True,2022-04-18,82.36
+U0057,John Ong,59,M,john.ong57@email.com,Bedok,Dessert,True,False,2022-10-09,167.85
+U0058,Vikram Abdullah,53,M,vikram.abdullah58@email.com,Sengkang,Dessert,False,False,2023-09-10,150.83
+U0059,Wei Kumar,22,M,wei.kumar59@email.com,Sengkang,Dessert,False,True,2022-08-03,46.25
+U0060,Mei Sharma,42,M,mei.sharma60@email.com,Woodlands,Dessert,False,False,2023-08-24,148.59
+U0061,Xiao Lee,24,M,xiao.lee61@email.com,Jurong,Dessert,False,False,2023-06-30,96.8
+U0062,Mei Sharma,49,M,mei.sharma62@email.com,Sengkang,Dessert,False,False,2022-08-26,98.71
+U0063,Chen Lim,34,F,chen.lim63@email.com,Jurong,Dessert,True,False,2022-05-04,169.45
+U0064,John Ong,33,F,john.ong64@email.com,Yishun,Dessert,True,True,2023-03-22,78.25
+U0065,Nurul Raj,21,F,nurul.raj65@email.com,Clementi,Dessert,False,True,2022-11-01,196.22
+U0066,Nur Tan,52,F,nur.tan66@email.com,Tampines,Dessert,False,False,2023-05-25,188.92
+U0067,Nur Lim,44,F,nur.lim67@email.com,Bedok,Dessert,True,True,2023-08-07,32.23
+U0068,Xiao Hassan,47,F,xiao.hassan68@email.com,Yishun,Dessert,False,True,2022-02-04,37.21
+U0069,Wei Goh,44,F,wei.goh69@email.com,Jurong,Dessert,True,False,2022-08-23,92.87
+U0070,Nadia Sharma,45,M,nadia.sharma70@email.com,Sengkang,Dessert,False,False,2022-12-17,62.37
+U0071,Zara Lim,25,F,zara.lim71@email.com,Clementi,Dessert,True,False,2022-04-21,88.07
+U0072,Kevin Ong,31,F,kevin.ong72@email.com,Woodlands,Dessert,False,False,2023-07-15,133.06
+U0073,Xiao Lim,46,M,xiao.lim73@email.com,Sengkang,Dessert,False,False,2022-06-12,61.86
+U0074,Hafiz Zhang,26,F,hafiz.zhang74@email.com,Woodlands,Dessert,True,True,2023-07-19,52.0
+U0075,Kavya Wong,29,M,kavya.wong75@email.com,Yishun,Dessert,True,True,2023-11-03,96.13

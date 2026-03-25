@@ -1,0 +1,272 @@
+recipe_id,recipe_name,cuisine,ingredient
+R0001,Chicken Rice,Chinese,Whole Chicken
+R0001,Chicken Rice,Chinese,Jasmine Rice
+R0001,Chicken Rice,Chinese,Ginger
+R0001,Chicken Rice,Chinese,Garlic
+R0001,Chicken Rice,Chinese,Sesame Oil
+R0001,Chicken Rice,Chinese,Light Soy Sauce
+R0002,Fried Rice,Chinese,Jasmine Rice
+R0002,Fried Rice,Chinese,Eggs
+R0002,Fried Rice,Chinese,Spring Onion
+R0002,Fried Rice,Chinese,Soy Sauce
+R0002,Fried Rice,Chinese,Vegetable Oil
+R0002,Fried Rice,Chinese,Frozen Mixed Veg
+R0003,Wonton Soup,Chinese,Wonton Wrappers
+R0003,Wonton Soup,Chinese,Minced Pork
+R0003,Wonton Soup,Chinese,Prawns
+R0003,Wonton Soup,Chinese,Chicken Stock
+R0003,Wonton Soup,Chinese,Ginger
+R0003,Wonton Soup,Chinese,Spring Onion
+R0004,Char Siew Pork,Chinese,Pork Belly
+R0004,Char Siew Pork,Chinese,Hoisin Sauce
+R0004,Char Siew Pork,Chinese,Honey
+R0004,Char Siew Pork,Chinese,Soy Sauce
+R0004,Char Siew Pork,Chinese,Five Spice Powder
+R0004,Char Siew Pork,Chinese,Garlic
+R0005,Steamed Fish,Chinese,Whole Seabass
+R0005,Steamed Fish,Chinese,Ginger
+R0005,Steamed Fish,Chinese,Light Soy Sauce
+R0005,Steamed Fish,Chinese,Spring Onion
+R0005,Steamed Fish,Chinese,Sesame Oil
+R0005,Steamed Fish,Chinese,Chilli
+R0006,Congee,Chinese,Jasmine Rice
+R0006,Congee,Chinese,Chicken Stock
+R0006,Congee,Chinese,Ginger
+R0006,Congee,Chinese,Spring Onion
+R0006,Congee,Chinese,Century Egg
+R0006,Congee,Chinese,Sesame Oil
+R0007,Nasi Lemak,Malay,Jasmine Rice
+R0007,Nasi Lemak,Malay,Coconut Milk
+R0007,Nasi Lemak,Malay,Pandan Leaves
+R0007,Nasi Lemak,Malay,Dried Anchovies
+R0007,Nasi Lemak,Malay,Sambal
+R0007,Nasi Lemak,Malay,Cucumber
+R0008,Rendang,Malay,Beef Chuck
+R0008,Rendang,Malay,Coconut Milk
+R0008,Rendang,Malay,Lemongrass
+R0008,Rendang,Malay,Galangal
+R0008,Rendang,Malay,Turmeric
+R0008,Rendang,Malay,Chilli Paste
+R0009,Mee Goreng,Malay,Yellow Noodles
+R0009,Mee Goreng,Malay,Eggs
+R0009,Mee Goreng,Malay,Bean Sprouts
+R0009,Mee Goreng,Malay,Tomato Sauce
+R0009,Mee Goreng,Malay,Soy Sauce
+R0009,Mee Goreng,Malay,Tofu
+R0010,Laksa,Malay,Rice Vermicelli
+R0010,Laksa,Malay,Coconut Milk
+R0010,Laksa,Malay,Laksa Paste
+R0010,Laksa,Malay,Prawns
+R0010,Laksa,Malay,Tofu Puffs
+R0010,Laksa,Malay,Bean Sprouts
+R0011,Satay,Malay,Chicken Thighs
+R0011,Satay,Malay,Lemongrass
+R0011,Satay,Malay,Turmeric
+R0011,Satay,Malay,Satay Sauce
+R0011,Satay,Malay,Bamboo Skewers
+R0011,Satay,Malay,Cucumber
+R0012,Curry Puff,Malay,Puff Pastry
+R0012,Curry Puff,Malay,Potatoes
+R0012,Curry Puff,Malay,Chicken Breast
+R0012,Curry Puff,Malay,Curry Powder
+R0012,Curry Puff,Malay,Onion
+R0012,Curry Puff,Malay,Eggs
+R0013,Biryani,Indian,Basmati Rice
+R0013,Biryani,Indian,Chicken Thighs
+R0013,Biryani,Indian,Biryani Spice Mix
+R0013,Biryani,Indian,Yoghurt
+R0013,Biryani,Indian,Onion
+R0013,Biryani,Indian,Ghee
+R0014,Roti Prata,Indian,Plain Flour
+R0014,Roti Prata,Indian,Eggs
+R0014,Roti Prata,Indian,Butter
+R0014,Roti Prata,Indian,Salt
+R0014,Roti Prata,Indian,Water
+R0014,Roti Prata,Indian,Condensed Milk
+R0015,Butter Chicken,Indian,Chicken Breast
+R0015,Butter Chicken,Indian,Butter
+R0015,Butter Chicken,Indian,Tomato Puree
+R0015,Butter Chicken,Indian,Cream
+R0015,Butter Chicken,Indian,Garam Masala
+R0015,Butter Chicken,Indian,Garlic
+R0016,Dhal Curry,Indian,Red Lentils
+R0016,Dhal Curry,Indian,Onion
+R0016,Dhal Curry,Indian,Tomatoes
+R0016,Dhal Curry,Indian,Turmeric
+R0016,Dhal Curry,Indian,Cumin
+R0016,Dhal Curry,Indian,Ghee
+R0017,Tandoori Chicken,Indian,Chicken Legs
+R0017,Tandoori Chicken,Indian,Yoghurt
+R0017,Tandoori Chicken,Indian,Tandoori Spice Mix
+R0017,Tandoori Chicken,Indian,Lemon
+R0017,Tandoori Chicken,Indian,Garlic
+R0017,Tandoori Chicken,Indian,Ginger
+R0018,Chapati,Indian,Whole Wheat Flour
+R0018,Chapati,Indian,Salt
+R0018,Chapati,Indian,Water
+R0018,Chapati,Indian,Ghee
+R0018,Chapati,Indian,Butter
+R0019,Pasta Aglio Olio,Western,Spaghetti
+R0019,Pasta Aglio Olio,Western,Garlic
+R0019,Pasta Aglio Olio,Western,Olive Oil
+R0019,Pasta Aglio Olio,Western,Chilli Flakes
+R0019,Pasta Aglio Olio,Western,Parmesan Cheese
+R0019,Pasta Aglio Olio,Western,Parsley
+R0020,Caesar Salad,Western,Romaine Lettuce
+R0020,Caesar Salad,Western,Caesar Dressing
+R0020,Caesar Salad,Western,Parmesan Cheese
+R0020,Caesar Salad,Western,Croutons
+R0020,Caesar Salad,Western,Chicken Breast
+R0020,Caesar Salad,Western,Lemon
+R0021,Grilled Salmon,Western,Salmon Fillet
+R0021,Grilled Salmon,Western,Lemon
+R0021,Grilled Salmon,Western,Garlic
+R0021,Grilled Salmon,Western,Olive Oil
+R0021,Grilled Salmon,Western,Dill
+R0021,Grilled Salmon,Western,Salt
+R0022,Beef Steak,Western,Ribeye Steak
+R0022,Beef Steak,Western,Butter
+R0022,Beef Steak,Western,Garlic
+R0022,Beef Steak,Western,Rosemary
+R0022,Beef Steak,Western,Salt
+R0022,Beef Steak,Western,Black Pepper
+R0023,Mac and Cheese,Western,Macaroni
+R0023,Mac and Cheese,Western,Cheddar Cheese
+R0023,Mac and Cheese,Western,Milk
+R0023,Mac and Cheese,Western,Butter
+R0023,Mac and Cheese,Western,Plain Flour
+R0023,Mac and Cheese,Western,Salt
+R0024,Club Sandwich,Western,White Bread
+R0024,Club Sandwich,Western,Chicken Breast
+R0024,Club Sandwich,Western,Bacon
+R0024,Club Sandwich,Western,Lettuce
+R0024,Club Sandwich,Western,Tomatoes
+R0024,Club Sandwich,Western,Mayonnaise
+R0025,Miso Soup,Japanese,Miso Paste
+R0025,Miso Soup,Japanese,Tofu
+R0025,Miso Soup,Japanese,Wakame Seaweed
+R0025,Miso Soup,Japanese,Spring Onion
+R0025,Miso Soup,Japanese,Dashi Stock
+R0026,Teriyaki Chicken,Japanese,Chicken Thighs
+R0026,Teriyaki Chicken,Japanese,Soy Sauce
+R0026,Teriyaki Chicken,Japanese,Mirin
+R0026,Teriyaki Chicken,Japanese,Sake
+R0026,Teriyaki Chicken,Japanese,Sugar
+R0026,Teriyaki Chicken,Japanese,Sesame Seeds
+R0027,Gyudon,Japanese,Beef Slices
+R0027,Gyudon,Japanese,Onion
+R0027,Gyudon,Japanese,Soy Sauce
+R0027,Gyudon,Japanese,Mirin
+R0027,Gyudon,Japanese,Dashi Stock
+R0027,Gyudon,Japanese,Jasmine Rice
+R0028,Tamagoyaki,Japanese,Eggs
+R0028,Tamagoyaki,Japanese,Mirin
+R0028,Tamagoyaki,Japanese,Soy Sauce
+R0028,Tamagoyaki,Japanese,Sugar
+R0028,Tamagoyaki,Japanese,Vegetable Oil
+R0029,Sushi Rice Bowl,Japanese,Sushi Rice
+R0029,Sushi Rice Bowl,Japanese,Rice Vinegar
+R0029,Sushi Rice Bowl,Japanese,Salmon Fillet
+R0029,Sushi Rice Bowl,Japanese,Avocado
+R0029,Sushi Rice Bowl,Japanese,Soy Sauce
+R0029,Sushi Rice Bowl,Japanese,Nori
+R0030,Ramen,Japanese,Ramen Noodles
+R0030,Ramen,Japanese,Chicken Stock
+R0030,Ramen,Japanese,Soy Sauce
+R0030,Ramen,Japanese,Chashu Pork
+R0030,Ramen,Japanese,Soft Boiled Eggs
+R0030,Ramen,Japanese,Nori
+R0031,Kimchi Jjigae,Korean,Kimchi
+R0031,Kimchi Jjigae,Korean,Pork Belly
+R0031,Kimchi Jjigae,Korean,Tofu
+R0031,Kimchi Jjigae,Korean,Gochugaru
+R0031,Kimchi Jjigae,Korean,Sesame Oil
+R0031,Kimchi Jjigae,Korean,Spring Onion
+R0032,Bibimbap,Korean,Jasmine Rice
+R0032,Bibimbap,Korean,Beef Mince
+R0032,Bibimbap,Korean,Spinach
+R0032,Bibimbap,Korean,Carrots
+R0032,Bibimbap,Korean,Gochujang
+R0032,Bibimbap,Korean,Sesame Oil
+R0033,Japchae,Korean,Glass Noodles
+R0033,Japchae,Korean,Beef Slices
+R0033,Japchae,Korean,Spinach
+R0033,Japchae,Korean,Carrots
+R0033,Japchae,Korean,Soy Sauce
+R0033,Japchae,Korean,Sesame Oil
+R0034,Korean Fried Chicken,Korean,Whole Chicken
+R0034,Korean Fried Chicken,Korean,Gochujang
+R0034,Korean Fried Chicken,Korean,Honey
+R0034,Korean Fried Chicken,Korean,Garlic
+R0034,Korean Fried Chicken,Korean,Soy Sauce
+R0034,Korean Fried Chicken,Korean,Corn Starch
+R0035,Doenjang Jjigae,Korean,Doenjang Paste
+R0035,Doenjang Jjigae,Korean,Tofu
+R0035,Doenjang Jjigae,Korean,Zucchini
+R0035,Doenjang Jjigae,Korean,Onion
+R0035,Doenjang Jjigae,Korean,Anchovy Stock
+R0035,Doenjang Jjigae,Korean,Garlic
+R0036,Tteokbokki,Korean,Rice Cakes
+R0036,Tteokbokki,Korean,Gochujang
+R0036,Tteokbokki,Korean,Fish Cakes
+R0036,Tteokbokki,Korean,Spring Onion
+R0036,Tteokbokki,Korean,Sugar
+R0036,Tteokbokki,Korean,Soy Sauce
+R0037,Ondeh Ondeh,Dessert,Glutinous Rice Flour
+R0037,Ondeh Ondeh,Dessert,Pandan Juice
+R0037,Ondeh Ondeh,Dessert,Palm Sugar
+R0037,Ondeh Ondeh,Dessert,Grated Coconut
+R0037,Ondeh Ondeh,Dessert,Salt
+R0038,Kueh Lapis,Dessert,Rice Flour
+R0038,Kueh Lapis,Dessert,Coconut Milk
+R0038,Kueh Lapis,Dessert,Sugar
+R0038,Kueh Lapis,Dessert,Pandan Juice
+R0038,Kueh Lapis,Dessert,Red Food Colouring
+R0038,Kueh Lapis,Dessert,Salt
+R0039,Bubur Cha Cha,Dessert,Sweet Potato
+R0039,Bubur Cha Cha,Dessert,Taro
+R0039,Bubur Cha Cha,Dessert,Coconut Milk
+R0039,Bubur Cha Cha,Dessert,Sago Pearls
+R0039,Bubur Cha Cha,Dessert,Pandan Leaves
+R0039,Bubur Cha Cha,Dessert,Sugar
+R0040,Cheng Tng,Dessert,Lotus Seeds
+R0040,Cheng Tng,Dessert,Dried Longan
+R0040,Cheng Tng,Dessert,Barley
+R0040,Cheng Tng,Dessert,White Fungus
+R0040,Cheng Tng,Dessert,Rock Sugar
+R0040,Cheng Tng,Dessert,Pandan Leaves
+R0041,Mango Sago,Dessert,Mango
+R0041,Mango Sago,Dessert,Sago Pearls
+R0041,Mango Sago,Dessert,Coconut Milk
+R0041,Mango Sago,Dessert,Condensed Milk
+R0041,Mango Sago,Dessert,Sugar
+R0042,Brownies,Dessert,Dark Chocolate
+R0042,Brownies,Dessert,Butter
+R0042,Brownies,Dessert,Sugar
+R0042,Brownies,Dessert,Eggs
+R0042,Brownies,Dessert,Plain Flour
+R0042,Brownies,Dessert,Cocoa Powder
+R0043,Cheesecake,Dessert,Cream Cheese
+R0043,Cheesecake,Dessert,Digestive Biscuits
+R0043,Cheesecake,Dessert,Butter
+R0043,Cheesecake,Dessert,Sugar
+R0043,Cheesecake,Dessert,Eggs
+R0043,Cheesecake,Dessert,Vanilla Extract
+R0044,Cookies,Dessert,Plain Flour
+R0044,Cookies,Dessert,Butter
+R0044,Cookies,Dessert,Sugar
+R0044,Cookies,Dessert,Eggs
+R0044,Cookies,Dessert,Vanilla Extract
+R0044,Cookies,Dessert,Chocolate Chips
+R0045,Gulab Jamun,Dessert,Milk Powder
+R0045,Gulab Jamun,Dessert,Plain Flour
+R0045,Gulab Jamun,Dessert,Ghee
+R0045,Gulab Jamun,Dessert,Sugar
+R0045,Gulab Jamun,Dessert,Rose Water
+R0045,Gulab Jamun,Dessert,Cardamom
+R0046,Kheer,Dessert,Basmati Rice
+R0046,Kheer,Dessert,Milk
+R0046,Kheer,Dessert,Sugar
+R0046,Kheer,Dessert,Cardamom
+R0046,Kheer,Dessert,Saffron
+R0046,Kheer,Dessert,Condensed Milk

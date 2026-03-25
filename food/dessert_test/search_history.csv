@@ -1,0 +1,921 @@
+search_id,user_id,search_term,timestamp,day_of_week,platform,result_clicked
+S000068,U0008,promotion,2024-01-01 01:28:12,Monday,Web,False
+S000131,U0014,Sago Pearls,2024-01-01 05:21:06,Monday,App,True
+S000644,U0052,Steamed Fish,2024-01-01 11:35:13,Monday,App,False
+S000562,U0045,organic,2024-01-01 14:17:59,Monday,App,False
+S000398,U0034,Cocoa Powder,2024-01-01 17:52:59,Monday,App,True
+S000652,U0053,Eggs,2024-01-02 04:30:39,Tuesday,App,True
+S000291,U0026,Curry Puff,2024-01-02 10:11:50,Tuesday,App,True
+S000685,U0055,Digestive Biscuits,2024-01-02 12:34:03,Tuesday,App,True
+S000335,U0029,Eggs,2024-01-02 17:31:59,Tuesday,App,True
+S000470,U0038,Vanilla Extract,2024-01-03 10:31:38,Wednesday,App,False
+S000043,U0006,Cocoa Powder,2024-01-03 13:44:28,Wednesday,Web,False
+S000834,U0068,Sugar,2024-01-03 16:35:04,Wednesday,Web,True
+S000624,U0050,Sugar,2024-01-03 17:30:41,Wednesday,Web,True
+S000844,U0069,Glutinous Rice Flour,2024-01-04 10:21:04,Thursday,App,False
+S000072,U0008,Rock Sugar,2024-01-04 15:59:51,Thursday,Web,True
+S000653,U0053,Eggs,2024-01-05 01:16:28,Friday,App,True
+S000343,U0030,Mango Sago,2024-01-05 01:30:28,Friday,App,True
+S000279,U0025,Saffron,2024-01-05 02:43:05,Friday,Web,True
+S000222,U0020,Grated Coconut,2024-01-05 10:47:52,Friday,Web,False
+S000315,U0028,Butter,2024-01-05 15:40:25,Friday,App,False
+S000689,U0055,Kimchi Jjigae,2024-01-05 19:35:10,Friday,App,True
+S000804,U0065,Plain Flour,2024-01-06 09:45:05,Saturday,App,False
+S000219,U0020,Cookies,2024-01-06 11:24:23,Saturday,App,False
+S000748,U0061,Plain Flour,2024-01-06 13:04:23,Saturday,App,True
+S000171,U0016,Lotus Seeds,2024-01-06 19:59:08,Saturday,Web,False
+S000081,U0009,Cheng Tng,2024-01-07 02:39:17,Sunday,App,True
+S000101,U0012,Pandan Leaves,2024-01-07 05:18:58,Sunday,App,False
+S000149,U0015,Pandan Leaves,2024-01-07 12:27:01,Sunday,Web,True
+S000324,U0029,Sugar,2024-01-07 14:12:14,Sunday,App,False
+S000020,U0003,Vanilla Extract,2024-01-07 16:23:52,Sunday,Web,True
+S000650,U0052,Beef Steak,2024-01-07 22:04:27,Sunday,App,True
+S000900,U0073,Sweet Potato,2024-01-08 06:52:52,Monday,App,True
+S000217,U0020,Butter,2024-01-08 07:47:26,Monday,Web,True
+S000853,U0070,Grated Coconut,2024-01-08 08:51:04,Monday,Web,False
+S000027,U0004,organic,2024-01-08 09:04:03,Monday,App,True
+S000774,U0062,Sugar,2024-01-08 11:16:25,Monday,Web,False
+S000622,U0050,Butter,2024-01-08 13:43:18,Monday,Web,True
+S000714,U0058,Brownies,2024-01-08 21:07:12,Monday,App,True
+S000734,U0059,Coconut Milk,2024-01-09 05:09:35,Tuesday,App,True
+S000023,U0004,Digestive Biscuits,2024-01-09 05:59:48,Tuesday,App,True
+S000079,U0009,Coconut Milk,2024-01-09 08:46:49,Tuesday,Web,False
+S000022,U0003,Cookies,2024-01-09 15:00:33,Tuesday,Web,True
+S000259,U0023,Cocoa Powder,2024-01-09 16:29:30,Tuesday,App,True
+S000890,U0073,Salt,2024-01-09 16:40:53,Tuesday,App,True
+S000142,U0014,Brownies,2024-01-09 20:50:50,Tuesday,App,True
+S000396,U0034,Sugar,2024-01-10 00:03:26,Wednesday,Web,True
+S000679,U0055,Bubur Cha Cha,2024-01-10 10:45:20,Wednesday,Web,False
+S000873,U0072,Bubur Cha Cha,2024-01-10 13:59:14,Wednesday,App,True
+S000555,U0044,Salt,2024-01-10 14:27:11,Wednesday,Web,False
+S000894,U0073,Curry Puff,2024-01-10 15:31:45,Wednesday,App,True
+S000772,U0062,Barley,2024-01-10 17:37:40,Wednesday,App,False
+S000812,U0066,Gyudon,2024-01-10 18:33:44,Wednesday,App,False
+S000393,U0033,Chocolate Chips,2024-01-10 21:26:05,Wednesday,Web,True
+S000017,U0003,Bubur Cha Cha,2024-01-11 12:41:27,Thursday,App,True
+S000857,U0071,Tteokbokki,2024-01-11 16:46:57,Thursday,App,False
+S000456,U0037,Sugar,2024-01-11 23:50:59,Thursday,App,True
+S000440,U0036,Caesar Salad,2024-01-12 03:18:10,Friday,App,True
+S000529,U0042,Korean Fried Chicken,2024-01-12 13:47:45,Friday,App,True
+S000828,U0067,Ghee,2024-01-12 21:16:57,Friday,Web,True
+S000130,U0014,Plain Flour,2024-01-12 21:52:16,Friday,App,False
+S000669,U0053,Pandan Juice,2024-01-12 23:51:49,Friday,App,True
+S000488,U0039,Cookies,2024-01-13 02:39:11,Saturday,Web,True
+S000855,U0071,Gulab Jamun,2024-01-13 16:14:16,Saturday,App,True
+S000735,U0059,Milk,2024-01-13 19:43:08,Saturday,App,False
+S000540,U0043,Vanilla Extract,2024-01-14 03:15:52,Sunday,App,True
+S000609,U0049,Cream Cheese,2024-01-14 08:15:28,Sunday,App,False
+S000681,U0055,Sugar,2024-01-14 14:18:00,Sunday,App,True
+S000645,U0052,Sweet Potato,2024-01-14 15:58:46,Sunday,App,True
+S000616,U0050,Saffron,2024-01-14 20:05:25,Sunday,Web,False
+S000458,U0037,Mango Sago,2024-01-14 21:11:39,Sunday,App,True
+S000919,U0075,Sago Pearls,2024-01-14 22:36:05,Sunday,App,True
+S000572,U0046,Brownies,2024-01-15 01:20:50,Monday,App,False
+S000289,U0026,Pandan Juice,2024-01-15 06:19:33,Monday,App,False
+S000326,U0029,Cookies,2024-01-15 12:24:07,Monday,Web,False
+S000067,U0008,Sugar,2024-01-15 16:29:11,Monday,Web,True
+S000637,U0051,Kueh Lapis,2024-01-16 11:24:50,Tuesday,Web,True
+S000683,U0055,Mac and Cheese,2024-01-17 02:18:00,Wednesday,App,True
+S000693,U0056,Gulab Jamun,2024-01-17 04:19:35,Wednesday,Web,True
+S000798,U0065,Cream Cheese,2024-01-17 15:25:56,Wednesday,Web,True
+S000132,U0014,Salt,2024-01-17 15:42:21,Wednesday,Web,True
+S000284,U0026,delivery,2024-01-17 20:46:53,Wednesday,App,False
+S000088,U0010,Bubur Cha Cha,2024-01-17 23:24:35,Wednesday,App,False
+S000115,U0013,Eggs,2024-01-17 23:49:34,Wednesday,Web,False
+S000462,U0037,Chocolate Chips,2024-01-18 07:27:04,Thursday,App,True
+S000238,U0021,Chocolate Chips,2024-01-18 20:40:34,Thursday,Web,True
+S000374,U0031,Ghee,2024-01-18 20:55:19,Thursday,App,True
+S000425,U0035,Bubur Cha Cha,2024-01-19 09:38:27,Friday,App,True
+S000036,U0006,Wonton Soup,2024-01-19 22:24:28,Friday,Web,True
+S000220,U0020,Milk Powder,2024-01-20 02:04:29,Saturday,App,True
+S000169,U0016,Vanilla Extract,2024-01-20 07:28:03,Saturday,App,True
+S000707,U0057,Sugar,2024-01-20 18:11:49,Saturday,App,False
+S000768,U0062,Saffron,2024-01-20 19:55:46,Saturday,App,False
+S000025,U0004,Beef Steak,2024-01-21 02:50:33,Sunday,App,False
+S000557,U0044,Barley,2024-01-21 04:51:51,Sunday,App,True
+S000835,U0068,Mango,2024-01-21 06:56:41,Sunday,App,True
+S000841,U0068,Glutinous Rice Flour,2024-01-21 12:55:41,Sunday,Web,False
+S000099,U0012,Taro,2024-01-21 13:30:28,Sunday,App,False
+S000807,U0065,Vanilla Extract,2024-01-21 14:16:19,Sunday,App,False
+S000638,U0051,Sushi Rice Bowl,2024-01-21 20:46:01,Sunday,App,True
+S000013,U0002,Sugar,2024-01-21 22:34:06,Sunday,Web,True
+S000903,U0074,Sugar,2024-01-22 04:58:41,Monday,App,True
+S000406,U0034,organic,2024-01-22 05:30:44,Monday,App,True
+S000785,U0063,Eggs,2024-01-22 15:04:40,Monday,Web,True
+S000268,U0025,Brownies,2024-01-22 18:21:08,Monday,Web,True
+S000832,U0068,Condensed Milk,2024-01-22 20:58:56,Monday,App,True
+S000561,U0045,Grated Coconut,2024-01-22 23:28:35,Monday,App,False
+S000306,U0028,Salt,2024-01-23 01:11:19,Tuesday,App,False
+S000281,U0025,Salt,2024-01-23 04:01:48,Tuesday,App,True
+S000062,U0007,Vanilla Extract,2024-01-23 04:53:21,Tuesday,App,True
+S000630,U0051,Sugar,2024-01-23 06:54:44,Tuesday,App,True
+S000613,U0050,Pandan Leaves,2024-01-23 19:18:02,Tuesday,App,True
+S000159,U0016,Vanilla Extract,2024-01-24 04:05:21,Wednesday,App,True
+S000500,U0040,Mango,2024-01-24 05:11:54,Wednesday,Web,True
+S000105,U0012,Ondeh Ondeh,2024-01-24 10:35:56,Wednesday,Web,False
+S000920,U0075,Pandan Juice,2024-01-24 17:15:41,Wednesday,Web,True
+S000110,U0013,Cardamom,2024-01-25 00:47:37,Thursday,App,True
+S000091,U0011,Glutinous Rice Flour,2024-01-25 15:51:32,Thursday,App,False
+S000740,U0060,Grated Coconut,2024-01-25 18:05:54,Thursday,App,True
+S000359,U0031,Digestive Biscuits,2024-01-25 19:19:36,Thursday,App,False
+S000776,U0062,Eggs,2024-01-26 10:41:06,Friday,App,True
+S000255,U0022,Mango Sago,2024-01-26 11:15:39,Friday,Web,True
+S000128,U0014,Ondeh Ondeh,2024-01-26 11:56:46,Friday,App,True
+S000030,U0005,Butter,2024-01-26 19:03:06,Friday,Web,True
+S000302,U0027,Sugar,2024-01-26 22:10:13,Friday,App,False
+S000152,U0015,Condensed Milk,2024-01-26 22:47:56,Friday,Web,True
+S000909,U0075,Rose Water,2024-01-27 06:05:33,Saturday,App,False
+S000782,U0063,Bubur Cha Cha,2024-01-27 07:28:33,Saturday,App,False
+S000338,U0029,Coconut Milk,2024-01-27 10:37:14,Saturday,Web,True
+S000349,U0030,Butter,2024-01-27 18:33:31,Saturday,App,True
+S000597,U0049,Cream Cheese,2024-01-27 18:58:39,Saturday,Web,True
+S000861,U0071,Sweet Potato,2024-01-28 01:31:21,Sunday,Web,True
+S000875,U0072,Coconut Milk,2024-01-28 01:47:31,Sunday,App,True
+S000560,U0045,delivery,2024-01-28 03:50:59,Sunday,Web,True
+S000256,U0022,Tandoori Chicken,2024-01-28 03:56:30,Sunday,App,False
+S000352,U0030,Dried Longan,2024-01-28 06:04:21,Sunday,App,False
+S000208,U0019,Dark Chocolate,2024-01-28 07:12:57,Sunday,App,True
+S000116,U0013,Sago Pearls,2024-01-28 08:15:31,Sunday,Web,False
+S000634,U0051,Pasta Aglio Olio,2024-01-28 08:39:23,Sunday,App,True
+S000180,U0017,Saffron,2024-01-28 09:38:35,Sunday,Web,True
+S000837,U0068,Cardamom,2024-01-28 14:25:35,Sunday,App,False
+S000564,U0045,Milk,2024-01-28 17:28:52,Sunday,Web,False
+S000273,U0025,Lotus Seeds,2024-01-28 19:34:56,Sunday,Web,True
+S000345,U0030,Eggs,2024-01-28 21:14:20,Sunday,App,True
+S000330,U0029,Vanilla Extract,2024-01-29 01:26:06,Monday,Web,True
+S000789,U0063,Roti Prata,2024-01-29 15:24:20,Monday,App,True
+S000213,U0019,Vanilla Extract,2024-01-29 21:24:46,Monday,App,True
+S000409,U0034,Brownies,2024-01-30 00:49:02,Tuesday,App,False
+S000542,U0044,Grated Coconut,2024-01-30 02:07:16,Tuesday,App,True
+S000321,U0028,Condensed Milk,2024-01-30 04:49:36,Tuesday,App,False
+S000678,U0055,Butter,2024-01-30 23:42:36,Tuesday,App,False
+S000884,U0073,Sugar,2024-01-31 03:47:47,Wednesday,App,False
+S000422,U0035,Sago Pearls,2024-01-31 05:09:50,Wednesday,Web,True
+S000082,U0009,Brownies,2024-01-31 14:46:55,Wednesday,App,True
+S000196,U0018,Grilled Salmon,2024-01-31 21:03:03,Wednesday,App,True
+S000003,U0001,Butter,2024-02-01 02:18:39,Thursday,App,True
+S000623,U0050,Eggs,2024-02-01 03:31:30,Thursday,App,False
+S000170,U0016,Sugar,2024-02-01 06:20:16,Thursday,App,True
+S000106,U0012,Digestive Biscuits,2024-02-01 19:32:14,Thursday,App,True
+S000565,U0045,organic,2024-02-02 03:48:41,Friday,Web,False
+S000631,U0051,Saffron,2024-02-02 04:41:23,Friday,Web,True
+S000898,U0073,halal,2024-02-02 15:40:28,Friday,App,True
+S000876,U0072,Sago Pearls,2024-02-02 18:34:38,Friday,App,True
+S000840,U0068,Ondeh Ondeh,2024-02-02 19:07:33,Friday,App,True
+S000113,U0013,Dried Longan,2024-02-02 19:14:43,Friday,App,False
+S000793,U0064,Wonton Soup,2024-02-02 22:07:31,Friday,App,False
+S000763,U0062,Vanilla Extract,2024-02-03 02:18:40,Saturday,App,True
+S000014,U0002,Caesar Salad,2024-02-03 07:48:28,Saturday,App,True
+S000295,U0027,Mango Sago,2024-02-03 12:39:04,Saturday,Web,True
+S000141,U0014,Cheesecake,2024-02-03 13:23:36,Saturday,Web,False
+S000029,U0005,Ghee,2024-02-03 17:49:55,Saturday,App,True
+S000184,U0017,Laksa,2024-02-04 10:37:21,Sunday,Web,False
+S000286,U0026,Butter,2024-02-04 11:12:14,Sunday,Web,False
+S000412,U0034,Biryani,2024-02-04 11:19:31,Sunday,App,True
+S000418,U0035,Sugar,2024-02-04 11:31:43,Sunday,Web,True
+S000262,U0023,Cookies,2024-02-04 12:27:17,Sunday,Web,True
+S000018,U0003,Sugar,2024-02-04 15:48:25,Sunday,App,False
+S000122,U0013,Gyudon,2024-02-04 21:06:17,Sunday,App,True
+S000204,U0018,Coconut Milk,2024-02-05 01:03:32,Monday,App,True
+S000391,U0033,Sugar,2024-02-05 08:17:52,Monday,Web,False
+S000070,U0008,Char Siew Pork,2024-02-05 17:31:02,Monday,App,True
+S000548,U0044,Tandoori Chicken,2024-02-05 22:16:34,Monday,App,False
+S000605,U0049,Butter,2024-02-05 23:44:40,Monday,App,False
+S000357,U0031,Rock Sugar,2024-02-06 01:09:27,Tuesday,App,False
+S000121,U0013,Gulab Jamun,2024-02-06 09:09:00,Tuesday,App,True
+S000434,U0036,Sugar,2024-02-06 19:30:05,Tuesday,Web,False
+S000290,U0026,Pandan Juice,2024-02-07 18:19:30,Wednesday,Web,True
+S000530,U0042,Chicken Rice,2024-02-08 05:50:13,Thursday,Web,True
+S000445,U0036,Cheesecake,2024-02-08 09:32:27,Thursday,Web,True
+S000016,U0003,Gulab Jamun,2024-02-08 15:52:56,Thursday,App,True
+S000791,U0064,Salt,2024-02-08 16:20:22,Thursday,App,True
+S000405,U0034,Rock Sugar,2024-02-09 09:23:53,Friday,App,True
+S000299,U0027,Sugar,2024-02-09 19:59:26,Friday,App,True
+S000216,U0019,Ondeh Ondeh,2024-02-10 00:45:30,Saturday,App,False
+S000494,U0039,Sweet Potato,2024-02-10 12:05:21,Saturday,App,False
+S000797,U0065,Pandan Leaves,2024-02-10 14:14:54,Saturday,Web,True
+S000194,U0018,Kheer,2024-02-10 15:03:13,Saturday,App,True
+S000546,U0044,Eggs,2024-02-10 17:57:36,Saturday,Web,True
+S000386,U0033,Dark Chocolate,2024-02-10 18:12:19,Saturday,App,False
+S000469,U0037,Milk Powder,2024-02-10 20:16:19,Saturday,Web,True
+S000695,U0056,Cardamom,2024-02-10 22:59:10,Saturday,Web,True
+S000747,U0061,Milk Powder,2024-02-11 07:41:47,Sunday,App,False
+S000696,U0056,Ghee,2024-02-11 14:07:40,Sunday,App,False
+S000514,U0041,Salt,2024-02-11 19:06:02,Sunday,Web,True
+S000253,U0022,Plain Flour,2024-02-11 19:32:10,Sunday,App,True
+S000566,U0045,White Fungus,2024-02-11 21:00:01,Sunday,Web,True
+S000849,U0070,Gyudon,2024-02-12 04:05:40,Monday,App,False
+S000899,U0073,Coconut Milk,2024-02-12 05:53:37,Monday,App,True
+S000673,U0054,Kueh Lapis,2024-02-12 09:06:25,Monday,Web,True
+S000767,U0062,Cheesecake,2024-02-12 09:15:48,Monday,Web,True
+S000361,U0031,Plain Flour,2024-02-12 09:18:33,Monday,Web,True
+S000186,U0018,Digestive Biscuits,2024-02-12 11:44:54,Monday,Web,False
+S000399,U0034,Butter,2024-02-12 19:06:29,Monday,App,True
+S000214,U0019,Sugar,2024-02-13 02:30:55,Tuesday,App,True
+S000516,U0041,Chocolate Chips,2024-02-13 05:34:01,Tuesday,App,True
+S000061,U0007,Condensed Milk,2024-02-13 08:36:42,Tuesday,Web,True
+S000627,U0051,Cream Cheese,2024-02-13 10:52:23,Tuesday,Web,True
+S000817,U0066,Cookies,2024-02-13 11:05:08,Tuesday,Web,True
+S000063,U0007,Mango,2024-02-13 13:56:05,Tuesday,Web,True
+S000686,U0055,Cheng Tng,2024-02-13 15:45:19,Tuesday,App,True
+S000662,U0053,Basmati Rice,2024-02-13 22:04:02,Tuesday,App,True
+S000147,U0015,Butter,2024-02-14 05:37:10,Wednesday,App,True
+S000427,U0035,Kheer,2024-02-14 10:49:42,Wednesday,Web,True
+S000567,U0045,Vanilla Extract,2024-02-14 12:18:24,Wednesday,Web,True
+S000040,U0006,Cheesecake,2024-02-14 17:21:03,Wednesday,App,True
+S000727,U0058,Gyudon,2024-02-14 18:42:01,Wednesday,App,True
+S000144,U0015,delivery,2024-02-14 23:18:20,Wednesday,Web,False
+S000294,U0026,Brownies,2024-02-15 01:11:23,Thursday,App,True
+S000777,U0062,Eggs,2024-02-15 04:56:14,Thursday,App,True
+S000551,U0044,Dried Longan,2024-02-15 05:19:19,Thursday,App,True
+S000741,U0060,Milk Powder,2024-02-15 07:13:02,Thursday,Web,True
+S000371,U0031,Condensed Milk,2024-02-15 14:20:15,Thursday,App,True
+S000231,U0020,Sugar,2024-02-15 20:36:11,Thursday,Web,True
+S000700,U0056,Pandan Juice,2024-02-16 00:03:44,Friday,Web,True
+S000484,U0039,Satay,2024-02-16 08:33:17,Friday,App,True
+S000694,U0056,Sugar,2024-02-16 09:57:19,Friday,App,True
+S000465,U0037,Chocolate Chips,2024-02-16 16:19:15,Friday,App,False
+S000810,U0066,Taro,2024-02-16 23:13:42,Friday,Web,True
+S000265,U0024,Cardamom,2024-02-17 00:41:36,Saturday,App,False
+S000322,U0028,Taro,2024-02-17 01:52:02,Saturday,Web,False
+S000365,U0031,Basmati Rice,2024-02-17 04:07:58,Saturday,App,True
+S000746,U0061,Club Sandwich,2024-02-17 11:41:51,Saturday,App,True
+S000264,U0024,Grilled Salmon,2024-02-18 01:19:51,Sunday,App,True
+S000593,U0048,Tteokbokki,2024-02-18 02:02:53,Sunday,Web,True
+S000813,U0066,Barley,2024-02-18 09:46:03,Sunday,Web,True
+S000867,U0071,Taro,2024-02-18 11:34:04,Sunday,App,False
+S000134,U0014,Palm Sugar,2024-02-18 19:33:52,Sunday,Web,True
+S000107,U0012,Basmati Rice,2024-02-19 04:25:49,Monday,App,True
+S000073,U0009,Cookies,2024-02-19 05:05:52,Monday,App,False
+S000912,U0075,Milk,2024-02-19 12:11:52,Monday,App,True
+S000378,U0032,Mango,2024-02-19 16:51:29,Monday,App,True
+S000431,U0036,Biryani,2024-02-19 19:18:59,Monday,App,False
+S000239,U0021,Butter,2024-02-19 22:15:37,Monday,App,False
+S000586,U0047,Milk,2024-02-20 04:57:35,Tuesday,Web,True
+S000307,U0028,Rice Flour,2024-02-20 08:29:05,Tuesday,App,True
+S000077,U0009,Kueh Lapis,2024-02-20 11:30:09,Tuesday,App,True
+S000203,U0018,Sugar,2024-02-20 16:15:48,Tuesday,Web,True
+S000274,U0025,Butter,2024-02-20 16:26:29,Tuesday,Web,True
+S000433,U0036,Sugar,2024-02-20 21:23:13,Tuesday,App,False
+S000358,U0031,Lotus Seeds,2024-02-20 21:33:25,Tuesday,App,False
+S000054,U0007,Laksa,2024-02-21 04:14:35,Wednesday,App,True
+S000676,U0054,Sushi Rice Bowl,2024-02-21 06:40:09,Wednesday,App,True
+S000486,U0039,Ondeh Ondeh,2024-02-21 09:15:56,Wednesday,Web,False
+S000620,U0050,Lotus Seeds,2024-02-21 21:52:38,Wednesday,Web,True
+S000329,U0029,White Fungus,2024-02-21 23:34:30,Wednesday,Web,False
+S000245,U0022,Cream Cheese,2024-02-21 23:44:06,Wednesday,App,True
+S000661,U0053,Eggs,2024-02-22 01:27:31,Thursday,App,False
+S000183,U0017,Cheesecake,2024-02-22 01:48:10,Thursday,Web,True
+S000543,U0044,Bubur Cha Cha,2024-02-22 03:19:04,Thursday,App,True
+S000178,U0017,Vanilla Extract,2024-02-22 15:58:35,Thursday,Web,True
+S000733,U0059,Plain Flour,2024-02-23 08:22:54,Friday,App,False
+S000438,U0036,Vanilla Extract,2024-02-23 17:57:34,Friday,App,False
+S000120,U0013,Dark Chocolate,2024-02-23 19:13:33,Friday,App,True
+S000762,U0062,Cardamom,2024-02-23 20:26:43,Friday,App,True
+S000739,U0060,Rose Water,2024-02-24 08:22:11,Saturday,App,True
+S000816,U0066,Glutinous Rice Flour,2024-02-24 12:48:04,Saturday,App,True
+S000784,U0063,Ondeh Ondeh,2024-02-24 15:40:15,Saturday,Web,True
+S000722,U0058,Sugar,2024-02-24 20:21:34,Saturday,Web,True
+S000103,U0012,Rice Flour,2024-02-24 22:04:49,Saturday,App,True
+S000480,U0038,Dark Chocolate,2024-02-25 02:23:53,Sunday,App,False
+S000847,U0069,Kueh Lapis,2024-02-25 04:47:17,Sunday,App,False
+S000552,U0044,Sweet Potato,2024-02-25 06:24:29,Sunday,App,True
+S000473,U0038,Saffron,2024-02-25 10:32:11,Sunday,App,True
+S000728,U0059,Plain Flour,2024-02-25 14:23:17,Sunday,App,True
+S000796,U0065,Red Food Colouring,2024-02-25 17:01:28,Sunday,App,True
+S000848,U0070,Chocolate Chips,2024-02-25 19:44:41,Sunday,App,False
+S000547,U0044,Dark Chocolate,2024-02-25 23:57:02,Sunday,App,True
+S000218,U0020,Sugar,2024-02-26 04:49:49,Monday,Web,True
+S000474,U0038,Sugar,2024-02-26 11:05:09,Monday,App,True
+S000737,U0060,Lotus Seeds,2024-02-26 14:29:20,Monday,Web,True
+S000303,U0027,Butter Chicken,2024-02-26 16:55:48,Monday,Web,False
+S000198,U0018,Kheer,2024-02-26 20:01:20,Monday,App,True
+S000769,U0062,Cream Cheese,2024-02-27 10:47:42,Tuesday,App,False
+S000463,U0037,Saffron,2024-02-27 19:34:49,Tuesday,App,False
+S000012,U0002,White Fungus,2024-02-27 22:04:27,Tuesday,Web,True
+S000725,U0058,Sweet Potato,2024-02-28 01:57:03,Wednesday,App,True
+S000010,U0002,Brownies,2024-02-28 04:02:27,Wednesday,App,True
+S000382,U0032,Eggs,2024-02-28 05:06:00,Wednesday,App,False
+S000582,U0047,Mac and Cheese,2024-02-28 07:30:02,Wednesday,Web,False
+S000083,U0009,Cookies,2024-02-28 10:08:10,Wednesday,App,True
+S000146,U0015,Cheng Tng,2024-02-28 16:34:08,Wednesday,App,True
+S000448,U0036,Saffron,2024-02-28 21:35:54,Wednesday,App,True
+S000880,U0072,Ondeh Ondeh,2024-02-28 22:02:38,Wednesday,App,False
+S000654,U0053,Digestive Biscuits,2024-02-28 22:19:41,Wednesday,App,True
+S000629,U0051,Sweet Potato,2024-02-29 00:59:10,Thursday,Web,True
+S000790,U0064,Eggs,2024-02-29 01:53:22,Thursday,Web,True
+S000800,U0065,Cheng Tng,2024-02-29 04:38:18,Thursday,App,False
+S000802,U0065,Condensed Milk,2024-02-29 10:28:19,Thursday,Web,True
+S000428,U0035,Bibimbap,2024-02-29 14:03:19,Thursday,App,True
+S000510,U0041,Salt,2024-02-29 20:53:42,Thursday,Web,True
+S000301,U0027,Sago Pearls,2024-03-01 04:48:48,Friday,Web,True
+S000340,U0030,Sugar,2024-03-01 12:27:08,Friday,App,True
+S000460,U0037,Eggs,2024-03-01 19:23:05,Friday,App,True
+S000580,U0047,Satay,2024-03-02 07:18:48,Saturday,App,True
+S000496,U0039,Rice Flour,2024-03-02 09:18:27,Saturday,App,True
+S000160,U0016,Plain Flour,2024-03-02 15:05:47,Saturday,App,True
+S000507,U0041,Plain Flour,2024-03-02 16:27:12,Saturday,Web,True
+S000139,U0014,Grated Coconut,2024-03-02 18:41:25,Saturday,App,False
+S000697,U0056,Ghee,2024-03-03 02:36:16,Sunday,App,True
+S000241,U0021,Condensed Milk,2024-03-03 07:03:42,Sunday,App,False
+S000327,U0029,Cream Cheese,2024-03-03 12:35:49,Sunday,Web,True
+S000511,U0041,Palm Sugar,2024-03-03 16:06:25,Sunday,Web,True
+S000377,U0032,Mango,2024-03-03 17:05:07,Sunday,Web,True
+S000034,U0005,Rose Water,2024-03-03 18:14:21,Sunday,App,True
+S000124,U0013,Milk,2024-03-03 20:32:51,Sunday,App,False
+S000297,U0027,Digestive Biscuits,2024-03-04 02:26:05,Monday,App,False
+S000051,U0007,Dhal Curry,2024-03-04 04:00:06,Monday,App,True
+S000461,U0037,Glutinous Rice Flour,2024-03-04 04:54:07,Monday,App,True
+S000887,U0073,Curry Puff,2024-03-04 05:15:29,Monday,App,True
+S000323,U0028,Coconut Milk,2024-03-04 11:05:11,Monday,Web,True
+S000671,U0054,Tandoori Chicken,2024-03-04 12:29:08,Monday,App,False
+S000270,U0025,Vanilla Extract,2024-03-04 23:03:58,Monday,App,False
+S000305,U0028,Red Food Colouring,2024-03-05 06:20:57,Tuesday,App,False
+S000743,U0061,Salt,2024-03-05 11:24:08,Tuesday,Web,True
+S000779,U0063,Sago Pearls,2024-03-06 08:38:16,Wednesday,App,True
+S000060,U0007,Ghee,2024-03-06 09:00:35,Wednesday,Web,True
+S000402,U0034,Pandan Leaves,2024-03-06 12:36:22,Wednesday,Web,True
+S000549,U0044,Kueh Lapis,2024-03-06 13:04:35,Wednesday,Web,True
+S000207,U0019,Chocolate Chips,2024-03-06 17:34:37,Wednesday,Web,True
+S000069,U0008,Chocolate Chips,2024-03-06 21:54:02,Wednesday,App,True
+S000483,U0039,Sugar,2024-03-07 01:38:25,Thursday,App,True
+S000902,U0074,Eggs,2024-03-07 06:42:09,Thursday,App,True
+S000512,U0041,Cocoa Powder,2024-03-07 10:52:02,Thursday,Web,False
+S000272,U0025,Pandan Juice,2024-03-07 11:06:52,Thursday,App,True
+S000699,U0056,Rice Flour,2024-03-07 11:34:26,Thursday,App,True
+S000172,U0016,Rock Sugar,2024-03-07 17:28:41,Thursday,App,True
+S000719,U0058,Cheesecake,2024-03-07 20:21:20,Thursday,Web,True
+S000442,U0036,Cookies,2024-03-07 22:13:45,Thursday,Web,True
+S000753,U0061,Japchae,2024-03-08 05:21:29,Friday,App,True
+S000150,U0015,Ghee,2024-03-08 22:43:29,Friday,App,False
+S000408,U0034,Cream Cheese,2024-03-09 07:28:53,Saturday,Web,False
+S000269,U0025,Plain Flour,2024-03-09 07:33:55,Saturday,App,True
+S000007,U0002,Cardamom,2024-03-09 12:17:42,Saturday,Web,True
+S000439,U0036,Korean Fried Chicken,2024-03-09 13:55:58,Saturday,Web,True
+S000384,U0032,Cookies,2024-03-09 15:34:44,Saturday,App,True
+S000199,U0018,Dried Longan,2024-03-09 18:02:33,Saturday,App,True
+S000429,U0035,Dark Chocolate,2024-03-09 19:50:53,Saturday,App,True
+S000611,U0049,Mango,2024-03-09 20:34:51,Saturday,App,True
+S000249,U0022,Butter Chicken,2024-03-10 02:58:49,Sunday,Web,True
+S000801,U0065,Coconut Milk,2024-03-10 06:00:47,Sunday,App,False
+S000525,U0042,Sugar,2024-03-10 12:19:53,Sunday,App,True
+S000348,U0030,Sago Pearls,2024-03-10 16:46:05,Sunday,App,True
+S000892,U0073,Sweet Potato,2024-03-11 04:06:54,Monday,App,True
+S000640,U0052,Pandan Leaves,2024-03-11 04:25:27,Monday,Web,True
+S000865,U0071,Condensed Milk,2024-03-11 09:42:07,Monday,App,False
+S000437,U0036,Plain Flour,2024-03-11 15:23:00,Monday,Web,True
+S000005,U0001,Rice Flour,2024-03-11 21:28:36,Monday,App,True
+S000583,U0047,Coconut Milk,2024-03-11 22:08:02,Monday,Web,False
+S000787,U0063,Chocolate Chips,2024-03-12 03:03:56,Tuesday,App,False
+S000574,U0046,Butter,2024-03-12 11:08:40,Tuesday,App,True
+S000655,U0053,Sugar,2024-03-12 20:01:07,Tuesday,App,True
+S000157,U0016,Dhal Curry,2024-03-12 20:12:07,Tuesday,App,True
+S000833,U0068,promotion,2024-03-12 20:18:38,Tuesday,Web,True
+S000100,U0012,Chocolate Chips,2024-03-12 23:49:28,Tuesday,Web,True
+S000221,U0020,Coconut Milk,2024-03-13 01:17:06,Wednesday,App,True
+S000097,U0011,Pandan Juice,2024-03-13 03:04:28,Wednesday,Web,True
+S000614,U0050,Sugar,2024-03-13 04:04:30,Wednesday,App,True
+S000288,U0026,Butter,2024-03-13 05:35:17,Wednesday,App,True
+S000602,U0049,Korean Fried Chicken,2024-03-13 12:53:11,Wednesday,Web,True
+S000285,U0026,Saffron,2024-03-13 14:43:59,Wednesday,App,True
+S000341,U0030,Sugar,2024-03-13 17:05:12,Wednesday,App,True
+S000506,U0041,Pandan Leaves,2024-03-13 19:03:14,Wednesday,App,True
+S000395,U0034,Butter,2024-03-14 00:08:31,Thursday,App,False
+S000911,U0075,Sugar,2024-03-14 03:25:50,Thursday,Web,False
+S000731,U0059,Brownies,2024-03-16 20:30:39,Saturday,Web,True
+S000166,U0016,Biryani,2024-03-17 03:16:35,Sunday,Web,True
+S000829,U0067,Dried Longan,2024-03-17 13:53:40,Sunday,App,True
+S000247,U0022,Cookies,2024-03-17 17:52:56,Sunday,App,True
+S000553,U0044,Brownies,2024-03-17 20:35:25,Sunday,App,False
+S000210,U0019,Sago Pearls,2024-03-17 23:23:04,Sunday,App,False
+S000235,U0021,Ghee,2024-03-18 01:49:55,Monday,App,True
+S000736,U0060,Grated Coconut,2024-03-18 01:54:25,Monday,Web,True
+S000410,U0034,Coconut Milk,2024-03-18 06:03:40,Monday,App,True
+S000732,U0059,Basmati Rice,2024-03-18 16:53:52,Monday,App,True
+S000450,U0036,Milk,2024-03-18 21:49:17,Monday,App,True
+S000852,U0070,Dark Chocolate,2024-03-18 23:25:57,Monday,App,False
+S000092,U0011,Kimchi Jjigae,2024-03-19 06:45:04,Tuesday,Web,False
+S000287,U0026,Grilled Salmon,2024-03-19 14:22:00,Tuesday,Web,True
+S000783,U0063,Sugar,2024-03-19 23:04:05,Tuesday,App,True
+S000346,U0030,Digestive Biscuits,2024-03-20 01:59:42,Wednesday,App,False
+S000094,U0011,Eggs,2024-03-20 11:45:23,Wednesday,App,True
+S000556,U0044,Cardamom,2024-03-20 14:48:24,Wednesday,App,True
+S000011,U0002,Sugar,2024-03-20 17:51:46,Wednesday,App,False
+S000423,U0035,Glutinous Rice Flour,2024-03-20 19:47:22,Wednesday,App,True
+S000482,U0039,Ondeh Ondeh,2024-03-21 10:43:17,Thursday,Web,True
+S000526,U0042,Gulab Jamun,2024-03-21 13:32:47,Thursday,Web,False
+S000258,U0023,Milk Powder,2024-03-21 16:08:48,Thursday,App,True
+S000209,U0019,Butter,2024-03-21 19:54:14,Thursday,Web,False
+S000827,U0067,Condensed Milk,2024-03-21 21:29:12,Thursday,Web,False
+S000467,U0037,Ramen,2024-03-22 01:44:11,Friday,App,False
+S000050,U0006,Glutinous Rice Flour,2024-03-22 01:57:59,Friday,App,True
+S000135,U0014,Cream Cheese,2024-03-22 02:55:20,Friday,App,False
+S000452,U0037,Sago Pearls,2024-03-22 10:33:01,Friday,App,True
+S000342,U0030,Chapati,2024-03-22 12:42:04,Friday,App,True
+S000764,U0062,Digestive Biscuits,2024-03-22 15:37:40,Friday,Web,True
+S000823,U0066,Condensed Milk,2024-03-22 20:06:29,Friday,App,True
+S000223,U0020,Vanilla Extract,2024-03-22 22:58:04,Friday,Web,True
+S000905,U0074,Pandan Juice,2024-03-22 23:55:12,Friday,Web,True
+S000711,U0057,Basmati Rice,2024-03-23 00:37:37,Saturday,App,False
+S000632,U0051,Glutinous Rice Flour,2024-03-23 02:04:15,Saturday,App,False
+S000250,U0022,Grated Coconut,2024-03-23 07:14:15,Saturday,App,True
+S000558,U0045,Palm Sugar,2024-03-23 08:10:43,Saturday,App,False
+S000145,U0015,Taro,2024-03-23 15:33:03,Saturday,App,False
+S000078,U0009,Coconut Milk,2024-03-24 00:43:06,Sunday,Web,False
+S000048,U0006,Sugar,2024-03-24 02:50:33,Sunday,App,True
+S000426,U0035,Coconut Milk,2024-03-24 12:30:45,Sunday,App,False
+S000647,U0052,Wonton Soup,2024-03-24 13:35:46,Sunday,Web,True
+S000754,U0061,Pandan Juice,2024-03-24 16:00:02,Sunday,App,True
+S000492,U0039,Eggs,2024-03-24 20:09:22,Sunday,Web,True
+S000138,U0014,Coconut Milk,2024-03-25 17:33:32,Monday,App,False
+S000053,U0007,Bubur Cha Cha,2024-03-25 17:54:32,Monday,Web,False
+S000084,U0009,Eggs,2024-03-26 03:57:37,Tuesday,Web,False
+S000868,U0071,Japchae,2024-03-26 11:14:39,Tuesday,App,True
+S000009,U0002,Ghee,2024-03-26 13:53:07,Tuesday,Web,True
+S000031,U0005,Condensed Milk,2024-03-26 15:15:42,Tuesday,Web,False
+S000320,U0028,Chocolate Chips,2024-03-26 16:58:22,Tuesday,Web,True
+S000698,U0056,Red Food Colouring,2024-03-26 23:48:03,Tuesday,App,True
+S000344,U0030,Grated Coconut,2024-03-27 08:21:27,Wednesday,App,True
+S000059,U0007,Sugar,2024-03-27 20:33:56,Wednesday,App,True
+S000742,U0060,Butter,2024-03-28 07:36:24,Thursday,Web,True
+S000651,U0052,Sugar,2024-03-29 02:01:34,Friday,App,True
+S000049,U0006,Coconut Milk,2024-03-29 10:04:17,Friday,App,True
+S000298,U0027,Eggs,2024-03-29 10:56:05,Friday,App,True
+S000642,U0052,Eggs,2024-03-29 17:13:53,Friday,App,True
+S000403,U0034,Congee,2024-03-30 00:19:38,Saturday,Web,True
+S000481,U0039,Gulab Jamun,2024-03-30 01:21:03,Saturday,App,True
+S000283,U0026,Butter,2024-03-30 03:18:23,Saturday,Web,False
+S000649,U0052,Rice Flour,2024-03-30 04:26:15,Saturday,App,False
+S000407,U0034,Salt,2024-03-30 05:08:59,Saturday,App,True
+S000175,U0017,Gulab Jamun,2024-03-30 06:13:22,Saturday,App,True
+S000363,U0031,Cocoa Powder,2024-03-30 08:53:55,Saturday,Web,False
+S000339,U0029,Cookies,2024-03-31 07:14:07,Sunday,App,True
+S000164,U0016,Grated Coconut,2024-03-31 15:48:40,Sunday,App,False
+S000375,U0032,Dark Chocolate,2024-03-31 22:03:37,Sunday,App,False
+S000211,U0019,Pandan Juice,2024-03-31 22:21:53,Sunday,App,True
+S000392,U0033,Sugar,2024-04-01 06:59:24,Monday,App,True
+S000251,U0022,Mango,2024-04-01 11:55:10,Monday,Web,True
+S000454,U0037,Salt,2024-04-01 16:05:53,Monday,App,False
+S000563,U0045,Pandan Leaves,2024-04-01 22:17:50,Monday,Web,True
+S000044,U0006,Vanilla Extract,2024-04-02 06:15:29,Tuesday,Web,False
+S000901,U0074,Pandan Juice,2024-04-02 07:53:58,Tuesday,Web,True
+S000385,U0033,Bubur Cha Cha,2024-04-02 13:17:44,Tuesday,Web,True
+S000376,U0032,Sugar,2024-04-02 17:47:17,Tuesday,App,True
+S000836,U0068,Salt,2024-04-02 19:01:12,Tuesday,App,True
+S000794,U0064,Rose Water,2024-04-02 19:21:42,Tuesday,Web,True
+S000504,U0041,Sugar,2024-04-02 19:40:39,Tuesday,App,True
+S000237,U0021,Palm Sugar,2024-04-02 19:52:17,Tuesday,App,True
+S000026,U0004,Pandan Leaves,2024-04-02 23:38:02,Tuesday,Web,False
+S000618,U0050,Sugar,2024-04-03 00:23:52,Wednesday,App,True
+S000277,U0025,Butter,2024-04-03 01:50:47,Wednesday,App,False
+S000182,U0017,Cardamom,2024-04-03 02:10:39,Wednesday,App,True
+S000119,U0013,Butter,2024-04-03 10:15:53,Wednesday,App,True
+S000397,U0034,Chocolate Chips,2024-04-03 11:28:51,Wednesday,App,True
+S000712,U0057,Digestive Biscuits,2024-04-03 16:31:36,Wednesday,App,True
+S000453,U0037,Glutinous Rice Flour,2024-04-03 23:31:28,Wednesday,App,False
+S000665,U0053,Pandan Leaves,2024-04-04 08:27:57,Thursday,App,True
+S000035,U0005,Mac and Cheese,2024-04-04 09:20:09,Thursday,Web,False
+S000201,U0018,delivery,2024-04-04 10:18:23,Thursday,Web,True
+S000267,U0024,Pandan Juice,2024-04-04 15:41:57,Thursday,Web,True
+S000545,U0044,Sugar,2024-04-04 16:50:28,Thursday,App,True
+S000206,U0019,organic,2024-04-04 20:00:00,Thursday,App,True
+S000532,U0043,Mango Sago,2024-04-05 06:22:40,Friday,App,True
+S000831,U0068,Bubur Cha Cha,2024-04-05 16:58:27,Friday,App,False
+S000400,U0034,Cardamom,2024-04-05 17:11:30,Friday,App,True
+S000643,U0052,delivery,2024-04-06 05:21:43,Saturday,App,True
+S000173,U0016,Vanilla Extract,2024-04-06 06:33:42,Saturday,Web,True
+S000744,U0061,organic,2024-04-06 08:43:32,Saturday,App,True
+S000430,U0035,Sushi Rice Bowl,2024-04-06 11:57:04,Saturday,App,True
+S000008,U0002,Eggs,2024-04-06 16:35:28,Saturday,App,True
+S000594,U0049,Plain Flour,2024-04-06 21:54:19,Saturday,App,True
+S000677,U0055,Rock Sugar,2024-04-07 03:51:35,Sunday,App,True
+S000168,U0016,Mango Sago,2024-04-07 05:20:15,Sunday,App,True
+S000554,U0044,Kheer,2024-04-07 06:40:45,Sunday,Web,False
+S000581,U0047,Sago Pearls,2024-04-07 13:12:55,Sunday,App,False
+S000355,U0030,Sugar,2024-04-07 23:43:39,Sunday,App,False
+S000904,U0074,Pandan Leaves,2024-04-08 05:34:17,Monday,Web,False
+S000424,U0035,Grilled Salmon,2024-04-08 09:52:57,Monday,Web,True
+S000055,U0007,Kueh Lapis,2024-04-08 10:50:32,Monday,App,False
+S000230,U0020,Japchae,2024-04-08 10:55:32,Monday,App,False
+S000280,U0025,Lotus Seeds,2024-04-08 13:38:27,Monday,Web,True
+S000057,U0007,Fried Rice,2024-04-08 20:03:25,Monday,App,True
+S000174,U0016,Mango Sago,2024-04-08 20:54:53,Monday,App,False
+S000721,U0058,Sugar,2024-04-09 01:40:33,Tuesday,App,True
+S000248,U0022,Sugar,2024-04-09 04:59:25,Tuesday,App,True
+S000908,U0075,White Fungus,2024-04-09 11:27:06,Tuesday,App,True
+S000202,U0018,Milk Powder,2024-04-09 13:38:07,Tuesday,Web,False
+S000538,U0043,Sago Pearls,2024-04-09 23:20:29,Tuesday,App,False
+S000493,U0039,Brownies,2024-04-10 01:42:04,Wednesday,Web,True
+S000858,U0071,Brownies,2024-04-10 02:33:08,Wednesday,App,True
+S000503,U0040,Rose Water,2024-04-10 13:42:51,Wednesday,Web,True
+S000702,U0056,Pandan Leaves,2024-04-10 23:11:01,Wednesday,App,False
+S000716,U0058,Cheesecake,2024-04-11 06:24:58,Thursday,App,True
+S000881,U0072,Plain Flour,2024-04-11 11:12:04,Thursday,App,True
+S000850,U0070,Mango,2024-04-11 11:47:22,Thursday,App,True
+S000449,U0036,Sago Pearls,2024-04-11 16:21:38,Thursday,Web,True
+S000156,U0016,discount,2024-04-11 16:39:21,Thursday,App,False
+S000032,U0005,Pandan Leaves,2024-04-11 21:22:13,Thursday,Web,True
+S000781,U0063,Eggs,2024-04-12 04:48:57,Friday,App,False
+S000915,U0075,Bubur Cha Cha,2024-04-12 04:55:43,Friday,App,True
+S000477,U0038,Kueh Lapis,2024-04-12 12:01:17,Friday,App,True
+S000811,U0066,Red Food Colouring,2024-04-12 12:43:26,Friday,Web,False
+S000089,U0010,Sugar,2024-04-12 17:01:16,Friday,App,True
+S000006,U0001,Fried Rice,2024-04-12 22:55:32,Friday,Web,True
+S000845,U0069,Saffron,2024-04-12 23:11:15,Friday,App,True
+S000568,U0045,Kueh Lapis,2024-04-13 17:59:07,Saturday,App,True
+S000818,U0066,Lotus Seeds,2024-04-13 19:57:55,Saturday,App,True
+S000675,U0054,Lotus Seeds,2024-04-14 07:31:38,Sunday,App,True
+S000870,U0071,Eggs,2024-04-14 11:02:24,Sunday,Web,True
+S000475,U0038,Cardamom,2024-04-14 11:04:27,Sunday,App,True
+S000680,U0055,Taro,2024-04-14 13:33:05,Sunday,App,True
+S000435,U0036,Mac and Cheese,2024-04-14 18:06:36,Sunday,Web,False
+S000723,U0058,Sugar,2024-04-14 23:16:45,Sunday,App,True
+S000126,U0014,Rock Sugar,2024-04-14 23:24:25,Sunday,Web,True
+S000668,U0053,Pandan Leaves,2024-04-15 18:31:34,Monday,App,True
+S000808,U0065,Pandan Leaves,2024-04-15 20:41:39,Monday,App,False
+S000730,U0059,Sugar,2024-04-15 23:47:27,Monday,App,True
+S000227,U0020,Taro,2024-04-15 23:59:55,Monday,App,True
+S000261,U0023,Korean Fried Chicken,2024-04-16 01:44:44,Tuesday,App,True
+S000862,U0071,Cream Cheese,2024-04-16 02:05:56,Tuesday,Web,True
+S000390,U0033,Vanilla Extract,2024-04-16 11:53:12,Tuesday,Web,True
+S000690,U0055,Pandan Leaves,2024-04-16 14:59:29,Tuesday,App,True
+S000234,U0021,Coconut Milk,2024-04-16 15:55:03,Tuesday,Web,False
+S000476,U0038,Chocolate Chips,2024-04-16 19:04:56,Tuesday,Web,False
+S000074,U0009,Sago Pearls,2024-04-17 02:44:00,Wednesday,App,True
+S000573,U0046,Rock Sugar,2024-04-17 02:57:45,Wednesday,Web,False
+S000466,U0037,Condensed Milk,2024-04-17 07:08:59,Wednesday,App,False
+S000751,U0061,Glutinous Rice Flour,2024-04-17 09:30:34,Wednesday,App,True
+S000498,U0040,Lotus Seeds,2024-04-17 09:52:24,Wednesday,App,False
+S000820,U0066,Gulab Jamun,2024-04-17 10:00:09,Wednesday,App,True
+S000703,U0056,Dark Chocolate,2024-04-17 10:59:31,Wednesday,Web,True
+S000368,U0031,Salt,2024-04-17 12:22:36,Wednesday,Web,False
+S000575,U0046,Mac and Cheese,2024-04-17 15:09:24,Wednesday,Web,True
+S000436,U0036,Cardamom,2024-04-17 15:36:23,Wednesday,Web,True
+S000705,U0057,Grated Coconut,2024-04-18 00:25:02,Thursday,App,True
+S000228,U0020,Condensed Milk,2024-04-18 03:44:11,Thursday,App,True
+S000197,U0018,Condensed Milk,2024-04-18 05:43:49,Thursday,App,True
+S000413,U0034,Vanilla Extract,2024-04-18 11:56:44,Thursday,App,False
+S000674,U0054,Mango Sago,2024-04-18 13:31:01,Thursday,App,True
+S000843,U0069,Red Food Colouring,2024-04-18 16:17:30,Thursday,App,True
+S000257,U0022,Miso Soup,2024-04-18 18:46:33,Thursday,App,True
+S000246,U0022,Sugar,2024-04-19 01:04:36,Friday,App,False
+S000550,U0044,Plain Flour,2024-04-19 13:28:53,Friday,App,True
+S000738,U0060,Plain Flour,2024-04-19 16:33:52,Friday,Web,False
+S000190,U0018,Barley,2024-04-19 17:48:37,Friday,Web,True
+S000373,U0031,Coconut Milk,2024-04-19 19:19:05,Friday,App,False
+S000212,U0019,Eggs,2024-04-19 21:13:34,Friday,App,True
+S000528,U0042,Roti Prata,2024-04-19 23:14:39,Friday,Web,False
+S000539,U0043,Dried Longan,2024-04-19 23:45:26,Friday,Web,False
+S000019,U0003,Sago Pearls,2024-04-20 04:12:49,Saturday,Web,True
+S000066,U0008,Club Sandwich,2024-04-20 07:48:53,Saturday,App,True
+S000780,U0063,promotion,2024-04-20 10:59:25,Saturday,App,True
+S000420,U0035,Sweet Potato,2024-04-20 17:20:19,Saturday,Web,True
+S000471,U0038,Mango,2024-04-21 01:33:38,Sunday,App,False
+S000600,U0049,Basmati Rice,2024-04-21 04:07:25,Sunday,App,False
+S000541,U0043,Tteokbokki,2024-04-21 04:16:09,Sunday,Web,True
+S000745,U0061,Brownies,2024-04-21 08:33:14,Sunday,App,True
+S000863,U0071,Plain Flour,2024-04-21 09:56:57,Sunday,App,True
+S000595,U0049,Plain Flour,2024-04-21 11:50:50,Sunday,App,False
+S000715,U0058,Cardamom,2024-04-21 19:34:24,Sunday,App,True
+S000625,U0051,Ramen,2024-04-21 21:51:52,Sunday,Web,True
+S000882,U0073,Taro,2024-04-21 23:25:30,Sunday,Web,True
+S000589,U0048,Butter,2024-04-22 10:12:18,Monday,Web,True
+S000351,U0030,Eggs,2024-04-22 10:24:25,Monday,App,True
+S000417,U0035,Pandan Juice,2024-04-22 23:33:47,Monday,App,False
+S000701,U0056,Cardamom,2024-04-23 04:19:22,Tuesday,Web,True
+S000756,U0061,Laksa,2024-04-23 04:49:22,Tuesday,App,True
+S000709,U0057,Digestive Biscuits,2024-04-23 05:16:49,Tuesday,Web,True
+S000331,U0029,Ondeh Ondeh,2024-04-23 11:11:09,Tuesday,Web,True
+S000096,U0011,Laksa,2024-04-23 14:35:34,Tuesday,App,True
+S000878,U0072,Sugar,2024-04-23 17:27:00,Tuesday,App,False
+S000176,U0017,Dark Chocolate,2024-04-23 19:51:24,Tuesday,App,False
+S000610,U0049,Coconut Milk,2024-04-24 05:31:57,Wednesday,App,False
+S000579,U0047,Rose Water,2024-04-24 15:43:18,Wednesday,Web,True
+S000656,U0053,delivery,2024-04-24 19:24:47,Wednesday,App,True
+S000720,U0058,Plain Flour,2024-04-24 19:40:17,Wednesday,App,False
+S000362,U0031,Butter Chicken,2024-04-24 21:00:36,Wednesday,App,True
+S000125,U0014,Vanilla Extract,2024-04-25 01:36:19,Thursday,App,True
+S000590,U0048,Condensed Milk,2024-04-25 02:50:06,Thursday,App,True
+S000037,U0006,Barley,2024-04-25 10:12:42,Thursday,App,True
+S000759,U0062,Barley,2024-04-26 01:42:28,Friday,App,True
+S000414,U0034,Cocoa Powder,2024-04-26 13:59:33,Friday,App,False
+S000064,U0008,Sugar,2024-04-26 21:23:36,Friday,App,True
+S000314,U0028,Steamed Fish,2024-04-26 22:12:21,Friday,App,True
+S000788,U0063,Butter,2024-04-27 08:02:11,Saturday,App,True
+S000313,U0028,Vanilla Extract,2024-04-27 08:43:08,Saturday,App,False
+S000293,U0026,Char Siew Pork,2024-04-27 09:48:11,Saturday,Web,True
+S000889,U0073,Salt,2024-04-27 12:08:58,Saturday,App,True
+S000052,U0007,Pasta Aglio Olio,2024-04-27 16:01:53,Saturday,App,False
+S000451,U0037,promotion,2024-04-27 17:17:53,Saturday,App,True
+S000726,U0058,Sweet Potato,2024-04-28 00:09:44,Sunday,App,False
+S000312,U0028,Plain Flour,2024-04-28 00:52:14,Sunday,App,True
+S000118,U0013,Fried Rice,2024-04-28 06:02:58,Sunday,App,False
+S000224,U0020,Sugar,2024-04-28 12:54:32,Sunday,App,True
+S000814,U0066,Plain Flour,2024-04-29 16:17:07,Monday,App,True
+S000724,U0058,Eggs,2024-04-29 16:31:55,Monday,App,False
+S000907,U0074,Pandan Juice,2024-04-29 20:02:05,Monday,App,True
+S000717,U0058,organic,2024-04-29 20:25:24,Monday,App,True
+S000087,U0010,Sugar,2024-04-29 22:26:01,Monday,App,False
+S000038,U0006,Condensed Milk,2024-04-30 00:08:57,Tuesday,App,True
+S000232,U0020,promotion,2024-04-30 00:44:45,Tuesday,App,False
+S000001,U0001,weekly deals,2024-04-30 01:27:16,Tuesday,Web,True
+S000041,U0006,Sweet Potato,2024-04-30 08:20:27,Tuesday,App,False
+S000266,U0024,Sugar,2024-04-30 19:47:43,Tuesday,App,False
+S000364,U0031,Rice Flour,2024-04-30 19:52:09,Tuesday,App,True
+S000576,U0046,Salt,2024-04-30 20:57:15,Tuesday,App,True
+S000917,U0075,Pandan Leaves,2024-05-01 06:05:40,Wednesday,App,False
+S000641,U0052,Chicken Rice,2024-05-01 07:42:29,Wednesday,App,True
+S000592,U0048,Rock Sugar,2024-05-01 08:29:33,Wednesday,App,True
+S000387,U0033,Eggs,2024-05-01 14:45:44,Wednesday,Web,True
+S000308,U0028,Congee,2024-05-01 16:16:16,Wednesday,App,False
+S000328,U0029,Dried Longan,2024-05-02 11:48:10,Thursday,App,True
+S000316,U0028,Kimchi Jjigae,2024-05-02 16:43:14,Thursday,App,False
+S000148,U0015,Cheesecake,2024-05-02 17:26:08,Thursday,App,True
+S000441,U0036,Tamagoyaki,2024-05-02 17:31:36,Thursday,App,False
+S000379,U0032,Pandan Juice,2024-05-02 22:11:58,Thursday,Web,False
+S000775,U0062,Cheesecake,2024-05-03 02:58:13,Friday,App,True
+S000569,U0046,Kueh Lapis,2024-05-03 05:54:13,Friday,App,True
+S000825,U0067,Rose Water,2024-05-03 07:43:36,Friday,Web,False
+S000086,U0010,Cookies,2024-05-03 08:56:58,Friday,App,False
+S000888,U0073,Sweet Potato,2024-05-03 11:49:35,Friday,App,False
+S000046,U0006,Milk,2024-05-03 18:13:14,Friday,App,True
+S000319,U0028,Cookies,2024-05-03 18:16:01,Friday,App,True
+S000024,U0004,Eggs,2024-05-04 06:59:38,Saturday,App,False
+S000071,U0008,Dried Longan,2024-05-04 07:05:42,Saturday,Web,False
+S000042,U0006,Dried Longan,2024-05-04 10:55:51,Saturday,App,True
+S000596,U0049,weekly deals,2024-05-04 15:29:59,Saturday,Web,True
+S000708,U0057,Sugar,2024-05-04 23:21:41,Saturday,Web,True
+S000388,U0033,Sweet Potato,2024-05-05 04:17:05,Sunday,App,True
+S000854,U0071,Dark Chocolate,2024-05-05 16:06:53,Sunday,App,True
+S000606,U0049,Sugar,2024-05-05 17:37:19,Sunday,App,True
+S000383,U0032,Cheesecake,2024-05-05 18:34:38,Sunday,Web,True
+S000646,U0052,Cocoa Powder,2024-05-05 19:32:10,Sunday,App,True
+S000826,U0067,Cookies,2024-05-06 08:07:30,Monday,App,False
+S000750,U0061,Pandan Leaves,2024-05-06 09:23:10,Monday,Web,False
+S000895,U0073,Coconut Milk,2024-05-06 11:00:42,Monday,App,True
+S000479,U0038,halal,2024-05-06 12:43:37,Monday,App,True
+S000897,U0073,Gulab Jamun,2024-05-06 15:47:49,Monday,Web,True
+S000457,U0037,Cheesecake,2024-05-06 22:12:55,Monday,App,True
+S000872,U0072,Rice Flour,2024-05-07 03:07:03,Tuesday,Web,False
+S000537,U0043,Barley,2024-05-07 07:53:30,Tuesday,Web,True
+S000311,U0028,Sago Pearls,2024-05-07 12:17:33,Tuesday,Web,True
+S000864,U0071,Cardamom,2024-05-07 16:51:15,Tuesday,App,False
+S000065,U0008,Cheng Tng,2024-05-07 17:52:09,Tuesday,App,True
+S000687,U0055,Coconut Milk,2024-05-08 03:31:49,Wednesday,Web,False
+S000394,U0033,Butter Chicken,2024-05-08 12:13:17,Wednesday,App,True
+S000571,U0046,Sugar,2024-05-08 20:28:35,Wednesday,Web,True
+S000838,U0068,Pandan Juice,2024-05-08 20:59:46,Wednesday,App,True
+S000559,U0045,Gulab Jamun,2024-05-09 01:36:29,Thursday,App,True
+S000688,U0055,Milk,2024-05-09 10:01:06,Thursday,Web,True
+S000667,U0053,Eggs,2024-05-09 16:48:56,Thursday,App,False
+S000193,U0018,Brownies,2024-05-09 21:04:45,Thursday,Web,False
+S000161,U0016,Rice Flour,2024-05-09 23:48:13,Thursday,App,True
+S000760,U0062,Sweet Potato,2024-05-10 01:28:17,Friday,App,True
+S000411,U0034,Ghee,2024-05-10 03:53:19,Friday,App,False
+S000578,U0047,Bubur Cha Cha,2024-05-10 05:49:43,Friday,Web,False
+S000215,U0019,discount,2024-05-10 07:21:47,Friday,App,True
+S000154,U0015,Taro,2024-05-10 17:57:28,Friday,App,True
+S000015,U0002,Condensed Milk,2024-05-10 22:00:44,Friday,App,False
+S000133,U0014,Condensed Milk,2024-05-10 23:47:13,Friday,Web,True
+S000755,U0061,promotion,2024-05-11 15:09:35,Saturday,App,True
+S000369,U0031,discount,2024-05-11 16:30:18,Saturday,App,True
+S000243,U0021,Grated Coconut,2024-05-12 01:55:52,Sunday,App,False
+S000179,U0017,Pandan Juice,2024-05-12 03:27:41,Sunday,App,False
+S000519,U0042,Condensed Milk,2024-05-12 06:19:22,Sunday,App,True
+S000770,U0062,Rose Water,2024-05-12 19:38:41,Sunday,App,False
+S000416,U0035,Fried Rice,2024-05-12 19:51:49,Sunday,App,True
+S000236,U0021,Ondeh Ondeh,2024-05-12 20:46:18,Sunday,App,True
+S000621,U0050,Taro,2024-05-12 23:57:28,Sunday,App,True
+S000325,U0029,Sugar,2024-05-13 00:28:50,Monday,App,True
+S000544,U0044,Condensed Milk,2024-05-13 04:06:57,Monday,App,False
+S000535,U0043,Coconut Milk,2024-05-13 08:18:49,Monday,Web,False
+S000489,U0039,Pandan Leaves,2024-05-13 08:37:21,Monday,App,True
+S000350,U0030,Saffron,2024-05-13 15:31:07,Monday,Web,False
+S000536,U0043,Mango,2024-05-13 16:05:42,Monday,App,True
+S000846,U0069,Kimchi Jjigae,2024-05-14 01:38:20,Tuesday,App,True
+S000531,U0042,Vanilla Extract,2024-05-14 05:27:21,Tuesday,App,True
+S000354,U0030,Eggs,2024-05-14 15:38:38,Tuesday,App,True
+S000619,U0050,Sushi Rice Bowl,2024-05-14 20:03:57,Tuesday,Web,True
+S000505,U0041,Pandan Juice,2024-05-14 20:09:15,Tuesday,Web,True
+S000866,U0071,discount,2024-05-14 20:59:37,Tuesday,App,True
+S000225,U0020,Rock Sugar,2024-05-15 05:25:40,Wednesday,App,False
+S000612,U0049,Brownies,2024-05-15 09:34:27,Wednesday,App,True
+S000822,U0066,Condensed Milk,2024-05-15 14:03:25,Wednesday,App,True
+S000112,U0013,Coconut Milk,2024-05-15 16:05:28,Wednesday,App,True
+S000356,U0031,Glutinous Rice Flour,2024-05-16 08:00:24,Thursday,App,True
+S000347,U0030,Miso Soup,2024-05-16 12:53:38,Thursday,App,False
+S000056,U0007,Grated Coconut,2024-05-16 13:01:43,Thursday,App,True
+S000588,U0047,Coconut Milk,2024-05-16 13:11:04,Thursday,App,False
+S000123,U0013,Plain Flour,2024-05-16 15:05:59,Thursday,Web,True
+S000910,U0075,Grilled Salmon,2024-05-16 20:50:54,Thursday,App,True
+S000521,U0042,Butter,2024-05-16 22:46:57,Thursday,App,True
+S000773,U0062,Salt,2024-05-17 03:39:24,Friday,App,False
+S000472,U0038,Butter,2024-05-17 16:58:13,Friday,App,True
+S000366,U0031,Sago Pearls,2024-05-17 19:36:50,Friday,App,True
+S000704,U0057,Condensed Milk,2024-05-17 23:21:40,Friday,Web,True
+S000718,U0058,Grilled Salmon,2024-05-18 00:03:58,Saturday,App,True
+S000591,U0048,Pandan Juice,2024-05-18 00:50:04,Saturday,App,True
+S000192,U0018,Rose Water,2024-05-18 00:59:26,Saturday,App,False
+S000885,U0073,Butter,2024-05-18 06:49:46,Saturday,App,False
+S000108,U0012,Coconut Milk,2024-05-18 07:37:26,Saturday,Web,True
+S000839,U0068,Rice Flour,2024-05-18 15:43:25,Saturday,Web,True
+S000317,U0028,Rose Water,2024-05-18 16:07:11,Saturday,App,True
+S000039,U0006,Taro,2024-05-18 22:31:44,Saturday,App,True
+S000491,U0039,Char Siew Pork,2024-05-19 08:56:11,Sunday,App,True
+S000140,U0014,Sweet Potato,2024-05-19 12:15:18,Sunday,App,True
+S000495,U0039,Eggs,2024-05-19 16:46:12,Sunday,App,False
+S000710,U0057,Ondeh Ondeh,2024-05-19 17:42:21,Sunday,App,True
+S000163,U0016,Vanilla Extract,2024-05-19 19:15:32,Sunday,App,True
+S000381,U0032,Sweet Potato,2024-05-19 22:02:11,Sunday,App,True
+S000523,U0042,Mango,2024-05-20 05:27:16,Monday,App,False
+S000533,U0043,Kueh Lapis,2024-05-20 10:16:53,Monday,App,True
+S000353,U0030,Condensed Milk,2024-05-20 12:56:00,Monday,Web,True
+S000260,U0023,Sago Pearls,2024-05-20 19:16:06,Monday,Web,True
+S000490,U0039,Cookies,2024-05-21 14:34:15,Tuesday,App,True
+S000318,U0028,Coconut Milk,2024-05-21 23:18:06,Tuesday,Web,True
+S000455,U0037,Kheer,2024-05-22 00:55:02,Wednesday,Web,True
+S000200,U0018,Mango Sago,2024-05-22 05:12:52,Wednesday,App,False
+S000137,U0014,Eggs,2024-05-22 05:43:53,Wednesday,Web,True
+S000918,U0075,Butter,2024-05-22 06:10:01,Wednesday,App,True
+S000153,U0015,Gulab Jamun,2024-05-22 09:25:31,Wednesday,App,True
+S000300,U0027,Sugar,2024-05-22 09:43:40,Wednesday,App,True
+S000607,U0049,Pandan Juice,2024-05-22 19:51:20,Wednesday,App,True
+S000226,U0020,Gyudon,2024-05-23 00:23:51,Thursday,App,True
+S000189,U0018,Vanilla Extract,2024-05-23 02:45:01,Thursday,App,True
+S000195,U0018,Pandan Juice,2024-05-23 09:28:30,Thursday,App,False
+S000004,U0001,Palm Sugar,2024-05-23 11:58:32,Thursday,Web,True
+S000058,U0007,organic,2024-05-23 15:04:43,Thursday,Web,True
+S000860,U0071,Rendang,2024-05-23 15:26:48,Thursday,Web,False
+S000916,U0075,Grated Coconut,2024-05-23 18:36:15,Thursday,App,True
+S000468,U0037,Taro,2024-05-24 04:48:48,Friday,App,False
+S000792,U0064,Butter,2024-05-24 14:24:50,Friday,Web,False
+S000447,U0036,Cheesecake,2024-05-24 16:51:32,Friday,App,True
+S000080,U0009,Kueh Lapis,2024-05-24 17:19:01,Friday,App,True
+S000271,U0025,Basmati Rice,2024-05-24 17:28:28,Friday,App,True
+S000584,U0047,Eggs,2024-05-24 18:56:45,Friday,App,True
+S000691,U0055,Caesar Salad,2024-05-24 20:34:40,Friday,Web,True
+S000415,U0035,Sugar,2024-05-25 14:34:34,Saturday,Web,False
+S000151,U0015,Grated Coconut,2024-05-25 21:44:08,Saturday,App,False
+S000815,U0066,Lotus Seeds,2024-05-25 22:12:07,Saturday,App,False
+S000761,U0062,Butter,2024-05-25 23:39:53,Saturday,App,False
+S000803,U0065,Rendang,2024-05-26 00:03:49,Sunday,Web,False
+S000499,U0040,Kueh Lapis,2024-05-26 03:23:59,Sunday,Web,True
+S000520,U0042,Ghee,2024-05-26 07:04:20,Sunday,App,True
+S000275,U0025,Ramen,2024-05-26 19:51:34,Sunday,App,False
+S000389,U0033,Cheng Tng,2024-05-26 22:37:01,Sunday,App,True
+S000360,U0031,Taro,2024-05-27 09:38:02,Monday,App,True
+S000076,U0009,Kheer,2024-05-27 10:33:48,Monday,App,True
+S000604,U0049,Salt,2024-05-27 15:43:41,Monday,App,True
+S000799,U0065,Ghee,2024-05-28 05:26:25,Tuesday,App,False
+S000893,U0073,Mango Sago,2024-05-28 07:28:13,Tuesday,Web,True
+S000819,U0066,Cream Cheese,2024-05-28 20:31:26,Tuesday,App,True
+S000501,U0040,Plain Flour,2024-05-29 00:01:24,Wednesday,Web,True
+S000158,U0016,Salt,2024-05-29 06:12:58,Wednesday,App,True
+S000657,U0053,Taro,2024-05-29 07:53:00,Wednesday,App,True
+S000045,U0006,Kueh Lapis,2024-05-29 14:27:58,Wednesday,App,False
+S000658,U0053,Rice Flour,2024-05-29 15:16:43,Wednesday,App,True
+S000254,U0022,Dark Chocolate,2024-05-29 16:04:25,Wednesday,App,True
+S000666,U0053,Ramen,2024-05-30 03:55:12,Thursday,App,False
+S000771,U0062,Taro,2024-05-30 07:31:31,Thursday,Web,True
+S000263,U0024,Sugar,2024-05-30 11:40:56,Thursday,Web,True
+S000098,U0011,Coconut Milk,2024-05-30 11:54:17,Thursday,App,True
+S000334,U0029,Sago Pearls,2024-05-30 17:43:39,Thursday,App,False
+S000906,U0074,Sugar,2024-05-30 22:03:05,Thursday,Web,False
+S000603,U0049,Sago Pearls,2024-05-31 05:52:31,Friday,App,True
+S000648,U0052,Kueh Lapis,2024-05-31 11:30:10,Friday,App,True
+S000871,U0072,Ghee,2024-05-31 19:31:02,Friday,Web,True
+S000187,U0018,Butter,2024-06-01 06:45:02,Saturday,App,True
+S000401,U0034,Laksa,2024-06-01 08:56:21,Saturday,App,True
+S000633,U0051,Eggs,2024-06-01 10:14:56,Saturday,App,True
+S000877,U0072,Barley,2024-06-01 11:29:19,Saturday,Web,True
+S000333,U0029,Basmati Rice,2024-06-01 17:17:51,Saturday,App,True
+S000874,U0072,Rose Water,2024-06-01 18:36:45,Saturday,App,False
+S000682,U0055,Grated Coconut,2024-06-02 12:18:30,Sunday,Web,True
+S000075,U0009,Salt,2024-06-02 13:19:21,Sunday,Web,True
+S000752,U0061,Taro,2024-06-02 22:38:58,Sunday,App,False
+S000421,U0035,Satay,2024-06-03 00:09:39,Monday,App,True
+S000824,U0066,Dried Longan,2024-06-03 06:53:30,Monday,App,True
+S000778,U0063,Wonton Soup,2024-06-04 05:57:38,Tuesday,Web,True
+S000276,U0025,Sweet Potato,2024-06-04 07:24:31,Tuesday,Web,False
+S000446,U0036,Ghee,2024-06-04 09:30:09,Tuesday,Web,True
+S000626,U0051,Rock Sugar,2024-06-04 11:50:52,Tuesday,App,False
+S000601,U0049,Milk Powder,2024-06-04 13:55:15,Tuesday,App,True
+S000628,U0051,Barley,2024-06-04 14:43:31,Tuesday,Web,True
+S000047,U0006,Eggs,2024-06-04 22:29:55,Tuesday,App,False
+S000513,U0041,Glutinous Rice Flour,2024-06-05 07:27:30,Wednesday,App,True
+S000296,U0027,Brownies,2024-06-05 09:29:19,Wednesday,App,True
+S000177,U0017,Sugar,2024-06-05 12:38:57,Wednesday,Web,True
+S000459,U0037,Butter,2024-06-05 14:55:42,Wednesday,App,True
+S000102,U0012,Eggs,2024-06-05 17:35:35,Wednesday,App,True
+S000372,U0031,Sugar,2024-06-05 19:41:17,Wednesday,App,True
+S000370,U0031,Sago Pearls,2024-06-05 19:44:19,Wednesday,App,True
+S000795,U0064,Plain Flour,2024-06-05 21:46:30,Wednesday,App,True
+S000859,U0071,Mac and Cheese,2024-06-05 23:01:53,Wednesday,App,False
+S000021,U0003,Sago Pearls,2024-06-06 17:18:32,Thursday,App,True
+S000185,U0018,Saffron,2024-06-06 20:36:34,Thursday,App,True
+S000830,U0068,Sugar,2024-06-07 00:06:51,Friday,App,True
+S000663,U0053,Pandan Juice,2024-06-07 05:00:34,Friday,Web,False
+S000518,U0042,Eggs,2024-06-07 05:28:51,Friday,App,True
+S000851,U0070,Eggs,2024-06-07 14:04:08,Friday,Web,True
+S000244,U0022,Coconut Milk,2024-06-07 19:02:48,Friday,Web,False
+S000278,U0025,Rock Sugar,2024-06-08 16:10:05,Saturday,Web,True
+S000809,U0065,Ondeh Ondeh,2024-06-09 00:01:23,Sunday,Web,True
+S000136,U0014,Pandan Juice,2024-06-09 00:19:30,Sunday,Web,True
+S000229,U0020,Rice Flour,2024-06-09 03:40:22,Sunday,App,True
+S000585,U0047,Sugar,2024-06-09 11:18:37,Sunday,App,True
+S000111,U0013,Gulab Jamun,2024-06-09 17:52:54,Sunday,Web,False
+S000282,U0026,Cardamom,2024-06-09 22:39:46,Sunday,Web,False
+S000090,U0010,Cheesecake,2024-06-10 01:57:16,Monday,Web,False
+S000856,U0071,Condensed Milk,2024-06-10 05:56:45,Monday,App,True
+S000635,U0051,Coconut Milk,2024-06-10 12:40:33,Monday,App,True
+S000165,U0016,Grated Coconut,2024-06-11 04:09:03,Tuesday,App,False
+S000517,U0042,Wonton Soup,2024-06-11 11:12:17,Tuesday,App,True
+S000670,U0054,Ghee,2024-06-11 12:46:35,Tuesday,App,True
+S000842,U0068,Sugar,2024-06-11 16:08:37,Tuesday,App,True
+S000309,U0028,Cardamom,2024-06-11 22:00:51,Tuesday,App,False
+S000104,U0012,Korean Fried Chicken,2024-06-12 01:21:29,Wednesday,App,True
+S000806,U0065,Rice Flour,2024-06-12 02:12:41,Wednesday,App,True
+S000419,U0035,Lotus Seeds,2024-06-12 03:29:24,Wednesday,App,True
+S000191,U0018,Pandan Leaves,2024-06-12 08:34:47,Wednesday,App,True
+S000692,U0056,Cookies,2024-06-12 12:04:59,Wednesday,App,True
+S000509,U0041,Sago Pearls,2024-06-12 13:55:40,Wednesday,Web,True
+S000672,U0054,Taro,2024-06-13 00:09:09,Thursday,Web,False
+S000805,U0065,Coconut Milk,2024-06-13 07:43:04,Thursday,App,True
+S000729,U0059,Cheng Tng,2024-06-13 15:51:28,Thursday,App,True
+S000617,U0050,Plain Flour,2024-06-13 18:25:49,Thursday,App,True
+S000757,U0061,Pandan Juice,2024-06-13 19:51:21,Thursday,Web,False
+S000587,U0047,Dried Longan,2024-06-14 06:33:37,Friday,App,True
+S000155,U0015,Mango,2024-06-14 08:04:06,Friday,App,False
+S000181,U0017,Mango,2024-06-14 09:35:14,Friday,App,True
+S000522,U0042,Glutinous Rice Flour,2024-06-14 14:42:47,Friday,Web,True
+S000167,U0016,Grated Coconut,2024-06-14 17:37:40,Friday,App,False
+S000117,U0013,Mango,2024-06-14 21:27:09,Friday,App,False
+S000464,U0037,Milk,2024-06-15 01:26:40,Saturday,App,False
+S000660,U0053,Dark Chocolate,2024-06-15 10:31:33,Saturday,Web,False
+S000485,U0039,Coconut Milk,2024-06-15 13:36:58,Saturday,Web,True
+S000706,U0057,Cheng Tng,2024-06-15 20:49:17,Saturday,App,True
+S000749,U0061,Pandan Leaves,2024-06-16 00:34:50,Sunday,App,True
+S000337,U0029,Cardamom,2024-06-16 05:32:29,Sunday,App,False
+S000891,U0073,Sugar,2024-06-16 06:58:08,Sunday,Web,True
+S000883,U0073,Sugar,2024-06-16 11:02:06,Sunday,App,False
+S000085,U0010,Curry Puff,2024-06-16 13:21:44,Sunday,Web,True
+S000304,U0027,Pandan Juice,2024-06-16 17:29:17,Sunday,App,False
+S000205,U0019,Plain Flour,2024-06-16 23:44:04,Sunday,Web,False
+S000766,U0062,Lotus Seeds,2024-06-17 03:30:40,Monday,App,False
+S000478,U0038,Digestive Biscuits,2024-06-17 04:36:32,Monday,App,False
+S000336,U0029,Butter,2024-06-17 14:16:27,Monday,Web,True
+S000487,U0039,Dark Chocolate,2024-06-18 02:18:16,Tuesday,Web,True
+S000659,U0053,discount,2024-06-18 05:52:49,Tuesday,App,True
+S000233,U0021,Ondeh Ondeh,2024-06-18 12:03:09,Tuesday,App,False
+S000310,U0028,Kueh Lapis,2024-06-18 18:43:33,Tuesday,App,False
+S000109,U0013,Plain Flour,2024-06-18 21:53:39,Tuesday,Web,False
+S000443,U0036,Dark Chocolate,2024-06-18 21:54:29,Tuesday,App,True
+S000664,U0053,Gyudon,2024-06-18 22:45:33,Tuesday,Web,True
+S000143,U0015,Sugar,2024-06-19 05:26:05,Wednesday,App,True
+S000252,U0022,Doenjang Jjigae,2024-06-19 11:03:29,Wednesday,App,True
+S000639,U0052,Coconut Milk,2024-06-19 12:57:42,Wednesday,App,True
+S000758,U0061,Rock Sugar,2024-06-19 12:59:33,Wednesday,App,True
+S000879,U0072,Sugar,2024-06-19 13:03:36,Wednesday,App,False
+S000497,U0039,Condensed Milk,2024-06-20 02:58:28,Thursday,App,True
+S000524,U0042,Sago Pearls,2024-06-20 10:38:19,Thursday,App,False
+S000292,U0026,Vanilla Extract,2024-06-20 17:22:25,Thursday,App,True
+S000129,U0014,Sugar,2024-06-20 22:51:52,Thursday,App,True
+S000786,U0063,Gyudon,2024-06-21 05:21:32,Friday,Web,True
+S000913,U0075,Dark Chocolate,2024-06-21 15:33:12,Friday,App,True
+S000444,U0036,White Fungus,2024-06-21 21:36:32,Friday,Web,True
+S000508,U0041,Sugar,2024-06-21 23:35:48,Friday,App,True
+S000367,U0031,Dried Longan,2024-06-22 19:14:52,Saturday,Web,True
+S000615,U0050,Cookies,2024-06-23 07:36:51,Sunday,App,True
+S000162,U0016,Cookies,2024-06-23 12:17:26,Sunday,App,False
+S000527,U0042,Gulab Jamun,2024-06-24 03:43:17,Monday,App,True
+S000598,U0049,Barley,2024-06-24 10:16:44,Monday,App,True
+S000033,U0005,Butter,2024-06-24 16:54:55,Monday,Web,False
+S000821,U0066,Glutinous Rice Flour,2024-06-25 04:10:24,Tuesday,App,True
+S000636,U0051,Pandan Juice,2024-06-25 04:47:01,Tuesday,App,True
+S000095,U0011,Kueh Lapis,2024-06-25 05:26:21,Tuesday,App,True
+S000886,U0073,Dried Longan,2024-06-25 20:14:34,Tuesday,Web,False
+S000093,U0011,Doenjang Jjigae,2024-06-25 20:25:32,Tuesday,App,True
+S000028,U0004,Palm Sugar,2024-06-25 22:23:32,Tuesday,App,True
+S000002,U0001,Palm Sugar,2024-06-26 06:41:26,Wednesday,App,True
+S000515,U0041,Glutinous Rice Flour,2024-06-26 11:21:22,Wednesday,App,True
+S000114,U0013,Coconut Milk,2024-06-26 16:40:54,Wednesday,Web,True
+S000684,U0055,Vanilla Extract,2024-06-26 16:48:23,Wednesday,Web,True
+S000242,U0021,Sago Pearls,2024-06-26 17:04:02,Wednesday,Web,True
+S000570,U0046,Tteokbokki,2024-06-27 04:36:07,Thursday,App,True
+S000404,U0034,Sugar,2024-06-27 09:52:59,Thursday,App,True
+S000534,U0043,Pandan Leaves,2024-06-27 11:11:28,Thursday,App,False
+S000380,U0032,Mango,2024-06-27 13:27:53,Thursday,App,False
+S000502,U0040,Basmati Rice,2024-06-27 22:58:59,Thursday,App,False
+S000332,U0029,Cardamom,2024-06-27 23:59:35,Thursday,Web,True
+S000608,U0049,Kueh Lapis,2024-06-28 01:52:36,Friday,App,True
+S000869,U0071,Digestive Biscuits,2024-06-28 02:57:44,Friday,App,False
+S000765,U0062,Sugar,2024-06-28 03:38:01,Friday,Web,True
+S000713,U0058,Sugar,2024-06-28 05:56:45,Friday,App,False
+S000914,U0075,Rock Sugar,2024-06-28 10:26:21,Friday,App,True
+S000432,U0036,Chocolate Chips,2024-06-28 13:41:58,Friday,App,False
+S000240,U0021,Eggs,2024-06-28 19:23:39,Friday,Web,True
+S000896,U0073,Pandan Juice,2024-06-29 02:18:52,Saturday,Web,True
+S000188,U0018,Doenjang Jjigae,2024-06-29 12:35:25,Saturday,Web,True
+S000577,U0046,Pandan Juice,2024-06-29 13:51:40,Saturday,Web,True
+S000599,U0049,Bubur Cha Cha,2024-06-29 14:14:15,Saturday,Web,True
+S000127,U0014,Mango,2024-06-29 14:55:10,Saturday,Web,True

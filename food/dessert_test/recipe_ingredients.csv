@@ -1,0 +1,59 @@
+recipe_id,recipe_name,cuisine,ingredient
+R0001,Ondeh Ondeh,Dessert,Glutinous Rice Flour
+R0001,Ondeh Ondeh,Dessert,Pandan Juice
+R0001,Ondeh Ondeh,Dessert,Palm Sugar
+R0001,Ondeh Ondeh,Dessert,Grated Coconut
+R0001,Ondeh Ondeh,Dessert,Salt
+R0002,Kueh Lapis,Dessert,Rice Flour
+R0002,Kueh Lapis,Dessert,Coconut Milk
+R0002,Kueh Lapis,Dessert,Sugar
+R0002,Kueh Lapis,Dessert,Pandan Juice
+R0002,Kueh Lapis,Dessert,Red Food Colouring
+R0002,Kueh Lapis,Dessert,Salt
+R0003,Bubur Cha Cha,Dessert,Sweet Potato
+R0003,Bubur Cha Cha,Dessert,Taro
+R0003,Bubur Cha Cha,Dessert,Coconut Milk
+R0003,Bubur Cha Cha,Dessert,Sago Pearls
+R0003,Bubur Cha Cha,Dessert,Pandan Leaves
+R0003,Bubur Cha Cha,Dessert,Sugar
+R0004,Cheng Tng,Dessert,Lotus Seeds
+R0004,Cheng Tng,Dessert,Dried Longan
+R0004,Cheng Tng,Dessert,Barley
+R0004,Cheng Tng,Dessert,White Fungus
+R0004,Cheng Tng,Dessert,Rock Sugar
+R0004,Cheng Tng,Dessert,Pandan Leaves
+R0005,Mango Sago,Dessert,Mango
+R0005,Mango Sago,Dessert,Sago Pearls
+R0005,Mango Sago,Dessert,Coconut Milk
+R0005,Mango Sago,Dessert,Condensed Milk
+R0005,Mango Sago,Dessert,Sugar
+R0006,Brownies,Dessert,Dark Chocolate
+R0006,Brownies,Dessert,Butter
+R0006,Brownies,Dessert,Sugar
+R0006,Brownies,Dessert,Eggs
+R0006,Brownies,Dessert,Plain Flour
+R0006,Brownies,Dessert,Cocoa Powder
+R0007,Cheesecake,Dessert,Cream Cheese
+R0007,Cheesecake,Dessert,Digestive Biscuits
+R0007,Cheesecake,Dessert,Butter
+R0007,Cheesecake,Dessert,Sugar
+R0007,Cheesecake,Dessert,Eggs
+R0007,Cheesecake,Dessert,Vanilla Extract
+R0008,Cookies,Dessert,Plain Flour
+R0008,Cookies,Dessert,Butter
+R0008,Cookies,Dessert,Sugar
+R0008,Cookies,Dessert,Eggs
+R0008,Cookies,Dessert,Vanilla Extract
+R0008,Cookies,Dessert,Chocolate Chips
+R0009,Gulab Jamun,Dessert,Milk Powder
+R0009,Gulab Jamun,Dessert,Plain Flour
+R0009,Gulab Jamun,Dessert,Ghee
+R0009,Gulab Jamun,Dessert,Sugar
+R0009,Gulab Jamun,Dessert,Rose Water
+R0009,Gulab Jamun,Dessert,Cardamom
+R0010,Kheer,Dessert,Basmati Rice
+R0010,Kheer,Dessert,Milk
+R0010,Kheer,Dessert,Sugar
+R0010,Kheer,Dessert,Cardamom
+R0010,Kheer,Dessert,Saffron
+R0010,Kheer,Dessert,Condensed Milk
