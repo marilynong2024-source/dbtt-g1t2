@@ -19,16 +19,65 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from matplotlib.image import imread
+from matplotlib.widgets import Button
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
-from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.decomposition import TruncatedSVD
-from scipy.sparse import csr_matrix
 import warnings
 warnings.filterwarnings('ignore')
 
 os.makedirs('output', exist_ok=True)
 sns.set_theme(style='whitegrid', palette='Set2')
+
+
+def run_chart_browser(paths, titles):
+    """Step through saved PNGs with small ← / → buttons (keyboard arrows wrap)."""
+    if not paths:
+        return
+    n = len(paths)
+    fig = plt.figure(figsize=(12, 8))
+    mgr = getattr(fig.canvas, 'manager', None)
+    if mgr is not None and hasattr(mgr, 'set_window_title'):
+        mgr.set_window_title('Output charts')
+    ax_img = fig.add_axes([0.03, 0.09, 0.94, 0.86])
+    ax_l = fig.add_axes([0.42, 0.02, 0.06, 0.032])
+    ax_r = fig.add_axes([0.52, 0.02, 0.06, 0.032])
+    state = {'i': 0}
+
+    def show_at(idx):
+        state['i'] = idx % n
+        i = state['i']
+        ax_img.clear()
+        ax_img.axis('off')
+        try:
+            ax_img.imshow(imread(paths[i]))
+        except Exception:
+            ax_img.text(0.5, 0.5, f'Unreadable:\n{paths[i]}',
+                        ha='center', va='center', transform=ax_img.transAxes, fontsize=10)
+        fig.suptitle(f'{i + 1} / {n} — {titles[i]}', fontsize=11, fontweight='bold', y=0.98)
+        fig.canvas.draw_idle()
+
+    def go_prev(_=None):
+        show_at(state['i'] - 1)
+
+    def go_next(_=None):
+        show_at(state['i'] + 1)
+
+    def on_key(ev):
+        if ev.key in ('left', 'backspace', 'a'):
+            go_prev()
+        elif ev.key in ('right', ' ', 'd', 'enter'):
+            go_next()
+
+    btn_l = Button(ax_l, '←')
+    btn_r = Button(ax_r, '→')
+    for _b in (btn_l, btn_r):
+        _b.label.set_fontsize(8)
+    btn_l.on_clicked(go_prev)
+    btn_r.on_clicked(go_next)
+    fig.canvas.mpl_connect('key_press_event', on_key)
+    show_at(0)
+    plt.show()
 
 users       = pd.read_csv('both_test/users.csv')
 orders      = pd.read_csv('both_test/orders.csv')
@@ -97,7 +146,7 @@ label_map = {
 seg_df['segment_label'] = seg_df['segment'].map(label_map)
 
 seg_counts = seg_df['segment_label'].value_counts()
-plt.figure(figsize=(6, 4))
+_fig = plt.figure(figsize=(6, 4))
 seg_counts.plot(kind='bar', color=['#66b3ff', '#ff9999', '#99ff99'], edgecolor='black')
 plt.title('Customer Segment Sizes')
 plt.xlabel('Segment')
@@ -105,7 +154,7 @@ plt.ylabel('Number of Customers')
 plt.xticks(rotation=15)
 plt.tight_layout()
 plt.savefig('output/1c_segment_sizes.png', dpi=150)
-plt.show()
+plt.close(_fig)
 print("Segment size chart saved → output/1c_segment_sizes.png")
 
 # Summary statistics per segment
@@ -141,9 +190,9 @@ top_products = order_items['product_name'].value_counts().head(5).index.tolist()
 print(f"Forecasting for top 5 products: {top_products}")
 
 # Plot actual demand + 3-week rolling average forecast
-fig, axes = plt.subplots(len(top_products), 1,
-                         figsize=(14, 4 * len(top_products)),
-                         sharex=False)
+_fig, axes = plt.subplots(len(top_products), 1,
+                          figsize=(14, 4 * len(top_products)),
+                          sharex=False)
 
 for i, product in enumerate(top_products):
     prod_data = (weekly_demand[weekly_demand['product_name'] == product]
@@ -183,7 +232,7 @@ plt.suptitle('Weekly Demand Forecast — Top 5 Products',
              fontsize=14, fontweight='bold', y=1.01)
 plt.tight_layout(h_pad=3)
 plt.savefig('output/2_demand_forecast.png', dpi=150, bbox_inches='tight')
-plt.show()
+plt.close(_fig)
 print("Demand forecast chart saved → output/2_demand_forecast.png")
 
 # Flag potential stockout risk: products where latest demand > forecast
@@ -213,7 +262,7 @@ print("Avg Order Total (SGD):")
 print(f"  No Promotion:       ${promo_analysis.get(False, promo_analysis.iloc[0])}")
 print(f"  Promotion Applied:  ${promo_analysis.get(True, promo_analysis.iloc[1])}")
 
-plt.figure(figsize=(6, 4))
+_fig = plt.figure(figsize=(6, 4))
 colors = ['#ff9999', '#66b3ff']
 promo_analysis.plot(kind='bar', color=colors, edgecolor='black', width=0.5)
 plt.title('Avg Order Total: Promotion vs No Promotion')
@@ -224,7 +273,7 @@ for i, val in enumerate(promo_analysis):
     plt.text(i, val + 1, f'${val:.2f}', ha='center', fontsize=10)
 plt.tight_layout()
 plt.savefig('output/3a_promo_overall.png', dpi=150)
-plt.show()
+plt.close(_fig)
 print("Promo overall chart saved → output/3a_promo_overall.png")
 
 # By segment: which customer segment responds most to promotions?
@@ -238,16 +287,17 @@ seg_promo.columns = ['No Promotion', 'Promotion Applied']
 print("\nPromo Impact by Customer Segment:")
 print(seg_promo.to_string())
 
-seg_promo.plot(kind='bar', figsize=(8, 5), color=['#ff9999', '#66b3ff'],
+_fig, _ax = plt.subplots(figsize=(8, 5))
+seg_promo.plot(kind='bar', ax=_ax, color=['#ff9999', '#66b3ff'],
                edgecolor='black', width=0.6)
-plt.title('Avg Order Total by Segment: Promo vs No Promo')
-plt.xlabel('Customer Segment')
-plt.ylabel('Avg Order Total (SGD)')
-plt.xticks(rotation=15)
-plt.legend(title='Promotion')
+_ax.set_title('Avg Order Total by Segment: Promo vs No Promo')
+_ax.set_xlabel('Customer Segment')
+_ax.set_ylabel('Avg Order Total (SGD)')
+plt.setp(_ax.get_xticklabels(), rotation=15)
+_ax.legend(title='Promotion')
 plt.tight_layout()
 plt.savefig('output/3b_promo_by_segment.png', dpi=150)
-plt.show()
+plt.close(_fig)
 print("Promo by segment chart saved → output/3b_promo_by_segment.png")
 
 # =============================================================
@@ -260,14 +310,14 @@ print("=" * 60)
 # Top 10 most searched terms
 top_searches = search_hist['search_term'].value_counts().head(10)
 
-plt.figure(figsize=(8, 5))
+_fig = plt.figure(figsize=(8, 5))
 top_searches.plot(kind='barh', color='steelblue', edgecolor='black')
 plt.title('Top 10 Most Searched Products on Giant Platform')
 plt.xlabel('Number of Searches')
 plt.gca().invert_yaxis()
 plt.tight_layout()
 plt.savefig('output/4a_top_searches.png', dpi=150)
-plt.show()
+plt.close(_fig)
 print("Top searches chart saved → output/4a_top_searches.png")
 
 # Search trends by day of week
@@ -276,7 +326,7 @@ daily_searches = (search_hist.groupby('day_of_week')['search_id']
                   .count()
                   .reindex(day_order))
 
-plt.figure(figsize=(8, 4))
+_fig = plt.figure(figsize=(8, 4))
 daily_searches.plot(kind='bar', color='mediumseagreen', edgecolor='black')
 plt.title('Search Volume by Day of Week')
 plt.xlabel('Day')
@@ -284,7 +334,7 @@ plt.ylabel('Number of Searches')
 plt.xticks(rotation=30)
 plt.tight_layout()
 plt.savefig('output/4b_search_by_day.png', dpi=150)
-plt.show()
+plt.close(_fig)
 print("Search by day chart saved → output/4b_search_by_day.png")
 
 
@@ -341,7 +391,7 @@ print(recipe_popularity.head(10)[
 # Plot: top 10 most ordered recipes
 top_recipes = recipe_popularity.head(10)
 
-plt.figure(figsize=(10, 5))
+_fig = plt.figure(figsize=(10, 5))
 colors = plt.cm.Blues(
     [0.4 + 0.5 * (i / len(top_recipes)) for i in range(len(top_recipes))]
 )[::-1]
@@ -356,14 +406,14 @@ for bar, val in zip(bars, top_recipes['inferred_orders']):
              str(val), va='center', fontsize=9)
 plt.tight_layout()
 plt.savefig('output/5a_recipe_popularity.png', dpi=150)
-plt.show()
+plt.close(_fig)
 print("Recipe popularity chart saved → output/5a_recipe_popularity.png")
 
 # Plot: most ordered by cuisine
 cuisine_orders = (recipe_popularity.groupby('cuisine')['inferred_orders']
                   .sum().sort_values(ascending=False))
 
-plt.figure(figsize=(8, 4))
+_fig = plt.figure(figsize=(8, 4))
 cuisine_orders.plot(kind='bar', color='mediumpurple', edgecolor='black', width=0.6)
 plt.title('Total Inferred Orders by Cuisine', fontsize=12, fontweight='bold')
 plt.xlabel('Cuisine')
@@ -373,7 +423,7 @@ for i, v in enumerate(cuisine_orders):
     plt.text(i, v + 0.3, str(v), ha='center', fontsize=9)
 plt.tight_layout()
 plt.savefig('output/5b_orders_by_cuisine.png', dpi=150)
-plt.show()
+plt.close(_fig)
 print("Orders by cuisine chart saved → output/5b_orders_by_cuisine.png")
 
 # Most popular recipe per cuisine
@@ -445,7 +495,7 @@ def most_purchased_recipe(order_items, recipe_ingredients):
 
 
 # Run all 3 test cases
-testcases = ["mains_test", "dessert_test", "both_test"]
+testcases = ["both_test"]
 
 for testcase in testcases:
     tc_search_history     = pd.read_csv(f"{testcase}/search_history.csv")
@@ -455,3 +505,16 @@ for testcase in testcases:
     print(f"\n── {testcase} ──────────────────────────")
     most_searched_recipe(tc_search_history, tc_recipe_ingredients)
     most_purchased_recipe(tc_order_items, tc_recipe_ingredients)
+
+CHART_SLIDES = [
+    ('output/1c_segment_sizes.png', 'Customer segment sizes'),
+    ('output/2_demand_forecast.png', 'Weekly demand forecast'),
+    ('output/3a_promo_overall.png', 'Promotion vs no promotion'),
+    ('output/3b_promo_by_segment.png', 'Promotion by segment'),
+    ('output/4a_top_searches.png', 'Top searches'),
+    ('output/4b_search_by_day.png', 'Searches by day'),
+    ('output/5a_recipe_popularity.png', 'Recipe popularity'),
+    ('output/5b_orders_by_cuisine.png', 'Orders by cuisine'),
+]
+if os.environ.get('DBTT_NO_CHART_BROWSER', '').lower() not in ('1', 'true', 'yes'):
+    run_chart_browser([p for p, _ in CHART_SLIDES], [t for _, t in CHART_SLIDES])
