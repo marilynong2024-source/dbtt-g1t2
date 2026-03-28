@@ -1,13 +1,13 @@
 """
 IS215 Project — Giant Singapore Digital Transformation
-analysis.py — Full Analytics & AI Component
+cleaned_analysis.py & household_analysis.py — Full Analytics Component
 =======================================================
 Sections:
-  0. Imports & Data Loading
-  1. Customer Segmentation (K-Means)
+  0. Imports & Data Loading, Data Cleaning
+  1. Customer Segmentation (K-Means) - Budget Shoppers, Regular Families, High-Value Customers
   2. Demand Forecasting (Rolling Average)
   3. Promotion Effectiveness Analysis
-  4. Search Trend Analysis (Bonus)
+  4. Search Trend Analysis
   5. Recipe Popularity Ranking
 """
 
@@ -111,32 +111,27 @@ print("=" * 60)
 print("SECTION 1: Customer Segmentation (K-Means)")
 print("=" * 60)
 
-# visit_frequency: count of orders per user
 visit_freq = (orders.groupby('user_id')['order_id']
               .count()
               .reset_index()
               .rename(columns={'order_id': 'visit_frequency'}))
 
-# Merge engineered feature into users dataframe
 seg_df = users.merge(visit_freq, on='user_id', how='left')
 seg_df['visit_frequency'] = seg_df['visit_frequency'].fillna(0)
 
-# Select features for clustering
-# Using age, avg_weekly_spend, and visit_frequency as key behavioural signals
+
 features = ['age', 'avg_weekly_spend_sgd', 'visit_frequency']
 X = seg_df[features].copy()
 
-# Scale features — critical because K-Means is distance-based.
-# Without scaling, avg_weekly_spend_sgd (100s) would dominate visit_frequency (1–20).
+
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Fit K-Means with k=3 (justified by elbow plot)
+
 kmeans = KMeans(n_clusters=3, random_state=42, n_init=10)
 seg_df['segment'] = kmeans.fit_predict(X_scaled)
 
-# Label segments by interpreting cluster centres
-# Sort clusters by avg_weekly_spend to assign meaningful names
+
 cluster_means = seg_df.groupby('segment')['avg_weekly_spend_sgd'].mean().sort_values()
 label_map = {
     cluster_means.index[0]: 'Budget Shoppers',
@@ -153,11 +148,11 @@ plt.xlabel('Segment')
 plt.ylabel('Number of Customers')
 plt.xticks(rotation=15)
 plt.tight_layout()
-plt.savefig('output/1c_segment_sizes.png', dpi=150)
+plt.savefig('output/1_segment_sizes.png', dpi=150)
 plt.close(_fig)
-print("Segment size chart saved → output/1c_segment_sizes.png")
+print("Segment size chart saved → output/1_segment_sizes.png")
 
-# Summary statistics per segment
+
 segment_summary = seg_df.groupby('segment_label')[features].mean().round(2)
 print("\nSegment Profiles:")
 print(segment_summary.to_string())
@@ -171,25 +166,20 @@ print("=" * 60)
 print("SECTION 2: Demand Forecasting")
 print("=" * 60)
 
-# Parse timestamps and extract week period
 orders['timestamp'] = pd.to_datetime(orders['timestamp'])
 orders['week'] = orders['timestamp'].dt.to_period('W')
 
-# Join order items with dated orders
 order_items_dated = order_items.merge(
     orders[['order_id', 'week']], on='order_id', how='left')
 
-# Aggregate: total quantity sold per product per week
 weekly_demand = (order_items_dated
                  .groupby(['week', 'product_name'])['quantity']
                  .sum()
                  .reset_index())
 
-# Select top 5 most purchased products
 top_products = order_items['product_name'].value_counts().head(5).index.tolist()
 print(f"Forecasting for top 5 products: {top_products}")
 
-# Plot actual demand + 3-week rolling average forecast
 _fig, axes = plt.subplots(len(top_products), 1,
                           figsize=(14, 4 * len(top_products)),
                           sharex=False)
@@ -235,8 +225,6 @@ plt.savefig('output/2_demand_forecast.png', dpi=150, bbox_inches='tight')
 plt.close(_fig)
 print("Demand forecast chart saved → output/2_demand_forecast.png")
 
-# Flag potential stockout risk: products where latest demand > forecast
-# Flagged as high risk if latest actual demand is >20% above the rolling forecast.
 print("\nStockout Risk Flags (latest demand > forecast):")
 
 for product in top_products:
@@ -256,7 +244,6 @@ print("=" * 60)
 print("SECTION 3: Promotion Effectiveness Analysis")
 print("=" * 60)
 
-# Overall: avg order total with vs without promotion
 promo_analysis = orders.groupby('promo_applied')['order_total_sgd'].mean().round(2)
 print("Avg Order Total (SGD):")
 print(f"  No Promotion:       ${promo_analysis.get(False, promo_analysis.iloc[0])}")
@@ -276,7 +263,6 @@ plt.savefig('output/3a_promo_overall.png', dpi=150)
 plt.close(_fig)
 print("Promo overall chart saved → output/3a_promo_overall.png")
 
-# By segment: which customer segment responds most to promotions?
 seg_orders = orders.merge(seg_df[['user_id', 'segment_label']], on='user_id', how='left')
 seg_promo = (seg_orders.groupby(['segment_label', 'promo_applied'])['order_total_sgd']
              .mean()
@@ -307,7 +293,6 @@ print("=" * 60)
 print("SECTION 4: Search Trend Analysis")
 print("=" * 60)
 
-# Top 10 most searched terms
 top_searches = search_hist['search_term'].value_counts().head(10)
 
 _fig = plt.figure(figsize=(8, 5))
@@ -320,7 +305,6 @@ plt.savefig('output/4a_top_searches.png', dpi=150)
 plt.close(_fig)
 print("Top searches chart saved → output/4a_top_searches.png")
 
-# Search trends by day of week
 day_order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 daily_searches = (search_hist.groupby('day_of_week')['search_id']
                   .count()
@@ -345,25 +329,18 @@ print("=" * 60)
 print("SECTION 5: Recipe Popularity Ranking")
 print("=" * 60)
 
-# Method: infer recipe "orders" from ingredient purchases.
-# A recipe is counted as ordered if a user bought >= 50% of
-# its ingredients in any single order.
-
-# Build lookup: recipe_id → set of ingredients
 recipe_ingredient_map = (
     recipe_ing.groupby('recipe_id')['ingredient']
     .apply(set)
     .to_dict()
 )
 
-# Build lookup: (order_id, user_id) → set of products bought
 order_product_map = (
     order_items.groupby(['order_id', 'user_id'])['product_name']
     .apply(set)
     .reset_index()
 )
 
-# Count how many times each recipe's ingredients appear together in one order
 recipe_order_counts = {}
 
 for recipe_id, ingredients in recipe_ingredient_map.items():
@@ -375,7 +352,6 @@ for recipe_id, ingredients in recipe_ingredient_map.items():
             count += 1
     recipe_order_counts[recipe_id] = count
 
-# Convert to dataframe and merge with recipe names
 recipe_popularity = pd.DataFrame(
     list(recipe_order_counts.items()),
     columns=['recipe_id', 'inferred_orders']
@@ -388,7 +364,6 @@ print(recipe_popularity.head(10)[
     ['recipe_name', 'cuisine', 'inferred_orders', 'avg_rating']
 ].to_string(index=False))
 
-# Plot: top 10 most ordered recipes
 top_recipes = recipe_popularity.head(10)
 
 _fig = plt.figure(figsize=(10, 5))
@@ -409,7 +384,6 @@ plt.savefig('output/5a_recipe_popularity.png', dpi=150)
 plt.close(_fig)
 print("Recipe popularity chart saved → output/5a_recipe_popularity.png")
 
-# Plot: most ordered by cuisine
 cuisine_orders = (recipe_popularity.groupby('cuisine')['inferred_orders']
                   .sum().sort_values(ascending=False))
 
@@ -426,7 +400,6 @@ plt.savefig('output/5b_orders_by_cuisine.png', dpi=150)
 plt.close(_fig)
 print("Orders by cuisine chart saved → output/5b_orders_by_cuisine.png")
 
-# Most popular recipe per cuisine
 top_per_cuisine = (recipe_popularity
                    .sort_values('inferred_orders', ascending=False)
                    .groupby('cuisine')
@@ -507,7 +480,7 @@ for testcase in testcases:
     most_purchased_recipe(tc_order_items, tc_recipe_ingredients)
 
 CHART_SLIDES = [
-    ('output/1c_segment_sizes.png', 'Customer segment sizes'),
+    ('output/1_segment_sizes.png', 'Customer segment sizes'),
     ('output/2_demand_forecast.png', 'Weekly demand forecast'),
     ('output/3a_promo_overall.png', 'Promotion vs no promotion'),
     ('output/3b_promo_by_segment.png', 'Promotion by segment'),
