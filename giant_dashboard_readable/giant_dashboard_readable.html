@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giant Singapore — Analytics Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f8f5;
+    --surface: #ffffff;
+    --card: #ffffff;
+    --border: #d4e8d8;
+    --accent: #1e7e3e;
+    --accent2: #2da84f;
+    --accent3: #52c472;
+    --accent4: #e07b2a;
+    --text: #1a2e1f;
+    --muted: #5a7a62;
+    --heading: 'DM Serif Display', Georgia, serif;
+    --body: 'DM Sans', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--body);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ── Sidebar ── */
+  .sidebar {
+    position: fixed;
+    top: 0; left: 0;
+    width: 220px; height: 100vh;
+    background: #f0f7f1;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    padding: 28px 0;
+    z-index: 100;
+    overflow-y: auto;
+  }
+  .sidebar-logo {
+    padding: 0 24px 28px;
+    border-bottom: 1px solid var(--border);
+  }
+  .sidebar-logo .brand {
+    font-family: var(--heading);
+    font-size: 22px;
+    color: var(--accent);
+    line-height: 1.1;
+  }
+  .sidebar-logo .sub {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .nav-section {
+    padding: 20px 24px 8px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 24px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 2px solid transparent;
+  }
+  .nav-link:hover, .nav-link.active {
+    color: var(--text);
+    background: rgba(30,126,62,0.06);
+    border-left-color: var(--accent);
+  }
+  .nav-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--border);
+    flex-shrink: 0;
+  }
+  .nav-link.active .nav-dot { background: var(--accent); }
+  .nav-link:hover .nav-dot { background: var(--muted); }
+
+  /* ── Main ── */
+  .main {
+    margin-left: 220px;
+    min-height: 100vh;
+  }
+
+  /* ── Top bar ── */
+  .topbar {
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 50;
+  }
+  .topbar-title {
+    font-family: var(--heading);
+    font-size: 17px;
+    color: var(--text);
+  }
+  .topbar-badge {
+    background: rgba(30,126,62,0.12);
+    border: 1px solid rgba(30,126,62,0.3);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Sections ── */
+  .section {
+    padding: 48px 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section:last-child { border-bottom: none; }
+
+  .section-header {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .section-num {
+    font-family: var(--heading);
+    font-size: 48px;
+    color: #c8e0cc;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .section-info .section-title {
+    font-family: var(--heading);
+    font-size: 26px;
+    color: var(--text);
+    line-height: 1.1;
+  }
+  .section-info .section-desc {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  /* ── KPI Cards ── */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  .kpi {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(30,126,62,0.07);
+  }
+  .kpi::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+  }
+  .kpi.gold::before { background: var(--accent); }
+  .kpi.blue::before { background: var(--accent2); }
+  .kpi.green::before { background: var(--accent3); }
+  .kpi.orange::before { background: var(--accent4); }
+  .kpi-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+  .kpi-value {
+    font-family: var(--heading);
+    font-size: 30px;
+    color: var(--text);
+    line-height: 1;
+  }
+  .kpi-sub {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+  .kpi-change {
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 6px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    display: inline-block;
+  }
+  .kpi-change.up { background: rgba(82,196,114,0.12); color: var(--accent3); }
+  .kpi-change.warn { background: rgba(224,123,42,0.12); color: var(--accent4); }
+
+  /* ── Chart Grids ── */
+  .chart-grid {
+    display: grid;
+    gap: 20px;
+  }
+  .chart-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+  .chart-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .chart-grid.cols-1-2 { grid-template-columns: 1fr 2fr; }
+  .chart-grid.cols-2-1 { grid-template-columns: 2fr 1fr; }
+
+  .chart-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(30,126,62,0.07);
+  }
+  .chart-head {
+    padding: 18px 20px 12px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .chart-title {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text);
+  }
+  .chart-subtitle {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .chart-tag {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 20px;
+    background: rgba(30,126,62,0.08);
+    color: var(--muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .chart-body {
+    padding: 0 16px 16px;
+  }
+  .chart-body img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    background: #fff;
+  }
+
+  /* ── Insight boxes ── */
+  .insight-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .insight {
+    background: rgba(30,126,62,0.05);
+    border: 1px solid rgba(30,126,62,0.12);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .insight.blue {
+    background: rgba(45,168,79,0.05);
+    border-color: rgba(45,168,79,0.12);
+  }
+  .insight.green {
+    background: rgba(82,196,114,0.05);
+    border-color: rgba(82,196,114,0.12);
+  }
+  .insight.orange {
+    background: rgba(224,123,42,0.05);
+    border-color: rgba(224,123,42,0.12);
+  }
+  .insight-head {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .insight.blue .insight-head { color: var(--accent2); }
+  .insight.green .insight-head { color: var(--accent3); }
+  .insight.orange .insight-head { color: var(--accent4); }
+  .insight p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .insight strong { color: var(--text); }
+
+  /* ── Targeting table ── */
+  .target-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 13px;
+  }
+  .target-table th {
+    text-align: left;
+    padding: 10px 14px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    border-bottom: 1px solid var(--border);
+  }
+  .target-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(212,232,216,0.6);
+    vertical-align: top;
+  }
+  .target-table tr:last-child td { border-bottom: none; }
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-right: 4px;
+  }
+  .tag-gold { background: rgba(30,126,62,0.12); color: var(--accent); }
+  .tag-blue { background: rgba(45,168,79,0.12); color: var(--accent2); }
+  .tag-green { background: rgba(82,196,114,0.12); color: var(--accent3); }
+  .tag-orange { background: rgba(224,123,42,0.12); color: var(--accent4); }
+  .tag-grey { background: rgba(122,128,153,0.15); color: var(--muted); }
+  .action-text { color: var(--muted); font-size: 12px; }
+  .count-pill {
+    background: #f0f7f1;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2px 8px;
+    font-size: 11px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  /* ── Divider label ── */
+  .divider-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 36px 0 24px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .divider-label::before, .divider-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ── Hero section ── */
+  .hero {
+    padding: 60px 40px 48px;
+    border-bottom: 1px solid var(--border);
+    background: radial-gradient(ellipse 60% 50% at 70% 50%, rgba(30,126,62,0.05) 0%, transparent 70%);
+    position: relative;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .hero-title {
+    font-family: var(--heading);
+    font-size: 48px;
+    line-height: 1.05;
+    color: var(--text);
+    max-width: 640px;
+  }
+  .hero-title span { color: var(--accent); }
+  .hero-body {
+    font-size: 15px;
+    color: var(--muted);
+    max-width: 520px;
+    margin-top: 16px;
+    line-height: 1.7;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+  }
+  .hero-stat-value {
+    font-family: var(--heading);
+    font-size: 32px;
+    color: var(--text);
+  }
+  .hero-stat-label {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<!-- ── Sidebar ── -->
+<nav class="sidebar">
+  <div class="sidebar-logo">
+    <div class="brand">Giant SG</div>
+    <div class="sub">Analytics Dashboard</div>
+  </div>
+
+  <div class="nav-section">Overview</div>
+  <a href="#overview" class="nav-link active"><span class="nav-dot"></span> Key Metrics</a>
+
+  <div class="nav-section">Food Analytics</div>
+  <a href="#segmentation" class="nav-link"><span class="nav-dot"></span> Customer Segments</a>
+  <a href="#recommendations" class="nav-link"><span class="nav-dot"></span> Recommendations</a>
+  <a href="#forecasting" class="nav-link"><span class="nav-dot"></span> Demand Forecasting</a>
+  <a href="#promotions" class="nav-link"><span class="nav-dot"></span> Promotions</a>
+  <a href="#recipes" class="nav-link"><span class="nav-dot"></span> Recipe Popularity</a>
+  <a href="#search" class="nav-link"><span class="nav-dot"></span> Search Trends</a>
+  <a href="#rfm" class="nav-link"><span class="nav-dot"></span> RFM Analysis</a>
+
+  <div class="nav-section">Household</div>
+  <a href="#household" class="nav-link"><span class="nav-dot"></span> Household Items</a>
+
+  <div class="nav-section">Strategy</div>
+  <a href="#targeting" class="nav-link"><span class="nav-dot"></span> Targeting Actions</a>
+</nav>
+
+<!-- ── Main ── -->
+<div class="main">
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="topbar-title">IS215 — Giant Singapore Digital Transformation</div>
+    <div class="topbar-badge">Data: both_test · Jan–Jun 2024</div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero" id="overview">
+    <div class="hero-eyebrow">✦ Executive Summary</div>
+    <h1 class="hero-title">Giant Singapore<br><span>Analytics Report</span></h1>
+    <p class="hero-body">
+      Full-stack analytics pipeline covering customer segmentation, collaborative filtering recommendations,
+      demand forecasting, promotion effectiveness, RFM scoring, and search behaviour across
+      the Food and Household verticals.
+    </p>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-value">75</div>
+        <div class="hero-stat-label">Total Users</div>
+      </div>
+      <div>
+        <div class="hero-stat-value">1,320</div>
+        <div class="hero-stat-label">Orders (Food + HH)</div>
+      </div>
+      <div>
+        <div class="hero-stat-value">8,369</div>
+        <div class="hero-stat-label">Order Items</div>
+      </div>
+      <div>
+        <div class="hero-stat-value">$81.2K</div>
+        <div class="hero-stat-label">HH Revenue (SGD)</div>
+      </div>
+      <div>
+        <div class="hero-stat-value">+59%</div>
+        <div class="hero-stat-label">Promo Lift (Food)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════ SECTION 1: SEGMENTATION ══ -->
+  <div class="section" id="segmentation">
+    <div class="section-header">
+      <div class="section-num">01</div>
+      <div class="section-info">
+        <div class="section-title">Customer Segmentation</div>
+        <div class="section-desc">K-Means clustering (k=3) on age, avg weekly spend & visit frequency</div>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi gold">
+        <div class="kpi-label">Budget Shoppers</div>
+        <div class="kpi-value">27</div>
+        <div class="kpi-sub">Avg $64.84/wk · Age 44.6</div>
+        <div class="kpi-change warn">8.5 visits/period</div>
+      </div>
+      <div class="kpi blue">
+        <div class="kpi-label">Regular Families</div>
+        <div class="kpi-value">25</div>
+        <div class="kpi-sub">Avg $138.19/wk · Age 53.9</div>
+        <div class="kpi-change up">11.9 visits/period</div>
+      </div>
+      <div class="kpi green">
+        <div class="kpi-label">High-Value Customers</div>
+        <div class="kpi-value">23</div>
+        <div class="kpi-sub">Avg $141.24/wk · Age 32.4</div>
+        <div class="kpi-change up">6.8 visits/period</div>
+      </div>
+      <div class="kpi orange">
+        <div class="kpi-label">SVD Explained Var.</div>
+        <div class="kpi-value">49.3%</div>
+        <div class="kpi-sub">10 latent dimensions</div>
+        <div class="kpi-change up">139 products</div>
+      </div>
+    </div>
+
+    <div class="chart-grid cols-2">
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Elbow Method — Optimal k</div>
+            <div class="chart-subtitle">Inertia vs number of clusters; k=3 is the elbow</div>
+          </div>
+          <div class="chart-tag">K-Means</div>
+        </div>
+        <div class="chart-body">
+          <img src="images/chart_01.png" alt="Elbow method chart">
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Segment Sizes</div>
+            <div class="chart-subtitle">Number of customers per cluster</div>
+          </div>
+          <div class="chart-tag">Distribution</div>
+        </div>
+        <div class="chart-body">
+          <img src="images/chart_02.png" alt="Segment sizes chart">
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;">
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Segmentation Scatter — Spend vs Visit Frequency</div>
+            <div class="chart-subtitle">Each dot is a customer, coloured by K-Means cluster assignment</div>
+          </div>
+          <div class="chart-tag">Scatter · k=3</div>
+        </div>
+        <div class="chart-body">
+          <img src="images/chart_03.png" alt="Segmentation scatter">
+        </div>
+      </div>
+    </div>
+
+    <div class="insight-row">
+      <div class="insight">
+        <div class="insight-head">💡 Budget Shoppers</div>
+        <p>Largest segment (27 users). Mid-age, lower spend. <strong>Target with bulk-buy deals and weekly staple promotions</strong> to increase basket size.</p>
+      </div>
+      <div class="insight blue">
+        <div class="insight-head">💡 Regular Families</div>
+        <p>Highest visit frequency (11.9). Older demographic. <strong>Ideal candidates for click-and-collect and recipe bundle promotions</strong>.</p>
+      </div>
+      <div class="insight green">
+        <div class="insight-head">💡 High-Value Customers</div>
+        <p>Youngest (avg 32.4) and highest spenders. <strong>Offer VIP early access and premium product discovery</strong> to retain and upsell.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════ SECTION 2: RECOMMENDATIONS ══ -->
+  <div class="section" id="recommendations">
+    <div class="section-header">
+      <div class="section-num">02</div>
+      <div class="section-info">
+        <div class="section-title">Product Recommendations</div>
+        <div class="section-desc">Collaborative filtering via Truncated SVD + price-sensitivity profiling</div>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi blue">
+        <div class="kpi-label">Value Conscious</div>
+        <div class="kpi-value">46.7%</div>
+        <div class="kpi-sub">35 users · mid-range spend</div>
+      </div>
+      <div class="kpi green">
+        <div class="kpi-label">Premium Seekers</div>
+        <div class="kpi-value">26.7%</div>
+        <div class="kpi-sub">20 users · avg basket $2,109</div>
+      </div>
+      <div class="kpi orange">
+        <div class="kpi-label">Price Sensitive</div>
+        <div class="kpi-value">26.7%</div>
+        <div class="kpi-sub">20 users · 33% promo rate</div>
+      </div>
+      <div class="kpi gold">
+        <div class="kpi-label">Products Indexed</div>
+        <div class="kpi-value">139</div>
+        <div class="kpi-sub">75 users purchase matrix</div>
+      </div>
+    </div>
+
+    <div class="chart-grid cols-2">
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Top Recommended Products</div>
+            <div class="chart-subtitle">Most frequently surfaced across all user recommendations</div>
+          </div>
+          <div class="chart-tag">CF · SVD</div>
+        </div>
+        <div class="chart-body">
+          <img src="images/chart_04.png" alt="Top recommendations">
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Price Tier Distribution</div>
+            <div class="chart-subtitle">Customers bucketed into price sensitivity tiers</div>
+          </div>
+          <div class="chart-tag">Segmentation</div>
+        </div>
+        <div class="chart-body">
+          <img src="images/chart_05.png" alt="Price tiers">
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;">
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Price Tier Profiles — Avg Unit Price · Promo Rate · Basket Size</div>
+            <div class="chart-subtitle">Behavioural comparison across the three price sensitivity tiers</div>
+          </div>
+          <div class="chart-tag">Profiling</div>
+        </div>
+        <div class="chart-body">
+          <img src="images/chart_06.png" alt="Price tier profiles">
+        </div>
+      </div>
+    </div>
+
+    <div class="insight-row">
+      <div class="insight green">
+        <div class="insight-head">💡 Premium Seekers</div>
+        <p>Highest avg basket ($2,109). Low promo reliance (22%). <strong>Push premium and new product lines</strong> directly — they buy without discounts.</p>
+      </div>
+      <div class="insight orange">
+        <div class="insight-head">💡 Price Sensitive</div>
+        <p>Highest promo rate (33%). <strong>Promotions are critical</strong> to conversion for this tier. Pair with personalised item recommendations.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════ SECTION 3: DEMAND FORECAST ══ -->
+  <div class="section" id="forecasting">
+    <div class="section-header">
+      <div class="section-num">03</div>
+      <div class="section-info">
+        <div class="section-title">Demand Forecasting</div>
+        <div class="section-desc">Rolling average forecasting for top 5 products across 26 weeks (Jan–Jun 2024)</div>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi gold"><div class="kpi-label">Pandan Leaves</div><div class="kpi-value">110</div><div class="kpi-sub">Total units · avg 10.5/wk</div></div>
+      <div class="kpi blue"><div class="kpi-label">Milk Powder</div><div class="kpi-value">108</div><div class="kpi-sub">Total units · avg 9.9/wk</div></div>
+      <div class="kpi green"><div class="kpi-label">Eggs</div><div class="kpi-value">108</div><div class="kpi-sub">Total units · avg 11.3/wk</div></div>
+      <div class="kpi orange"><div class="kpi-label">Palm Sugar + Ghee</div><div class="kpi-value">211</div><div class="kpi-sub">Combined · ~10.3/wk each</div></div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-head">
+        <div>
+          <div class="chart-title">Weekly Demand + Rolling Forecast — Top 5 Products</div>
+          <div class="chart-subtitle">Historical weekly units sold with 4-week rolling average trendline</div>
+        </div>
+        <div class="chart-tag">Time Series</div>
+      </div>
+      <div class="chart-body">
+        <img src="images/chart_07.png" alt="Demand forecast">
+      </div>
+    </div>
+
+    <div class="insight-row">
+      <div class="insight">
+        <div class="insight-head">💡 Inventory Implication</div>
+        <p>All top-5 products show <strong>stable demand</strong> (~10 units/week). Safe to maintain consistent stock levels. Watch for seasonal spikes in festive months.</p>
+      </div>
+      <div class="insight blue">
+        <div class="insight-head">💡 Staples Category</div>
+        <p>Pandan Leaves, Eggs, and Palm Sugar are core Malay and Chinese dessert staples. <strong>Bundle these with recipe suggestions</strong> to increase attachment rate.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════ SECTION 4: PROMOTIONS ══ -->
+  <div class="section" id="promotions">
+    <div class="section-header">
+      <div class="section-num">04</div>
+      <div class="section-info">
+        <div class="section-title">Promotion Effectiveness</div>
+        <div class="section-desc">Avg order value with vs without promotion applied, across all segments</div>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi gold">
+        <div class="kpi-label">No Promo — Avg Order</div>
+        <div class="kpi-value">$150</div>
+        <div class="kpi-sub">Food vertical baseline</div>
+      </div>
+      <div class="kpi green">
+        <div class="kpi-label">With Promo — Avg Order</div>
+        <div class="kpi-value">$239</div>
+        <div class="kpi-sub">Food vertical with discount</div>
+        <div class="kpi-change up">+59% lift</div>
+      </div>
+      <div class="kpi blue">
+        <div class="kpi-label">HH No Promo</div>
+        <div class="kpi-value">$123</div>
+        <div class="kpi-sub">Household baseline</div>
+      </div>
+      <div class="kpi orange">
+        <div class="kpi-label">HH With Promo</div>
+        <div class="kpi-value">$131</div>
+        <div class="kpi-sub">Household with discount</div>
+        <div class="kpi-change up">+7% lift</div>
+      </div>
+    </div>
+
+    <div class="chart-grid cols-2">
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Overall Promo Lift</div>
+            <div class="chart-subtitle">Avg order total: promotion vs no promotion</div>
+          </div>
+          <div class="chart-tag">Food</div>
+        </div>
+        <div class="chart-body">
+          <img src="images/chart_08.png" alt="Promo overall">
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Promo Impact by Customer Segment</div>
+            <div class="chart-subtitle">Which segments respond most to promotions?</div>
+          </div>
+          <div class="chart-tag">Segment × Promo</div>
+        </div>
+        <div class="chart-body">
+          <img src="images/chart_09.png" alt="Promo by segment">
+        </div>
+      </div>
+    </div>
+
+    <div class="insight-row">
+      <div class="insight green">
+        <div class="insight-head">💡 Food Promo ROI is Exceptional</div>
+        <p>A 59% lift in average order value when promotions are applied. <strong>Budget Shoppers respond most</strong>: $154 → $241 (+56%).</p>
+      </div>
+      <div class="insight orange">
+        <div class="insight-head">💡 Household Promo is Modest</div>
+        <p>Only 7% lift for household items. Customers likely buy essentials regardless. <strong>Shift promo spend toward food bundles</strong> for better ROI.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════ SECTION 5: RECIPES ══ -->
+  <div class="section" id="recipes">
+    <div class="section-header">
+      <div class="section-num">05</div>
+      <div class="section-info">
+        <div class="section-title">Recipe Popularity Ranking</div>
+        <div class="section-desc">Recipes inferred from ingredient purchase overlap (≥50% match) across both_test dataset</div>
+      </div>
+    </div>
+
+    <!-- KPI row -->
+    <div class="kpi-grid">
+      <div class="kpi" style="border-top:2px solid var(--accent);">
+        <div class="kpi-label">Most Ordered Recipe</div>
+        <div class="kpi-value">Kheer</div>
+        <div class="kpi-sub">Dessert · 27 inferred orders</div>
+        <div class="kpi-change up">★ 3.8 rating</div>
+      </div>
+      <div class="kpi" style="border-top:2px solid var(--accent2);">
+        <div class="kpi-label">Most Searched (both_test)</div>
+        <div class="kpi-value">Nasi Lemak</div>
+        <div class="kpi-sub">Matched by 6 users via ingredients</div>
+        <div class="kpi-change up">Malay cuisine</div>
+      </div>
+      <div class="kpi" style="border-top:2px solid var(--accent3);">
+        <div class="kpi-label">Best Bundle Recipe</div>
+        <div class="kpi-value">Kheer</div>
+        <div class="kpi-sub">27 orders contain ≥50% ingredients</div>
+        <div class="kpi-change up">Indian dessert</div>
+      </div>
+      <div class="kpi" style="border-top:2px solid var(--accent4);">
+        <div class="kpi-label">Highest Rated</div>
+        <div class="kpi-value">Kueh Lapis</div>
+        <div class="kpi-sub">★ 5.0 · 11 inferred orders</div>
+        <div class="kpi-change up">Dessert</div>
+      </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="chart-grid cols-2">
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Top 10 Most Ordered Recipes</div>
+            <div class="chart-subtitle">Inferred from ingredient purchases · star ratings shown</div>
+          </div>
+          <div class="chart-tag">both_test</div>
+        </div>
+        <div class="chart-body">
+          <img src="images/chart_10.png" alt="Recipe popularity chart">
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Total Inferred Orders by Cuisine</div>
+            <div class="chart-subtitle">Dessert dominates — 9 of the top 10 recipes are desserts</div>
+          </div>
+          <div class="chart-tag">Cuisine Split</div>
+        </div>
+        <div class="chart-body">
+          <img src="images/chart_11.png" alt="Orders by cuisine chart">
+        </div>
+      </div>
+    </div>
+
+    <!-- Most searched per test case -->
+    <div class="divider-label">Recipe Results</div>
+
+    <!-- Most popular per cuisine table -->
+    <div class="chart-card">
+      <div class="chart-head">
+        <div>
+          <div class="chart-title">Most Popular Recipe per Cuisine</div>
+          <div class="chart-subtitle">Top recipe in each cuisine category by inferred order count</div>
+        </div>
+        <div class="chart-tag">both_test</div>
+      </div>
+      <div class="chart-body" style="padding:8px 20px 20px;">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <tr style="border-bottom:1px solid var(--border);">
+            <th style="text-align:left;padding:8px 0;color:var(--muted);font-size:11px;font-weight:600;">CUISINE</th>
+            <th style="text-align:left;padding:8px 0;color:var(--muted);font-size:11px;font-weight:600;">TOP RECIPE</th>
+            <th style="text-align:right;padding:8px 0;color:var(--muted);font-size:11px;font-weight:600;">ORDERS</th>
+            <th style="text-align:right;padding:8px 0;color:var(--muted);font-size:11px;font-weight:600;">RATING</th>
+          </tr>
+          <tr>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);"><span class="tag tag-green">Dessert</span></td>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);font-weight:600;">Kheer</td>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);text-align:right;">27</td>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);text-align:right;color:#e07b2a;">★ 3.8</td>
+        </tr>
+          <tr>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);"><span class="tag tag-gold">Indian</span></td>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);font-weight:600;">Roti Prata</td>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);text-align:right;">11</td>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);text-align:right;color:#e07b2a;">★ 4.7</td>
+        </tr>
+          <tr>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);"><span class="tag tag-orange">Western</span></td>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);font-weight:600;">Mac and Cheese</td>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);text-align:right;">8</td>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);text-align:right;color:#e07b2a;">★ 3.9</td>
+        </tr>
+          <tr>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);"><span class="tag tag-blue">Chinese</span></td>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);font-weight:600;">Congee</td>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);text-align:right;">4</td>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);text-align:right;color:#e07b2a;">★ 4.1</td>
+        </tr>
+          <tr>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);"><span class="tag" style="background:rgba(30,126,62,0.1);color:#1e7e3e;">Malay</span></td>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);font-weight:600;">Nasi Lemak</td>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);text-align:right;">3</td>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);text-align:right;color:#e07b2a;">★ 4.2</td>
+        </tr>
+          <tr>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);"><span class="tag" style="background:rgba(52,196,114,0.1);color:#1a6e40;">Japanese</span></td>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);font-weight:600;">Teriyaki Chicken</td>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);text-align:right;">3</td>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.6);text-align:right;color:#e07b2a;">★ 3.7</td>
+        </tr>
+          <tr>
+          <td style="padding:9px 0;"><span class="tag" style="background:rgba(224,123,42,0.1);color:#a0500a;">Korean</span></td>
+          <td style="padding:9px 0;font-weight:600;">Tteokbokki</td>
+          <td style="padding:9px 0;text-align:right;">1</td>
+          <td style="padding:9px 0;text-align:right;color:#e07b2a;">★ 5.0</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Insights -->
+    <div class="insight-row">
+      <div class="insight">
+        <div class="insight-head">💡 Desserts Dominate</div>
+        <p>9 of the top 10 recipes are desserts. Customers are
+          <strong>actively buying dessert ingredients together</strong>
+          — a strong signal to surface dessert recipe bundles prominently on the homepage.
+        </p>
+      </div>
+      <div class="insight blue">
+        <div class="insight-head">💡 Kueh Lapis — Hidden Gem</div>
+        <p>Rated a perfect <strong>★ 5.0</strong> with 11 inferred orders. High satisfaction but moderate volume — <strong>promote it more aggressively</strong> to increase awareness and orders.</p>
+      </div>
+      <div class="insight green">
+        <div class="insight-head">💡 Bundle Opportunity</div>
+        <p>Cookies drove <strong>80 bundle-matched orders</strong> in dessert_test alone. Pre-packaged ingredient kits for Cookies and Kheer would likely convert well across all user segments.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════ SECTION 6: SEARCH ══ -->
+  <div class="section" id="search">
+    <div class="section-header">
+      <div class="section-num">06</div>
+      <div class="section-info">
+        <div class="section-title">Search Trend Analysis</div>
+        <div class="section-desc">Top queries, platform click-through rates, and daily search volume patterns</div>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi blue">
+        <div class="kpi-label">App CTR (Food)</div>
+        <div class="kpi-value">67.4%</div>
+        <div class="kpi-sub">of searches result in a click</div>
+      </div>
+      <div class="kpi gold">
+        <div class="kpi-label">Web CTR (Food)</div>
+        <div class="kpi-value">68.3%</div>
+        <div class="kpi-sub">slightly higher than App</div>
+      </div>
+      <div class="kpi blue">
+        <div class="kpi-label">App CTR (HH)</div>
+        <div class="kpi-value">64.0%</div>
+        <div class="kpi-sub">Household items App</div>
+      </div>
+      <div class="kpi gold">
+        <div class="kpi-label">Web CTR (HH)</div>
+        <div class="kpi-value">64.8%</div>
+        <div class="kpi-sub">Household items Web</div>
+      </div>
+    </div>
+
+    <div class="chart-grid cols-2">
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Top 10 Most Searched — Food</div>
+            <div class="chart-subtitle">Search terms across all 995 food search events</div>
+          </div>
+          <div class="chart-tag">Food · both_test</div>
+        </div>
+        <div class="chart-body">
+          <img src="images/chart_12.png" alt="Top searches">
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Search Volume by Day of Week</div>
+            <div class="chart-subtitle">Peak on Thursday & Saturday; dip on Sunday</div>
+          </div>
+          <div class="chart-tag">Temporal</div>
+        </div>
+        <div class="chart-body">
+          <img src="images/chart_13.png" alt="Search by day">
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;">
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Platform Click-Through Rate — App vs Web</div>
+            <div class="chart-subtitle">Web edges App by ~1pp across both verticals</div>
+          </div>
+          <div class="chart-tag">Platform</div>
+        </div>
+        <div class="chart-body" style="max-width:480px;">
+          <img src="images/chart_14.png" alt="Platform CTR">
+        </div>
+      </div>
+    </div>
+
+    <div class="insight-row">
+      <div class="insight">
+        <div class="insight-head">💡 Thursday & Saturday Peak</div>
+        <p>Search volume spikes Thu/Sat — likely <strong>pre-weekend meal planning</strong>. Schedule push notifications and recipe spotlights for Thursday mornings.</p>
+      </div>
+      <div class="insight blue">
+        <div class="insight-head">💡 Web vs App CTR Parity</div>
+        <p>Both platforms perform similarly (~67–68%). <strong>Invest equally in App and Web search UX</strong>; neither significantly outperforms the other.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════ SECTION 6: RFM ══ -->
+  <div class="section" id="rfm">
+    <div class="section-header">
+      <div class="section-num">07</div>
+      <div class="section-info">
+        <div class="section-title">RFM Segmentation + K-Means Overlap</div>
+        <div class="section-desc">Recency–Frequency–Monetary scoring (quartiles 1–4) combined with K-Means clusters</div>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi green">
+        <div class="kpi-label">Champions</div>
+        <div class="kpi-value">24</div>
+        <div class="kpi-sub">Avg recency 8.75d · $2,620 spend</div>
+        <div class="kpi-change up">High value</div>
+      </div>
+      <div class="kpi blue">
+        <div class="kpi-label">Loyal Customers</div>
+        <div class="kpi-value">10</div>
+        <div class="kpi-sub">Avg recency 11d · $1,627 spend</div>
+      </div>
+      <div class="kpi gold">
+        <div class="kpi-label">Occasional Visitors</div>
+        <div class="kpi-value">25</div>
+        <div class="kpi-sub">Avg recency 52.8d · $1,000 spend</div>
+      </div>
+      <div class="kpi orange">
+        <div class="kpi-label">At Risk</div>
+        <div class="kpi-value">12</div>
+        <div class="kpi-sub">Avg recency 35.9d · $2,381 spend</div>
+        <div class="kpi-change warn">High-value churners</div>
+      </div>
+    </div>
+
+    <div class="chart-grid cols-2">
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">RFM Segment Sizes</div>
+            <div class="chart-subtitle">Customer count per RFM classification</div>
+          </div>
+          <div class="chart-tag">RFM</div>
+        </div>
+        <div class="chart-body">
+          <img src="images/chart_15.png" alt="RFM segments">
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Frequency vs Monetary — RFM Scatter</div>
+            <div class="chart-subtitle">Coloured by RFM segment; Champions cluster top-right</div>
+          </div>
+          <div class="chart-tag">Scatter</div>
+        </div>
+        <div class="chart-body">
+          <img src="images/chart_16.png" alt="RFM scatter">
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;">
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">K-Means × RFM Overlap Heatmap</div>
+            <div class="chart-subtitle">Cross-tabulation showing how K-Means clusters map onto RFM segments</div>
+          </div>
+          <div class="chart-tag">Heatmap</div>
+        </div>
+        <div class="chart-body">
+          <img src="images/chart_17.png" alt="K-Means RFM heatmap">
+        </div>
+      </div>
+    </div>
+
+    <div class="insight-row">
+      <div class="insight orange">
+        <div class="insight-head">⚠️ At Risk — High-Value Churners</div>
+        <p>12 users with avg spend $2,381 but recency of 36 days. <strong>Urgent re-engagement needed</strong>: Yuu points bonus + personalised offer.</p>
+      </div>
+      <div class="insight green">
+        <div class="insight-head">💡 Champions × Regular Families</div>
+        <p>14 users overlap here — the most loyal regular shoppers. <strong>Prioritise for loyalty multiplier events</strong> and meal plan feature rollout.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════ SECTION 7: HOUSEHOLD ══ -->
+  <div class="section" id="household">
+    <div class="section-header">
+      <div class="section-num">08</div>
+      <div class="section-info">
+        <div class="section-title">Household Items Division</div>
+        <div class="section-desc">Search and purchase analytics across 62 household products — 637 orders, 3,102 items</div>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi gold">
+        <div class="kpi-label">Total HH Revenue</div>
+        <div class="kpi-value">$81.2K</div>
+        <div class="kpi-sub">637 orders · 75 users</div>
+      </div>
+      <div class="kpi blue">
+        <div class="kpi-label">Avg Order Value</div>
+        <div class="kpi-value">$127.49</div>
+        <div class="kpi-sub">vs Food: ~$185 blended</div>
+      </div>
+      <div class="kpi green">
+        <div class="kpi-label">Total Products</div>
+        <div class="kpi-value">62</div>
+        <div class="kpi-sub">Across 5 categories</div>
+      </div>
+      <div class="kpi orange">
+        <div class="kpi-label">Promo Lift</div>
+        <div class="kpi-value">+7%</div>
+        <div class="kpi-sub">$123 → $131 avg order</div>
+      </div>
+    </div>
+
+    <div class="chart-grid cols-2">
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Top Searched Household Products</div>
+            <div class="chart-subtitle">Search frequency among validated product names</div>
+          </div>
+          <div class="chart-tag">Search · 940 events</div>
+        </div>
+        <div class="chart-body" style="padding:20px 20px 16px;">
+          <table style="width:100%;border-collapse:collapse;font-size:13px;">
+            <tr style="border-bottom:1px solid var(--border);">
+              <th style="text-align:left;padding:8px 0;color:var(--muted);font-size:11px;font-weight:600;">PRODUCT</th>
+              <th style="text-align:right;padding:8px 0;color:var(--muted);font-size:11px;font-weight:600;">SEARCHES</th>
+              <th style="text-align:right;padding:8px 0;color:var(--muted);font-size:11px;font-weight:600;">CATEGORY</th>
+            </tr>
+            <tr>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.8);">Feminine Wash</td>
+          <td style="text-align:right;color:var(--accent);font-weight:600;">22</td>
+          <td style="text-align:right;color:var(--muted);font-size:11px;">Personal Care</td>
+        </tr>
+            <tr>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.8);">Panty Liners</td>
+          <td style="text-align:right;color:var(--accent);font-weight:600;">22</td>
+          <td style="text-align:right;color:var(--muted);font-size:11px;">Personal Care</td>
+        </tr>
+            <tr>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.8);">Aluminium Foil</td>
+          <td style="text-align:right;color:var(--accent);font-weight:600;">21</td>
+          <td style="text-align:right;color:var(--muted);font-size:11px;">Kitchen Essentials</td>
+        </tr>
+            <tr>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.8);">Baby Wipes</td>
+          <td style="text-align:right;color:var(--accent);font-weight:600;">21</td>
+          <td style="text-align:right;color:var(--muted);font-size:11px;">Baby &amp; Family</td>
+        </tr>
+            <tr>
+          <td style="padding:9px 0;">Bottle Brush</td>
+          <td style="text-align:right;color:var(--accent);font-weight:600;">21</td>
+          <td style="text-align:right;color:var(--muted);font-size:11px;">Kitchen Essentials</td>
+        </tr>
+          </table>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Top Purchased Household Products</div>
+            <div class="chart-subtitle">Most ordered items by total purchase count</div>
+          </div>
+          <div class="chart-tag">Orders · 3,102 items</div>
+        </div>
+        <div class="chart-body" style="padding:20px 20px 16px;">
+          <table style="width:100%;border-collapse:collapse;font-size:13px;">
+            <tr style="border-bottom:1px solid var(--border);">
+              <th style="text-align:left;padding:8px 0;color:var(--muted);font-size:11px;font-weight:600;">PRODUCT</th>
+              <th style="text-align:right;padding:8px 0;color:var(--muted);font-size:11px;font-weight:600;">PURCHASES</th>
+              <th style="text-align:right;padding:8px 0;color:var(--muted);font-size:11px;font-weight:600;">CATEGORY</th>
+            </tr>
+            <tr>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.8);">Washing Machine Cleaner</td>
+          <td style="text-align:right;color:var(--accent3);font-weight:600;">70</td>
+          <td style="text-align:right;color:var(--muted);font-size:11px;">Laundry</td>
+        </tr>
+            <tr>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.8);">Panty Liners</td>
+          <td style="text-align:right;color:var(--accent3);font-weight:600;">67</td>
+          <td style="text-align:right;color:var(--muted);font-size:11px;">Personal Care</td>
+        </tr>
+            <tr>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.8);">Rubber Bands</td>
+          <td style="text-align:right;color:var(--accent3);font-weight:600;">65</td>
+          <td style="text-align:right;color:var(--muted);font-size:11px;">Kitchen Essentials</td>
+        </tr>
+            <tr>
+          <td style="padding:9px 0;border-bottom:1px solid rgba(212,232,216,0.8);">Cling Wrap</td>
+          <td style="text-align:right;color:var(--accent3);font-weight:600;">65</td>
+          <td style="text-align:right;color:var(--muted);font-size:11px;">Kitchen Essentials</td>
+        </tr>
+            <tr>
+          <td style="padding:9px 0;">Bottle Brush</td>
+          <td style="text-align:right;color:var(--accent3);font-weight:600;">64</td>
+          <td style="text-align:right;color:var(--muted);font-size:11px;">Kitchen Essentials</td>
+        </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-grid cols-2" style="margin-top:20px;">
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Product Categories</div>
+            <div class="chart-subtitle">62 products across 5 household categories</div>
+          </div>
+        </div>
+        <div class="chart-body" style="padding:16px 20px;">
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="flex:1;font-size:12px;">Toiletries &amp; Personal Care</div>
+              <div style="width:120px;height:8px;border-radius:4px;background:var(--border);overflow:hidden;">
+                  <div style="width:100%;height:100%;background:var(--accent2);border-radius:4px;"></div>
+                </div>
+              <div style="font-size:12px;color:var(--accent2);font-weight:600;width:20px;">15</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="flex:1;font-size:12px;">Cleaning Supplies</div>
+              <div style="width:120px;height:8px;border-radius:4px;background:var(--border);overflow:hidden;">
+                  <div style="width:93%;height:100%;background:var(--accent3);border-radius:4px;"></div>
+                </div>
+              <div style="font-size:12px;color:var(--accent3);font-weight:600;width:20px;">14</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="flex:1;font-size:12px;">Baby &amp; Family Care</div>
+              <div style="width:120px;height:8px;border-radius:4px;background:var(--border);overflow:hidden;">
+                  <div style="width:87%;height:100%;background:var(--accent);border-radius:4px;"></div>
+                </div>
+              <div style="font-size:12px;color:var(--accent);font-weight:600;width:20px;">13</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="flex:1;font-size:12px;">Kitchen Essentials</div>
+              <div style="width:120px;height:8px;border-radius:4px;background:var(--border);overflow:hidden;">
+                  <div style="width:80%;height:100%;background:var(--accent4);border-radius:4px;"></div>
+                </div>
+              <div style="font-size:12px;color:var(--accent4);font-weight:600;width:20px;">12</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="flex:1;font-size:12px;">Laundry</div>
+              <div style="width:120px;height:8px;border-radius:4px;background:var(--border);overflow:hidden;">
+                  <div style="width:53%;height:100%;background:var(--muted);border-radius:4px;"></div>
+                </div>
+              <div style="font-size:12px;color:var(--muted);font-weight:600;width:20px;">8</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Platform CTR — Household Items</div>
+            <div class="chart-subtitle">App 64.0% vs Web 64.8% — very close parity</div>
+          </div>
+          <div class="chart-tag">Search UX</div>
+        </div>
+        <div class="chart-body" style="padding:20px;">
+          <div style="display:flex;gap:20px;">
+            <div style="flex:1;background:#f0f7f1;border-radius:10px;padding:20px;text-align:center;">
+              <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;">App CTR</div>
+              <div style="font-family:var(--heading);font-size:38px;color:var(--accent2);">64.0%</div>
+              <div style="font-size:11px;color:var(--muted);margin-top:8px;">of app searches clicked</div>
+            </div>
+            <div style="flex:1;background:#f0f7f1;border-radius:10px;padding:20px;text-align:center;">
+              <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;">Web CTR</div>
+              <div style="font-family:var(--heading);font-size:38px;color:var(--accent);">64.8%</div>
+              <div style="font-size:11px;color:var(--muted);margin-top:8px;">of web searches clicked</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════ SECTION 8: TARGETING ══ -->
+  <div class="section" id="targeting">
+    <div class="section-header">
+      <div class="section-num">09</div>
+      <div class="section-info">
+        <div class="section-title">Actionable Targeting Recommendations</div>
+        <div class="section-desc">Combined K-Means + RFM logic — personalised actions per segment combo</div>
+      </div>
+    </div>
+
+    <table class="target-table">
+      <thead>
+        <tr>
+          <th>K-Means Segment</th>
+          <th>RFM Segment</th>
+          <th>Users</th>
+          <th>Recommended Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tag tag-green">High-Value</span></td>
+          <td><span class="tag tag-green">Champions</span></td>
+          <td><span class="count-pill">5 users</span></td>
+          <td class="action-text">🏆 VIP early access to weekly deals + premium product push</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-green">High-Value</span></td>
+          <td><span class="tag tag-orange">At Risk</span></td>
+          <td><span class="count-pill">2 users</span></td>
+          <td class="action-text">🚨 Urgent re-engagement: Yuu points bonus + personalised offer</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-blue">Regular Families</span></td>
+          <td><span class="tag tag-blue">Loyal Customers</span></td>
+          <td><span class="count-pill">3 users</span></td>
+          <td class="action-text">🥘 Recipe bundle promotions + meal plan feature highlight</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-blue">Regular Families</span></td>
+          <td><span class="tag tag-gold">Potential Loyalists</span></td>
+          <td><span class="count-pill">0 users</span></td>
+          <td class="action-text">🛒 First click-and-collect incentive + family bundle discount</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-gold">Budget Shoppers</span></td>
+          <td><span class="tag tag-green">Champions</span></td>
+          <td><span class="count-pill">5 users</span></td>
+          <td class="action-text">⭐ Loyalty point multiplier events + bulk-buy deals</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-gold">Budget Shoppers</span></td>
+          <td><span class="tag tag-gold">Potential Loyalists</span></td>
+          <td><span class="count-pill">2 users</span></td>
+          <td class="action-text">📦 Weekly staples promotion + low-minimum click-and-collect</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-grey">Occasional Visitors</span></td>
+          <td><span class="tag tag-orange">At Risk</span></td>
+          <td><span class="count-pill">est.</span></td>
+          <td class="action-text">📩 "We miss you" push notification + limited-time discount</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-grey">Occasional Visitors</span></td>
+          <td><span class="tag tag-grey">Occasional Visitors</span></td>
+          <td><span class="count-pill">est.</span></td>
+          <td class="action-text">📣 Price promotions + awareness campaigns on app home feed</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top:20px;">
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <div class="chart-title">Yuu Membership Rate by RFM Segment</div>
+            <div class="chart-subtitle">Which segments are already on Yuu loyalty vs need onboarding</div>
+          </div>
+          <div class="chart-tag">Loyalty</div>
+        </div>
+        <div class="chart-body">
+          <img src="images/chart_18.png" alt="Yuu membership by segment">
+        </div>
+      </div>
+    </div>
+
+    <div class="insight-row">
+      <div class="insight green">
+        <div class="insight-head">✅ Priority #1: Retain At Risk High-Value</div>
+        <p><strong>2 High-Value Customers are At Risk</strong> — avg spend $2,381 but haven't returned in ~36 days. Even retaining 1 is worth a targeted Yuu bonus campaign.</p>
+      </div>
+      <div class="insight blue">
+        <div class="insight-head">✅ Priority #2: Champions × Budget Shoppers</div>
+        <p><strong>5 Budget Shoppers are Champions</strong> — they're loyal despite low spend. <strong>Loyalty multipliers</strong> can shift them toward higher basket sizes over time.</p>
+      </div>
+      <div class="insight orange">
+        <div class="insight-head">✅ Priority #3: Win Occasional Visitors</div>
+        <p>25 customers have 52-day avg recency and $1,000 spend. <strong>Re-engagement push campaigns mid-week</strong> can convert some into Loyal Customers.</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
+      <div>
+        <div style="font-family:var(--heading);font-size:18px;color:var(--accent);">Giant Singapore</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:4px;">IS215 Digital Transformation · Analytics Report · Jan–Jun 2024</div>
+      </div>
+      <div style="font-size:11px;color:var(--muted);text-align:right;">
+        Data: both_test + household_items<br>
+        Models: K-Means · SVD CF · Rolling Avg · RFM Scoring
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Active nav link on scroll
+  const sections = document.querySelectorAll('.section[id], .hero[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
