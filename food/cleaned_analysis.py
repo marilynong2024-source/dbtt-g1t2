@@ -28,6 +28,7 @@ warnings.filterwarnings('ignore')
 
 os.makedirs('output', exist_ok=True)
 sns.set_theme(style='whitegrid', palette='Set2')
+# PNGs under output/ are embedded in ../giant_dashboard_readable/giant_dashboard_readable.html
 
 
 def run_chart_browser(paths, titles):
