@@ -1,64 +1,82 @@
 # DBTT-G1T2
 
-Analytics for the Giant Singapore digital transformation project (IS215): **recipe and customer analytics** in `food/`, and **household product** search vs. purchase summaries in `household_items/`.
+IS215-style analytics for **Giant Singapore**: food vertical metrics in `food/cleaned_analysis.py`, household search/purchase summaries in `household_items/`, and a static **HTML dashboard** in `giant_dashboard_readable/`.
 
 ---
 
 ## Requirements
 
-**Household script** (`household_items/household_analysis.py`):
+**Household** (`household_items/household_analysis.py`):
 
 ```bash
 pip install pandas
 ```
 
-**Food analytics** (`food/cleaned_analysis.py`) — Customer segmentation, Demand forecasting (rolling average), Promotion effectiveness analysis, Search trend analysis, Recipe popularity ranking
-
-
+**Food** (`food/cleaned_analysis.py`):
 
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn scipy
+pip install pandas numpy matplotlib seaborn scikit-learn
 ```
 
-Python 3.
+Python 3. Use `python3` on macOS if `python` is not on your PATH.
 
 ---
 
 ## How to run
 
-### Food — full pipeline (`food/cleaned_analysis.py`)
+### Food analytics
 
-Run from the **`food/`** directory (CSV paths are relative to there):
+From the **`food/`** directory (paths are relative to there):
 
 ```bash
 cd food
-python cleaned_analysis.py
+python3 cleaned_analysis.py
 ```
 
-The script loads **`both_test/`** and runs:
+The script loads **`both_test/`**, prints data checks, then:
 
-- Data quality checks  
-- Customer segmentation (K-Means)  
-- Demand forecasting (rolling average)  
-- Promotion effectiveness  
-- Search trend analysis  
-- Recipe popularity ranking  
+- Weekly demand vs rolling forecast (top 5 products) → `output/2_demand_forecast.png`
+- Promotion vs no promotion (avg order total) → `output/3a_promo_overall.png`
+- Top searches and searches by day → `output/4a_top_searches.png`, `output/4b_search_by_day.png`
+- Recipe popularity and inferred orders by cuisine → `output/5a_recipe_popularity.png`, `output/5b_orders_by_cuisine.png`
+- Console-only **most searched recipe** / **best recipe for bundle** (50% ingredient rules; see below)
 
-Figures are written under **`food/output/`** (folder is created if missing).
+After saving, an interactive **chart browser** opens (small **← / →** buttons and keyboard arrows) unless you disable it:
 
-**Closing block (three scenarios):** The file ends by looping `mains_test`, `dessert_test`, and `both_test` for “most searched recipe” and “best recipe for bundle” (50% ingredient coverage; direct recipe-name search counts for the search side). This repository currently includes only **`both_test/`**. To run without errors, either add `mains_test/` and `dessert_test/` with the same CSV layout, or change the `testcases` list near the bottom of `cleaned_analysis.py` to e.g. `["both_test"]` only.
+```bash
+DBTT_NO_CHART_BROWSER=1 python3 cleaned_analysis.py
+```
 
 ---
 
-### Household — top products
+### Household analytics
 
 From the **repository root**:
 
 ```bash
-python household_items/household_analysis.py
+python3 household_items/household_analysis.py
 ```
 
-Prints **top 3 most searched** and **top 3 most purchased** products (search terms restricted to known product names).
+Prints **top 3 searched** and **top 3 purchased** products (searches limited to known product names).
+
+---
+
+### HTML dashboard
+
+Open in a browser:
+
+`giant_dashboard_readable/giant_dashboard_readable.html`
+
+Or serve the **repo root** and open (note the full filename):
+
+```bash
+cd /path/to/dbtt-g1t2
+python3 -m http.server 8080
+```
+
+Then visit: **http://localhost:8080/giant_dashboard_readable/giant_dashboard_readable.html**
+
+Most figures in the dashboard use **`giant_dashboard_readable/images/chart_*.png`**. Regenerate **`food/output/*.png`** with `cleaned_analysis.py` if you wire those paths in HTML yourself.
 
 ---
 
@@ -67,24 +85,24 @@ Prints **top 3 most searched** and **top 3 most purchased** products (search ter
 ```
 DBTT-G1T2/
 ├── food/
-│   ├── cleaned_analysis.py   # Full IS215 analytics + recipe match loop
-│   ├── output/               # PNG charts (created on run)
-│   └── both_test/            # users, orders, order_items, search_history,
-│                             # recipes, recipe_ingredients, recipe_ratings.csv
-└── household_items/
-    ├── household_analysis.py
-    ├── users.csv
-    ├── products.csv
-    ├── orders.csv
-    ├── order_items.csv
-    └── search_history.csv
+│   ├── cleaned_analysis.py    # Demand, promos, search, recipes + chart browser
+│   ├── output/                # PNG charts (created on run)
+│   └── both_test/             # Fixture CSVs (orders, search, recipes, …)
+├── household_items/
+│   ├── household_analysis.py
+│   └── *.csv
+└── giant_dashboard_readable/
+    ├── giant_dashboard.html
+    └── images/                # Dashboard chart assets
 ```
 
 ---
 
-## Recipe matching rules (tail of `food/cleaned_analysis.py`)
+## Recipe matching rules (`food/cleaned_analysis.py`)
+
+Used by **`most_searched_recipe`** and **`most_purchased_recipe`** at the end of the script:
 
 | Match type | Rule |
 |------------|------|
-| **Search** | A user counts for a recipe if they searched the recipe name, or if ≥50% of that recipe’s ingredients appear among their search terms. |
-| **Order** | An order counts for a recipe if ≥50% of the recipe’s ingredients appear as `product_name` in that order’s line items. |
+| **Search** | Count a user for a recipe if they searched the recipe name, or if ≥50% of that recipe’s ingredients appear in their search terms. |
+| **Order** | Count an order for a recipe if ≥50% of the recipe’s ingredients appear as `product_name` in that order’s line items. |
