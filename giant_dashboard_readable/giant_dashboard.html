@@ -496,61 +496,11 @@
     </div>
   </div>
 
-  <div class="section" id="segmentation">
-    <div class="section-header">
-      <div class="section-num">01</div>
-      <div class="section-info">
-        <div class="section-title">Customer Segmentation</div>
-        <div class="section-desc">K-Means clustering (k=3) on age, avg weekly spend & visit frequency</div>
-      </div>
-    </div>
 
-    <div class="kpi-grid">
-      <div class="kpi gold">
-        <div class="kpi-label">Budget Shoppers</div>
-        <div class="kpi-value">27</div>
-        <div class="kpi-sub">Avg $64.84/wk · Age 44.6</div>
-        <div class="kpi-change warn">8.5 visits/period</div>
-      </div>
-      <div class="kpi blue">
-        <div class="kpi-label">Regular Families</div>
-        <div class="kpi-value">25</div>
-        <div class="kpi-sub">Avg $138.19/wk · Age 53.9</div>
-        <div class="kpi-change up">11.9 visits/period</div>
-      </div>
-      <div class="kpi green">
-        <div class="kpi-label">High-Value Customers</div>
-        <div class="kpi-value">23</div>
-        <div class="kpi-sub">Avg $141.24/wk · Age 32.4</div>
-        <div class="kpi-change up">6.8 visits/period</div>
-      </div>
-      <div class="kpi orange">
-        <div class="kpi-label">SVD Explained Var.</div>
-        <div class="kpi-value">49.3%</div>
-        <div class="kpi-sub">10 latent dimensions</div>
-        <div class="kpi-change up">139 products</div>
-      </div>
-    </div>
-
-    <div class="chart-grid cols-1">
-      <div class="chart-card">
-        <div class="chart-head">
-          <div>
-            <div class="chart-title">Segment Sizes</div>
-            <div class="chart-subtitle">Number of customers per cluster</div>
-          </div>
-          <div class="chart-tag">Distribution</div>
-        </div>
-        <div class="chart-body">
-          <img src="images/chart_02.png" alt="Segment sizes chart">
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="section" id="forecasting">
     <div class="section-header">
-      <div class="section-num">02</div>
+      <div class="section-num">01</div>
       <div class="section-info">
         <div class="section-title">Demand Forecasting</div>
         <div class="section-desc">Rolling average forecasting for top 5 products across 26 weeks (Jan–Jun 2024)</div>
@@ -638,7 +588,7 @@
 
   <div class="section" id="promotions">
     <div class="section-header">
-      <div class="section-num">03</div>
+      <div class="section-num">02</div>
       <div class="section-info">
         <div class="section-title">Promotion Effectiveness</div>
         <div class="section-desc">Avg order value with vs without promotion applied, across all segments</div>
@@ -712,7 +662,7 @@
 
   <div class="section" id="recipes">
     <div class="section-header">
-      <div class="section-num">04</div>
+      <div class="section-num">03</div>
       <div class="section-info">
         <div class="section-title">Recipe Popularity Ranking</div>
         <div class="section-desc">Recipes inferred from ingredient purchase overlap (≥50% match) across both_test dataset</div>
@@ -858,36 +808,14 @@
 
   <div class="section" id="search">
     <div class="section-header">
-      <div class="section-num">05</div>
+      <div class="section-num">04</div>
       <div class="section-info">
         <div class="section-title">Search Trend Analysis</div>
         <div class="section-desc">Top queries, platform click-through rates, and daily search volume patterns</div>
       </div>
     </div>
 
-    <div class="kpi-grid">
-      <div class="kpi blue">
-        <div class="kpi-label">App CTR (Food)</div>
-        <div class="kpi-value">67.4%</div>
-        <div class="kpi-sub">of searches result in a click</div>
-      </div>
-      <div class="kpi gold">
-        <div class="kpi-label">Web CTR (Food)</div>
-        <div class="kpi-value">68.3%</div>
-        <div class="kpi-sub">slightly higher than App</div>
-      </div>
-      <div class="kpi blue">
-        <div class="kpi-label">App CTR (HH)</div>
-        <div class="kpi-value">64.0%</div>
-        <div class="kpi-sub">Household items App</div>
-      </div>
-      <div class="kpi gold">
-        <div class="kpi-label">Web CTR (HH)</div>
-        <div class="kpi-value">64.8%</div>
-        <div class="kpi-sub">Household items Web</div>
-      </div>
-    </div>
-
+    
     <div class="chart-grid cols-2">
       <div class="chart-card">
         <div class="chart-head">
@@ -920,11 +848,11 @@
         <div class="insight-head">💡 Thursday & Saturday Peak</div>
         <p>Search volume spikes Thu/Sat — likely <strong>pre-weekend meal planning</strong>. Schedule push notifications and recipe spotlights for Thursday mornings.</p>
       </div>
-      <div class="insight blue">
+      <!-- <div class="insight blue">
         <div class="insight-head">💡 Web vs App CTR Parity</div>
         <p>Both platforms perform similarly (~67–68%). <strong>Invest equally in App and Web search UX</strong>; neither significantly outperforms the other.</p>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <div style="margin: 0 40px; padding-top:32px; border-top:1px solid var(--border); display:flex; align-items:center; justify-content:space-between;">

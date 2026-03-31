@@ -104,63 +104,9 @@ for name, df in [('users', users), ('orders', orders),
     print(f"  {name:<15} rows={len(df):>5}  nulls={nulls}  duplicates={dups}")
 print("All checks passed.\n")
 
-# =============================================================
-# SECTION 1: CUSTOMER SEGMENTATION (K-MEANS)
-# =============================================================
-print("=" * 60)
-print("SECTION 1: Customer Segmentation (K-Means)")
-print("=" * 60)
-
-visit_freq = (orders.groupby('user_id')['order_id']
-              .count()
-              .reset_index()
-              .rename(columns={'order_id': 'visit_frequency'}))
-
-seg_df = users.merge(visit_freq, on='user_id', how='left')
-seg_df['visit_frequency'] = seg_df['visit_frequency'].fillna(0)
-
-
-features = ['age', 'avg_weekly_spend_sgd', 'visit_frequency']
-X = seg_df[features].copy()
-
-
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
-
-
-kmeans = KMeans(n_clusters=3, random_state=42, n_init=10)
-seg_df['segment'] = kmeans.fit_predict(X_scaled)
-
-
-cluster_means = seg_df.groupby('segment')['avg_weekly_spend_sgd'].mean().sort_values()
-label_map = {
-    cluster_means.index[0]: 'Budget Shoppers',
-    cluster_means.index[1]: 'Regular Families',
-    cluster_means.index[2]: 'High-Value Customers'
-}
-seg_df['segment_label'] = seg_df['segment'].map(label_map)
-
-seg_counts = seg_df['segment_label'].value_counts()
-_fig = plt.figure(figsize=(6, 4))
-seg_counts.plot(kind='bar', color=['#66b3ff', '#ff9999', '#99ff99'], edgecolor='black')
-plt.title('Customer Segment Sizes')
-plt.xlabel('Segment')
-plt.ylabel('Number of Customers')
-plt.xticks(rotation=15)
-plt.tight_layout()
-plt.savefig('output/1_segment_sizes.png', dpi=150)
-plt.close(_fig)
-print("Segment size chart saved → output/1_segment_sizes.png")
-
-
-segment_summary = seg_df.groupby('segment_label')[features].mean().round(2)
-print("\nSegment Profiles:")
-print(segment_summary.to_string())
-print()
-
 
 # =============================================================
-# SECTION 2: DEMAND FORECASTING (ROLLING AVERAGE)
+# SECTION 1: DEMAND FORECASTING (ROLLING AVERAGE)
 # =============================================================
 print("=" * 60)
 print("SECTION 2: Demand Forecasting")
@@ -238,7 +184,7 @@ print()
 
 
 # =============================================================
-# SECTION 3: PROMOTION EFFECTIVENESS ANALYSIS
+# SECTION 2: PROMOTION EFFECTIVENESS ANALYSIS
 # =============================================================
 print("=" * 60)
 print("SECTION 3: Promotion Effectiveness Analysis")
@@ -263,31 +209,9 @@ plt.savefig('output/3a_promo_overall.png', dpi=150)
 plt.close(_fig)
 print("Promo overall chart saved → output/3a_promo_overall.png")
 
-seg_orders = orders.merge(seg_df[['user_id', 'segment_label']], on='user_id', how='left')
-seg_promo = (seg_orders.groupby(['segment_label', 'promo_applied'])['order_total_sgd']
-             .mean()
-             .round(2)
-             .unstack())
-seg_promo.columns = ['No Promotion', 'Promotion Applied']
-
-print("\nPromo Impact by Customer Segment:")
-print(seg_promo.to_string())
-
-_fig, _ax = plt.subplots(figsize=(8, 5))
-seg_promo.plot(kind='bar', ax=_ax, color=['#ff9999', '#66b3ff'],
-               edgecolor='black', width=0.6)
-_ax.set_title('Avg Order Total by Segment: Promo vs No Promo')
-_ax.set_xlabel('Customer Segment')
-_ax.set_ylabel('Avg Order Total (SGD)')
-plt.setp(_ax.get_xticklabels(), rotation=15)
-_ax.legend(title='Promotion')
-plt.tight_layout()
-plt.savefig('output/3b_promo_by_segment.png', dpi=150)
-plt.close(_fig)
-print("Promo by segment chart saved → output/3b_promo_by_segment.png")
 
 # =============================================================
-# SECTION 4: SEARCH TREND ANALYSIS
+# SECTION 3: SEARCH TREND ANALYSIS
 # =============================================================
 print("=" * 60)
 print("SECTION 4: Search Trend Analysis")
@@ -323,7 +247,7 @@ print("Search by day chart saved → output/4b_search_by_day.png")
 
 
 # =============================================================
-# SECTION 5: RECIPE POPULARITY RANKING
+# SECTION 4: RECIPE POPULARITY RANKING
 # =============================================================
 print("=" * 60)
 print("SECTION 5: Recipe Popularity Ranking")
@@ -480,10 +404,8 @@ for testcase in testcases:
     most_purchased_recipe(tc_order_items, tc_recipe_ingredients)
 
 CHART_SLIDES = [
-    ('output/1_segment_sizes.png', 'Customer segment sizes'),
     ('output/2_demand_forecast.png', 'Weekly demand forecast'),
     ('output/3a_promo_overall.png', 'Promotion vs no promotion'),
-    ('output/3b_promo_by_segment.png', 'Promotion by segment'),
     ('output/4a_top_searches.png', 'Top searches'),
     ('output/4b_search_by_day.png', 'Searches by day'),
     ('output/5a_recipe_popularity.png', 'Recipe popularity'),
